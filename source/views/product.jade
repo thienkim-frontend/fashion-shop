@@ -1,0 +1,103 @@
+- function capitalize(string) {
+  - return string.charAt(0).toUpperCase() + string.slice(1);
+- }
+mixin breadcrumb(objs, lastitem)
+  ol.col-md-9.hasebz_breadcrumb
+    each item in objs.items
+      li
+        a(href=item[1], title=item[0])!=item[0]
+    li.active!=lastitem
++breadcrumb({"items":[["Home", "index.html"]]}, "Product")
+mixin filterSize(arr)
+  ul.list-unstyled
+    each item in arr
+      li: a.round-icon(href='javascript:void(0)') #{item}
+mixin filterColor(arr)
+  ul.list-unstyled
+    each item in arr
+      li: a.round-icon.color-box(href='javascript:void(0)', class=item)
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "product";
+  - subPage = "product";
+  - title = "Product page";
+block content
+  section.filter-block
+    header Filter
+    .content-block
+      .filter-price
+        h5 Filter By Price
+        .noUiSlider
+        .range-slider-value.clear
+          span Price: 
+          span#value-min $
+          | -
+          span#value-max $
+      .filter-size
+        h5 Filter By Size
+        +filterSize(['XS', 'S', 'M', 'L', 'XL', 'XXL'])
+       
+      .filter-color
+        h5 Filter By Color
+        +filterColor(['white', 'silver', 'black', 'tan', 'green', 'yellow', 'pink', 'tomato', 'purple', 'pattern'])
+  section.products-wrapper
+    header
+      .col-xs-12.col-sm-12.center-xs.product-control(style='background: #fff; margin-bottom: 15px; padding:5px 10px')
+        .pull-left.view-filter
+          a(href='')
+            span.filter-newest Newest
+          a(href='')
+            span.filter-best-sellers Best sellers
+          a(href='')
+            span.filter-price Price
+        // DISPLAY MODE
+        ul.list-unstyled.pull-right.layout-mode(style='margin:3px 0 0 0;')
+          li#fitRows.active
+            a(href=''): i.iconfont-th
+          li#fitColumns
+            a(href=''): i.iconfont-list
+        // NUMBER OF ITEMS TO BE DISPLAYED
+        .pull-right.pro-per-page.hidden-xs
+          .custom-select.inline-middle.grey-bg(style='width:100px!important;')
+            select
+              option 9 per page
+              option 12
+    .products-layout.list.clearfix.row
+      .col-md-4
+        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+      .col-md-4
+        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+      .col-md-4
+        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+      .col-md-4
+        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+      .col-md-4
+        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+      
+  // PAGINATION
+  .pagination
+    ul.unstyled.pull-right.list-inline.center-xs
+      li
+        a(href='')
+          i.iconfont-angle-left
+      li
+        a.active(href='') 1
+      li
+        a(href='') 2
+      li
+        a(href='') 3
+      li ...
+      li
+        a(href='')
+          i.iconfont-angle-right
+    .page-info.pull-left.center-xs
+      | Displaying 
+      strong 1 
+      | to 4 (of 32 products)

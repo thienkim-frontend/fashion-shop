@@ -1,0 +1,110 @@
+mixin a(text, href)
+  - var href= (typeof(href) === 'undefined' || href =="")? "javascript:void(0);" : href;
+  a(href=href, title=text)&attributes(attributes) !{text}
+- var subPage = "index"
+mixin checkActive(obj)
+  - if (subPage + ".html" === obj.url)
+    li.active
+      a(href=obj.url  title=obj.title) #{obj.title}
+      if (block)
+        block
+  - else
+    li: a(href=obj.url  title=obj.title) #{obj.title}
+      if (block)
+        block
+mixin dl-list(arr, addClass)
+  ul(class=addClass)
+    - for (item in arr)
+      - var obj = arr[item]
+      - if (!obj.url)
+          - obj.url = "javascript:void(0);"
+      - if (obj.hasChild)
+        +checkActive(obj)
+          +dl-list(obj.hasChild, "dl-submenu")
+      - else 
+        +checkActive(obj)
+mixin menu(arr)
+  ul&attributes(attributes).unstyled-list
+    - for (items in arr)
+      - var item = arr[items]
+      - if (!item[1])
+          - item[1] = "javascript:void(0);"
+      - if (item[2] == "active")
+        li.active
+          a(href=item[1] title=item[0])= item[0]
+      - else 
+        li
+          a(href=item[1] title=item[0])= item[0]
+mixin mega-menu(heading, content)
+  .col-md-3
+    h4(class="menu-title")= heading
+    +menu(content)
+mixin li(arr)
+  li&attributes(attributes)
+    - if (!arr[1]) 
+      - arr[1]= "javascript:void(0);"
+    a(href=arr[1] title="")!= arr[0]
+    block
+
+mixin cart-item(name, url, price)
+  li.item.clearfix
+    button.close &times;
+    a.entry-thumbnail(href='#')
+      img.img-responsive(src='images/#{url}.jpg', alt=url)
+    .info
+      a.entry-title(href='#')= name
+      span.entry-price= price
+
+header.header-section
+  .header-inner
+    .logo-block.clearfix
+      .logo-wrapper
+        a(href="index.html") Fashion Shop
+    #dl-menu.dl-menuwrapper.visible-xs.pull-right
+      button.dl-trigger
+        i.fa.fa-reorder
+      +dl-list([{"title":"Home", "url":"index.html"}, {"title":"Women", "url":""}, {"title":"Men", "url":""}, {"title":"Template pages", "url":"", "hasChild":[{"title":"Products grid listing", "url": "product_list.html"}, {"title":"Product detail page", "url":"product_detail.html"}, {"title":"Compare products", "url":"compare_product.html"}, {"title":"Blog page", "url":"blog.html"}, {"title":"Cart page", "url":"cart.html"}]}], "dl-menu")
+    .sub-menu.hidden-xs
+      .menu-item.clearfix
+        +menu([["$", "", "active"], ["£", ""], ["€", ""]]).option-list
+        +menu([["EN","", "active"], ["FR", ""], ["DE", ""]]).option-list
+      .menu-item
+        +menu([["My Account", "my_account.html"], ["My Wishlist(3)", "my_account.html"], ["My Compare(2)", "compare_product.html"], ["Checkout", "cart.html"], ["Log Out", "register.html"]]).menu-list.center-xs
+    nav.menu-block.clearfix.hidden-xs.hidden-sm
+      ul.main-menu.unstyled-list
+        +li(["Home", ""])
+        +li(["Women", ""])
+        +li(["Men", ""])
+        +li(["Template pages<b class='caret'></b>", ""]).has-child
+          .dropdown-content.mega-menu.col-md-12 
+            +mega-menu("Common pages", [["Home page", "index.html"], ["Products grid listing", "product_list.html"], ["Product detail page", "product_detail.html"], ["Compare products", "compare_product.html"], ["Wishlist page", "my_account.html"]])
+            +mega-menu("Cart pages", [["Emty cart", ""], ["Checkout step 1", "cart.html"], ["Checkout step 2", "blog.html"], ["Checkout step 3", "cart.html"], ["Checkout step 4", "cart.html"]])
+            +mega-menu("My pages", [["Registration", "register.html"], ["My account", "my_account.html"], ["Blog listing", "blog.html"], ["Blog detail", "blog_detail.html"], ["About us", "about_us.html"], ["Contact us", "contact.html"]])
+            .col-md-3
+              .carousel
+                .carousel-inner
+                  .item.active
+                    img(src='images/slide1.jpg', alt='')
+                  .item
+                    img(src='images/slide2.jpg', alt='')
+              h5 Lorem ipsum dolor sit, consectetur adipiscing elit. 
+              a.btn-black(href='#') Go to Shop &rarr;
+        +li(["About us", "about_us.html"])
+        +li(["Contact us", "contact.html"])
+      .cart-block.has-child.pull-right
+        a.cart-view(href='#')
+          i.fa.fa-shopping-cart
+          span My Cart: 4 item(s) - $ 790.00 
+        .sub-cart.subHeader.dropdown-content
+          .cart-header.text-center
+            span.empty-cart.hide Your cart is currently empty.
+            span Displaying 2 of 4 items
+            a(href='#') (See All)
+          ul.cart-items.list-unstyled 
+            +cart-item("Halter Rhinestone Sleeveless Cocktail Dresses", "pro-17", "1 x $ 450.00")
+            +cart-item("Sweetheart High Side Slit Chiffon Pageant Dress", "pro-21", "2 x $ 320.00")
+          .cart-total.clearfix
+            span.pull-left Total
+            span.pull-right $790
+          +a.btn-viewcart.pull-right("View Cart", "")
+

@@ -1,0 +1,142 @@
+.blog-detail{
+	.blog-content{
+		[class*="-block"]{
+			background: $white;
+			margin-bottom: 20px;
+			padding:10px;
+		}
+	}
+	.social-icon{
+		position: relative;
+		display: block;
+		z-index: 5;
+		float:right;
+		a{
+			padding:0 5px;
+			font-size:14px;	
+		}
+	}
+	.tag-cloud a{
+		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), inset 0px 0px 4px 1px rgba(0,0,0,0.07), 0px 1px 0px rgba(255,255,255,0.1);
+		padding:5px;
+		background:#CCC;
+		margin: 0px 0px 5px 0px;
+		display:inline-block;
+	}
+	.user-avatar {
+		width: 73px;
+		height: 90px;
+		float:left;
+	}
+	.author-info, .comment-text{
+		display:block;
+		margin-left:90px;
+	}
+	.author-info{
+		h5{
+			display:inline-block;
+			margin-right:10px;
+			color:#DF0A71;
+			font-weight:bold;	
+		}
+	}
+	.blog-comment-block{
+		li{
+			margin-bottom:15px;
+			.has-child{
+				padding-left: 50px;
+				.comment-block{
+					background-color: transparent!important;
+					border: 1px solid $grey;
+				}
+			}
+		}
+		.comment-block{
+			padding: 10px;
+			margin-bottom:10px;
+			background-color: $grey;
+		}
+		.comment-info{ margin-bottom: 20px; }
+		.user-name{
+			display: block;
+			color: $highlight-color;
+		}
+	}
+	.comment-form-block{
+		form{
+			float: none;
+			margin: auto;
+		}
+			label{ text-align: right;}
+	}
+}
+
+.post-frame {
+	position: relative;
+	margin: -10px;
+	.post-date {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 10px;
+		color: $dark-grey;
+		background-color: $white;
+		.camera {
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #dedede;
+			font-size: 40px;
+			text-align: center;
+		}
+	}
+}
+.post-detail {
+	padding: 10px;
+    margin: 10px -10px;
+	a{ color: $dark-grey; }
+	li {
+		float: left;
+		color: $dark-grey;
+		i{ margin-right: 5px;}
+		+ li{
+			margin-left: 5px;
+			padding-left: 10px;
+			border-left: 1px solid $dark-grey;
+		}
+	}
+}
+
+/*======================
+ Blog page
+========================*/
+.blog-page{
+	.blog-content {
+		padding:15px;
+	}
+	.thumbnail-arrow {
+		border-bottom: 45px solid rgba(223, 10, 113, 0.8);
+		border-left: 45px solid transparent;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		display:none;
+		i {
+			position: absolute;
+			top: 22px;
+			left: -20px;
+			font-size: 17px;
+			color:#fff !important;
+		}
+	}
+	.blog-img{
+		position:relative;
+		&:hover .thumbnail-arrow{
+			display:block;
+			@include transition(all .2s ease-out);	
+		}
+	}
+	.blog-action{
+		margin-bottom:15px;
+	}
+}
+

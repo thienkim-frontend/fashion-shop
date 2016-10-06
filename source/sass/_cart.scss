@@ -1,0 +1,150 @@
+body {counter-reset:section;}
+.shipping_address{
+	input, select{
+		&[class*="col-"]{
+			float: none;
+		}
+	}
+}
+
+.cart_nav{
+	border-bottom: 4px solid $dark-grey;
+	li{
+		position: relative;
+		text-align: center;
+		font-size: 18px;
+		text-transform: uppercase;
+		&:before {
+			counter-increment: section;
+			content: counter(section) ".";
+		}
+		&.active, &:hover {
+			color: $highlight-color;
+			&:after{
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -3px;
+				height: 4px;
+				background-color: $black;
+			}
+			a{
+				color: $highlight-color;
+				cursor: pointer;
+				border: none;
+				background:none;
+				&:hover{
+					color: $highlight-color;
+					border: none;
+					background:none;
+				}
+			}
+		}
+		a{
+			display: inline-block;
+			border: none;
+			background:none;
+		}
+	} 
+}
+.tbl-cart {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 15px;
+	th {
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.cart-thumbnail {
+		width: 140px;
+		float: left;
+		margin-right: 20px;
+	}
+	.cart-title {
+		color: $dark-grey;
+	}
+	td{
+		position: relative;
+		vertical-align: middle;
+		min-height: 80px;
+		background: $light-grey;
+		color: #1f1f1f; 
+		+ td{
+			text-align: center;
+			border-left: 1px solid $grey;
+		}
+		h5{
+			margin-top: 20px;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			line-height: 18px;
+		}
+	}
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $white;
+		width: 30px;
+		height: 30px;
+		text-shadow: none;
+		text-align: center;
+		@include opacity(.4);
+		@include transition(opacity, .2 , ease);
+		background-color: $dark-grey;
+		&:hover{
+			@include opacity(1);
+		}
+	}
+	input[type="number"]{
+		width: 60px;
+		text-align: center;
+	}
+	.calculation-block{
+		td{
+			background-color: $white;
+			+ td{
+				border-left: none;
+			}
+		}
+		.text-right{
+			text-align: right;
+		}
+		.total{
+			color: $highlight-color;
+			font-weight: bold;
+		}
+	}
+}
+.cart-box{
+	background-color: $white;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.price-calculate{
+	td{
+		padding:10px;
+	} 
+	select, input[type="text"]{
+		width:100%!important;
+		margin-bottom:10px;
+	}
+}
+.sumary-blocks{
+	margin-bottom: 20px;
+	.content-block{
+		padding: 20px;
+		height: 100%;
+		border: 1px solid $grey;
+		// background-color: $grey;
+		li + li{
+			margin-top: 10px;
+			padding-top: 10px;
+			border-top: 1px solid $grey;
+		}
+	}
+}
+#address .element {
+	margin-bottom:10px;
+}

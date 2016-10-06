@@ -1,0 +1,212 @@
+.fancybox-ad{
+	text-transform: uppercase;
+	width:700px!important;
+	background:#f0f0f0;
+	[class*="col"]{
+		padding:0px !important;
+	}
+	.header{
+		padding:20px;
+		margin: 0px 15px;
+		font-size: 16px;
+		font-weight:bold;
+		border-bottom:1px solid #E4E4E4;
+	}
+	.off{
+		line-height: 45px;
+		font-size: 50px;
+		float: left;
+		margin-right: 14px;
+		text-shadow: 0px 1px 0px #969191;
+		-webkit-text-shadow: 0px 1px 0px #969191;
+	}
+	.special-text{
+		color: #DF0A71;
+	}
+	.main{
+		margin:0px 15px;
+		padding:15px 0;
+		text-align: center;
+		border-top:1px solid #fff;
+	}
+	input[type="text"]{
+		border-radius: 0px;
+		border: 1px solid #e0e0e0;
+		padding: 8px 5px;
+		width:77%;
+	}
+	.btn{
+		font-size:12px;
+		background-color: #000;
+		border-radius: 0px;
+		padding: 8px 20px;
+	}
+	.social-icon{
+		margin-top: 80px;
+		float:right;
+	}
+}
+.fancybox-skin{
+border-radius: 0px!important;	
+}
+.fancybox-inner{
+overflow:hidden !important;
+}
+// banner
+.banner-block{
+	.banner-item{
+		position:relative;
+		overflow: hidden;
+		img{
+			border: 10px solid #303030;
+			width: 100%;
+			@include transition(all 0.5s ease-out);
+		}
+		.titles {
+			position:absolute;
+			bottom: 20px;
+			left: 30px;
+			color: $white;
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: -1px;
+		}
+		.title02 {
+			font-size: 22px;
+			font-weight:bold;
+			margin-top: 5px;
+			margin-bottom: 20px;
+		}
+		.title03 {
+			font-weight:bold;
+			color: lighten($black, 40%);
+			margin-top:-15px;
+		}
+		.triangle {
+			position:absolute;
+			top: 0;
+			left: 10px;
+			border-top: 200px solid transparent;
+			border-left: 273px solid rgba(0, 0, 0, 0.8);
+			@include transition(all 0.2s ease-out)	
+		}
+		&:hover{
+			.triangle, .titles{
+				left:-300px;
+			}
+			img{
+				border-color: $white;
+			}
+		}
+	}
+}
+.newsletter {
+	display: flex;
+	align-items: center;
+	padding: 20px 10px;
+	margin-top: 15px;
+	margin-bottom:15px;
+	color: $white;
+	background-color: $black;
+	button{
+		padding: .5em 0.7em;
+		background: $highlight-color;
+		position:absolute;
+		top:0;
+		right:0px;
+		border:0;
+	}
+	span{
+		font-size: 18px;
+		line-height: 1.5em;
+	}
+	input{
+		padding: 5px 10px;
+		width: 100%;
+	}
+	button{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 10px;
+		padding: 0 10px;
+		color: $white;
+		background-color: $highlight-color;
+	}
+}
+
+#progressBar { 
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	width: 100%; 
+	background: rgba(0,0,0,.2); 
+	z-index: 5; 
+	#bar{ 
+		width: 0%; 
+		max-width: 100%; 
+		height: 3px; 
+		background: rgba(0, 0, 0, .7);
+	}
+}
+.main-slider{
+	.owl-nav {
+		> div{
+			@include opacity(0);
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			@include transition(all .3s ease);
+		}
+		.owl-prev{ left: 0; }
+		.owl-next{ right: 0; }
+	}
+	.round-icon{
+		padding-top: 12px;
+    	font-size: 24px;
+    	background-color: rgba(255, 255, 255, .5);
+    	border: none;
+	}
+	&:hover{
+		.owl-nav > div { @include opacity(1);}
+		.owl-next{ right: 20px; }
+		.owl-prev{ left: 20px; }
+	} 
+	.owl-dots{
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -40px;
+		.owl-dot {
+			display: inline-block;
+			span {
+			    display: block;
+			    width: 10px;
+			    height: 10px;
+			    margin: 5px 7px;
+			    @include opacity(0.5);
+			    @include border-radius(20px);
+			    background-color: #869791;
+			}
+			&.active span{
+				@include opacity(1);
+			}
+		}
+	}
+}
+.owl-carousel{ 
+	display: block;
+	overflow: hidden; 
+	img{
+		width: 100%;
+	}
+}
+.customNavigation{
+	position: absolute;
+	top: -5px;
+	right: 0;
+	a{
+		display: inline-block;
+	}
+}
+

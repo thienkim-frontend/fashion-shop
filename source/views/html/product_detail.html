@@ -1,0 +1,1227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fashion Shop</title>
+<meta name="description" content="GFashion is Responsive Website."/>
+<meta name="keywords" content="html, responsive, shop theme, shopping, bootstrap theme "/>
+<meta name="author" content="Thien Kim">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="icon" href="" type="image/x-icon" />
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/plugin/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/font-awesome.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/responsive.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/component.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/jquery.nouislider.min.css" type="text/css">
+<link rel="stylesheet" href="css/plugin/jquery.fancybox.css" type="text/css" />
+<!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" /> -->
+<link rel="stylesheet" href="css/plugin/animate.css" type="text/css" />
+<link rel="stylesheet" href="css/plugin/owl.carousel.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body id="product_detail_page">
+<div class="container">
+    <!--begin Header-->
+    <header class="header-block">
+        <div class="logo-block clearfix">
+            <div class="logo-wrapper">
+                <a href="index.html">Fashion Shop</a>
+            </div>
+            <div id="dl-menu" class="dl-menuwrapper visible-xs pull-right">
+                <button class="dl-trigger"><a href=""><i class="iconfont-reorder"></i></a></button>
+                <ul class="dl-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li>
+                        <a href="#">Template pages </a>
+                        <ul class="dl-submenu">
+                            <li><a href="">Homepage</a></li>
+                            <li><a  href="">Products grid listing</a></li>
+                            <li><a  href="">Products table listing</a></li>
+                            <li><a  href="">Product detail page</a></li>
+                            <li><a  href="">Compare products</a></li>
+                            <li><a  href="">Wishlist page</a></li>
+                         </ul>
+                      </li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Contact us</a></li>
+                 </ul>
+            </div>
+            
+            <div class="sub-menu hidden-xs">
+                <div class="menu-item clearfix">
+                    <ul class="option-list unstyled-list">
+                        <li class="active"><a href="#">$</a></li>
+                        <li><a href="#">£</a></li>
+                        <li><a href="#">€</a></li>
+                    </ul><!--// CURRENCY-->
+                    <ul class="option-list unstyled-list">
+                        <li class="active"><a href="#" title="English">EN</a></li>
+                        <li><a href="#" title="France">FR</a></li>
+                        <li><a href="#" title="De">DE</a></li>
+                    </ul><!--// LANGUAGES-->
+                </div>
+                <div class="menu-item">
+                    <ul class="menu-list center-xs unstyled-list">
+                        <li><a href="my_account.html">My Account</a></li>
+                        <li><a href="my_account.html">My Wishlist(3)</a></li>
+                        <li><a href="compare_product.html">My Compare(2)</a></li>
+                        <li><a href="cart.html">Checkout</a></li>
+                        <li><a href="register.html">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        
+        <nav class="menu-block clearfix hidden-xs hidden-sm">
+            <ul class="main-menu unstyled-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li class="has-child">
+                    <a href="#">Template pages <b class="caret"></b></a>
+                    <div class="dropdown-content mega-menu"  class="col-md-12">
+                        <div class="col-md-3">
+                            <h2 class="menu-title">Common pages</h2>
+                            <ul class="mega-sub unstyled-list">
+                                <li><a href="index.html">Homepage</a></li>
+                                <li><a  href="product_list.html">Products grid listing</a></li>
+                                <li><a  href="product.html">Products table listing</a></li>
+                                <li><a  href="product_detail.html">Product detail page</a></li>
+                                <li><a  href="compare_product.html">Compare products</a></li>
+                                <li><a  href="my_account.html">Wishlist page</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="menu-title">Cart pages</h2>
+                            <ul class="mega-sub unstyled-list">
+                                <li><a href="emty_cart.html">Emty cart</a></li>
+                                <li><a  href="cart.html">Checkout step 1</a></li>
+                                <li><a  href="cart.html">Checkout step 2</a></li>
+                                <li><a  href="cart.html">Checkout step 3</a></li>
+                                <li><a  href="cart.html">Checkout step 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h2 class="menu-title unstyled-list">My pages</h2>
+                            <ul class="mega-sub">
+                                <li><a href="register.html">Registration</a></li>
+                                <li><a  href="my_account.html">My account</a></li>
+                                <li><a  href="blog.html">Blog listing</a></li>
+                                <li><a  href="blog_detail.html">Blog detail</a></li>
+                                <li><a  href="about_us.html">About us</a></li>
+                                <li><a  href="contact.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="images/slide1.jpg" alt="" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/slide2.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="">Lorem ipsum dolor sit, consectetur adipiscing elit. </h5>
+                                <a href="" class="btn-black" >Go to Shop →</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            
+            <div class="cart-block has-child pull-right">
+                <a href="#" class="cart-view">
+                    <i class="iconfont-shopping-cart"></i>
+                    <span>My Cart: 4 item(s) - $ 790.00 </span>
+                </a>
+                <div id="sub-cart" class="subHeader dropdown-content">
+                    <div class="cart-header  text-center">
+                        <span class="empty-cart hide">Your cart is currently empty.</span>
+                        <span>Displaying 2 of 4 items</span>
+                        <a href="#">(See All)</a>
+                    </div>
+                    <ul class="cart-items unstyled">
+                        <li>
+                            <div class="item clearfix">
+                                <button class="close">×</button>
+                                <a href="#" class="cart-thumbnail">
+                                    <img  src="images/pro-17.jpg" alt="" class="img-responsive" />
+                                </a>
+                                <div class="info">
+                                    <a href="" class="cart-title">Halter Rhinestone Sleeveless Cocktail Dresses</a>
+                                    <span class="cart-price">1 x $ 450.00</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item clearfix">
+                                <button class="close">×</button>
+                                <a href="#" class="cart-thumbnail">
+                                    <img  src="images/pro-17.jpg" alt="" class="img-responsive"/>
+                                </a>
+                                <div class="info">
+                                    <a href="" class="cart-title">Halter Rhinestone Sleeveless Cocktail Dresses</a>
+                                    <span class="cart-price">1 x $ 450.00</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cart-total clearfix">
+                        <span class="pull-left">Total</span>
+                        <span class="pull-right">$790</span>
+                    </div>
+                    <a href="#" class="btn-viewcart pull-right">View Cart</a>
+                </div>
+            </div>
+        </nav>
+    </header><!--end Header-->
+    <!--end Header-->
+	
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">My account</a>
+        </li>
+        <li class="active">JOHN DOE</li>
+    </ol>
+    
+    <!--main content-->
+    <div class="mainContent">
+        <div class="">
+            <div class="preview-block clearfix">
+                <div class="product-preview col-md-4">
+                    <div class="big-image ">
+                        <a href="#" class="elevatezoom">
+                            <img class="zoom fancybox img-respnsive" src="images/small/n14d0663px-4.jpg" data-zoom-image="images/large/n14d0663px-4.jpg"/>
+                      </a>
+                    </div>
+                   
+                    <div class="thumbs" id="gallery_01">
+                            <a href="#" class="image-thumb active" data-image="images/small/n14d0663px-4.jpg" data-zoom-image="images/large/n14d0663px-4.jpg">
+                                <img src="images/small/n14d0663px-4.jpg" />
+                            </a>                
+                            <a href="#" class="image-thumb" data-image="images/small/n14d0663px-2.jpg" data-zoom-image="images/large/n14d0663px-2.jpg">
+                                <img src="images/small/n14d0663px-2.jpg" />
+                            </a>
+                            <a href="#" class="image-thumb" data-image="images/small/n14d0663px-3.jpg" data-zoom-image="images/large/n14d0663px-3.jpg">
+                                <img src="images/small/n14d0663px-3.jpg" />
+                            </a>
+                            <a href="#" class="image-thumb" data-image="images/small/n14d0663px-4.jpg" data-zoom-image="images/large/n14d0663px-4.jpg">
+                                <img src="images/small/n14d0663px-4.jpg" />
+                            </a>
+                            <a href="#" class="image-thumb" data-image="images/small/n14d0663px-6.jpg" data-zoom-image="images/large/n14d0663px-6.jpg">
+                                <img src="images/small/n14d0663px-6.jpg" />
+                            </a>
+                            <a href="#" class="image-thumb" data-image="images/small/n14d0663px-7.jpg" data-zoom-image="images/large/n14d0663px-7.jpg">
+                                <img src="images/small/n14d0663px-7.jpg" />
+                            </a>                 
+                    </div> 
+                </div>
+                
+                <div class="product-details col-md-8">
+                    <header class="entry-header clearfix">
+                        <h3>One Shoulder Asymmetric Dress</h3>   
+                        <div class="print-block">
+                            <i class="iconfont-print"></i>
+                            <span>Print this page</span>
+                        </div>
+                    </header>
+                    <article class="entry-content">
+
+                        <div class="rate-bar">
+                            <div class="rateit-selected "></div>
+                        </div>
+                        <span class="entry-review-count">(14 Votes) </span>|
+                        <span> 15 orders</span>
+                        <ul class="info-details">
+                            <li>
+                                <span>Price</span>
+                                <del class=" value original-price">$59.80</del>
+                            </li>
+                            <li>
+                                <span>Discount Price</span>
+                                $39.80
+                                <span class="discount">30% off</span>
+                            </li>
+                            <li>
+                                <span>Brand</span>
+                                Versace
+                            </li>
+                            <li>
+                                <span>Availability</span>
+                                In Stock
+                            </li>
+                            <li>
+                                <span>Product Code</span>
+                                GF-123456
+                            </li>
+                            <li class="colors">
+                                <span>Color</span>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="white"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="colors"/>
+                                    <b style="background:silver;" title="silver"></b>
+                                </label>
+                            </li>
+                            <li class="sizes">
+                                <span>Size</span>
+                                <label>
+                                    <input type="radio" name="size" checked/>
+                                    <b>XS</b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size"/>
+                                    <b>XS</b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size"/>
+                                    <b>XS</b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size"/>
+                                    <b>XS</b>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size"/>
+                                    <b>XS</b>
+                                </label>
+                            </li>
+                            <li>
+                                <span>Quantity</span>
+                                <input type="number" value="1"/>
+                            </li>
+                        </ul>
+                        <!-- <div class="info-details">
+                            <dl class="">
+                                <dt>Price</span>
+                                <dd><del class=" value original-price">$59.80</del></dd>
+                        
+                                <dt>Discount Price</dt>
+                                <dd>
+                                    <span>$39.80</span>
+                                    <span class="discount">30% off</span>
+                                </dd>
+                                <dt>Brand</dt>
+                                <dd>Versace</dd>
+                            
+                                <dt>Availability</dt>
+                                <dd>In Stock</dd>
+                            
+                                <dt>Product Code</dt>
+                                <dd>GF-123456</dd>
+                            
+                                <dt>Store Promotion</dt>
+                                <dd>Get a <b>US $2</b> coupon</dd>
+                            
+                                <dt>Color</dt>
+                                <dd>
+                                    <ul class="colors list-unstyled clearfix">
+                                        <li class="item ">
+                                            
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:silver;" title="silver"></b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(82, 81, 81);" title="black"></b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(210, 180, 140);" title="tan"></b>
+                                            </label>
+                                        </li>
+                                        
+                                        
+                                         <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(107, 142, 35);" title="green"></b>
+                                            </label>
+                                        </li>
+                                         <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(224, 204, 18);" title="yellow"></b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(252, 134, 193);" title="pink"></b>
+                                            </label>
+                                        </li>
+                                         <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors"/>
+                                                <b style="background:rgb(253, 119, 95);" title="tomato"></b>
+                                            </label>
+                                        </li> 
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="colors" checked="checked"/>
+                                                <b style="background:purple;" title="purple"></b>
+                                            </label>
+                                        </li>   
+                                    </ul>
+                                </dd>
+                            
+                                <dt>Size</dt>
+                                <dd>
+                                    <ul class="sizes list-unstyled">
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="size"/>
+                                                <b>XS</b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="size" checked="checked"/>
+                                                <b>S</b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="size"/>
+                                                <b>M</b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="size"/>
+                                                <b>L</b>
+                                            </label>
+                                        </li>
+                                        <li class="item ">
+                                            <label>
+                                                <input type="radio" name="size"/>
+                                                <b>XL</b>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            
+                                <dt>Quantity</dt>
+                                <dd >
+                                    <input type="number" value="1"/>
+                                    
+                                </dd>
+                            </dl> -->
+                            <div class="row flex ad-block">
+                                <!-- <div class="col-md-6">
+                                    <div class="share-block">
+                                        <ul class="list-inline">
+                                            <li class="facebook"><a href="#"><i class="iconfont-facebook "></i></a></li>
+                                            <li><a href="#"><i class="iconfont-rss "></i></a></li>
+                                            <li><a href="#"><i class="iconfont-xing "></i></a></li>
+                                            <li><a href="#"><i class="iconfont-pinterest "></i></a></li>
+                                            <li><a href="#"><i class="iconfont-twitter "></i></a></li>
+                                        </ul>
+                                        <p> 
+                                            <a href="">Sign in</a> and share the website for a chance to 
+                                            <strong>get Points</strong>, <br />which you can then convert to coupons.
+                                            
+                                        </p>
+                                    </div>
+                                </div> -->
+                                <div class="col-md-6">
+                                    <div class="buy-protection-block clearfix">
+                                        <img src="images/shield-icon.png" alt="" class="pull-left" style="" class="responsive-img"/>
+                                        <h3>Buyer Protection</h3>
+
+                                        <div class="buy-protection-info " >
+                                            
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <i class="iconfont-check"></i>
+                                                    <strong>Full Refund</strong> if you don't receive your order
+                                                </li>
+                                                <li>
+                                                    <i class="iconfont-check"></i>
+                                                    <strong>Refund or Keep</strong>  items not as described
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="button-group">
+                                <a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a>
+                                <a href="#" class="btn-outline" title="Add to Wishlist"><i class="iconfont-heart"></i></a>
+                                <a href="#" class="btn-outline" title="Add to Comapre"><i class="iconfont-retweet"></i></a>
+                            </div>
+                                    
+                         </div>
+                         
+                         
+         
+                       
+                        
+                    </article>
+                </div>
+            </div>
+            
+            
+
+        </div>
+        
+        
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs product-nav">
+          <li  class="active"><a href="#home" data-toggle="tab">Specifications</a></li>
+          <li ><a href="#profile" data-toggle="tab">Feedback (14)</a></li>
+          <li class="hidden-xs"><a href="#sizechart" data-toggle="tab">Size Chart</a></li>
+          <li class="hidden-xs"><a href="#maintenance" data-toggle="tab">Maintenance</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+          	<h5>Product Attributes:</h5>
+            <table border="0" width="100%" cellspacing="0" cellpadding="2">
+              <tr>
+                <td >Wedding Venues</td>
+                <td>Church,Garden,Hall,outdoor</td>
+              </tr>
+              <tr>
+                <td >Season</td>
+                <td>Spring,Summer,Fall,Winter</td>
+              </tr>
+              <tr>
+                <td >Wedding Style</td>
+                <td>fancy,unique,beautiful</td>
+              </tr>
+              <tr>
+                <td >Silhouette</td>
+                <td>A-Line,&nbsp;<span style=''>This design looks like a standard letter "A", which will show a smooth body line.</span></td>
+              </tr>
+              <tr>
+                <td >Neckline</td>
+                <td>V-neck,&nbsp;<span style=''>Make you seems have a thin and slim neckline.</span></td>
+              </tr>
+              <tr>
+                <td >Waistline</td>
+                <td>Natural waist,&nbsp;<span style=''>Nothing special, the most common way to present your body shape.</span></td>
+              </tr>
+              <tr>
+                <td >Sleeve Length</td>
+                <td>Sleeveless,&nbsp;<span style=''>If you want to show your sexy feature, it is the best choice.</span></td>
+              </tr>
+              <tr>
+                <td >Fabric</td>
+                <td>Satin,&nbsp;<span style=''>Accents with glossy surface and dull back and gives you a smooth touching feeling.</span></td>
+              </tr>
+              <tr>
+                <td >Embellishment</td>
+                <td>Ruffled,Sequin</td>
+              </tr>
+              <tr>
+                <td >Body Shape</td>
+                <td>Plus Size,Petite,Apple,Hourglass,Inverted Triangle,Pear Shaped,Rectangle,heart shaped</td>
+              </tr>
+              <tr>
+                <td >Shipping Weight</td>
+                <td>2.0Kg</td>
+              </tr>
+            </table>
+          </div>
+          <div class="tab-pane" id="profile">
+          	<div class="comments-list clearfix">
+            	<header class="col-md-12">
+                    <span class="col-md-3">Feedback (14) </span>                    
+                    <span class=" pull-right">
+                    	<span><a href="" class="btn-cta">Add review</a></span>
+                    </span>
+                </header>
+                
+                <article class="review col-md-12">
+                	<div class="col-md-1"><img src="images/images.jpg" alt="" /></div>
+                    <div class="col-md-8">
+                        <h4 class="title-review">title-review</h4>
+                        <p class="info"><span class="author">Richard Doe</span> | <span class="date">Aug 7, 2013</span></p> 
+                        <p>Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar round sunglasses. 
+                        </p>
+                        <div class="social-icon">
+                            <a hred=""> <i class="iconfont-twitter"></i></a>
+                            <a hred=""> <i class="iconfont-linkedin"></i></a>
+                            <a hred=""> <i class="iconfont-facebook"></i></a>
+                            <a hred=""> <i class="iconfont-xing"></i></a>
+                            <a hred=""> <i class="iconfont-rss"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="review col-md-12">
+                    <div class="col-md-1"><img src="images/images.jpg" alt="" /></div>
+                    <div class="col-md-8">
+                        <h4 class="title-review">title-review</h4>
+                        <p class="info"><span class="author">Richard Doe</span> | <span class="date">Aug 7, 2013</span></p> 
+                        <p>Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar round sunglasses. 
+                        </p>
+                        <div class="social-icon">
+                            <a hred=""> <i class="iconfont-twitter"></i></a>
+                            <a hred=""> <i class="iconfont-linkedin"></i></a>
+                            <a hred=""> <i class="iconfont-facebook"></i></a>
+                            <a hred=""> <i class="iconfont-xing"></i></a>
+                            <a hred=""> <i class="iconfont-rss"></i></a>
+                        </div>
+                    </div>
+                </article>
+				<div class="pagination col-md-12 clearfix" style="margin:0px;">
+                	<div class="pull-left center-xs">Displaying 1 to 4 (of 17 reviews)</div>
+                    <div class="pull-right center-xs">
+                        <a href="">Pre</a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">Next</a>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          	
+          
+          <div class="tab-pane " id="sizechart">
+          	<h4>Dresses Size Chart</h4>
+            <div class="table-custom">
+                <table border="0" width="75%" cellspacing="0" cellpadding="2">
+                  <tr>
+                    <td >US</td>
+                    <td >2</td>
+                    <td >4</td>
+                    <td >6</td>
+                    <td >8</td>
+                    <td >10</td>
+                    <td >12</td>
+                    <td >14</td>
+                    <td >16</td>
+                    <td >16W</td>
+                    <td >18W</td>
+                    <td >20W</td>
+                    <td >22W</td>
+                  </tr>
+                  <tr>
+                    <td >European</td>
+                    <td >32</td>
+                    <td >34</td>
+                    <td >36</td>
+                    <td >38</td>
+                    <td >40</td>
+                    <td >42</td>
+                    <td >44</td>
+                    <td >46</td>
+                    <td >48</td>
+                    <td >50</td>
+                    <td >52</td>
+                    <td >54</td>
+                  </tr>
+                  <tr>
+                    <td >UK</td>
+                    <td >4</td>
+                    <td >6</td>
+                    <td >8</td>
+                    <td >10</td>
+                    <td >12</td>
+                    <td >14</td>
+                    <td >16</td>
+                    <td >18</td>
+                    <td >20</td>
+                    <td >22</td>
+                    <td >24</td>
+                    <td >26</td>
+                  </tr>
+                  <tr>
+                    <td >Japan</td>
+                    <td >5</td>
+                    <td >7</td>
+                    <td >9</td>
+                    <td >11</td>
+                    <td >13</td>
+                    <td >15</td>
+                    <td >17</td>
+                    <td >19</td>
+                    <td >21</td>
+                    <td >23</td>
+                    <td >25</td>
+                    <td >27</td>
+                  </tr>
+                  <tr>
+                    <td >US LETTER</td>
+                    <td >XS</td>
+                    <td >S</td>
+                    <td >S</td>
+                    <td >M</td>
+                    <td >M</td>
+                    <td >L</td>
+                    <td >L</td>
+                    <td >XL</td>
+                    <td >1X</td>
+                    <td >2X</td>
+                    <td >3X</td>
+                    <td >4X</td>
+                  </tr>
+                </table>
+            </div>
+            
+            <h4>Us Dresses Size Chart</h4><table border="0" width="100%" cellspacing="0" cellpadding="2">
+            <table  border="0" width="100%" cellspacing="0" cellpadding="2">
+              <tr>
+                <th >Size</th>
+                <th  colspan="2">2</th>
+                <th  colspan="2">4</th>
+                <th  colspan="2">6</th>
+                <th  colspan="2">8</th>
+                <th  colspan="2">10</th>
+                <th  colspan="2">12</th>
+                <th  colspan="2">14</th>
+                <th  colspan="2" >16</th>
+              </tr>
+              <tr>
+                <td >&nbsp</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td>cm</td>
+                <td>inch</td>
+                <td class="odd last">cm</td>
+              </tr>
+              <tr>
+                <td >Bust</td>
+                <td>32½ </td>
+                <td>83</td>
+                <td>33½</td>
+                <td>84</td>
+                <td>34½</td>
+                <td>88</td>
+                <td>35 ½</td>
+                <td>90</td>
+                <td>36 ½ </td>
+                <td>93</td>
+                <td>38</td>
+                <td>97</td>
+                <td>39 ½</td>
+                <td>100</td>
+                <td>41</td>
+                <td class="odd last">104</td>
+              </tr>
+              <tr>
+                <td >Waist</td>
+                <td>25 ½ </td>
+                <td>65</td>
+                <td>26 ½</td>
+                <td>68</td>
+                <td>27 ½</td>
+                <td>70</td>
+                <td>28 ½</td>
+                <td>72</td>
+                <td>29 ½</td>
+                <td>75</td>
+                <td>31</td>
+                <td>79</td>
+                <td>32 ½</td>
+                <td>83</td>
+                <td>34</td>
+                <td class="odd last">86</td>
+              </tr>
+              <tr>
+                <td >Hips</td>
+                <td>35 ¾</td>
+                <td>91</td>
+                <td>36 ¾</td>
+                <td>92</td>
+                <td>37 ¾</td>
+                <td>96</td>
+                <td>38 ¾</td>
+                <td>98</td>
+                <td>39 ¾</td>
+                <td>101</td>
+                <td>41 ¼</td>
+                <td>105</td>
+                <td>42 ¾</td>
+                <td>109</td>
+                <td>44 ¼</td>
+                <td class="odd last">112</td>
+              </tr>
+              <tr>
+                <td >Hollow to Floor</td>
+                <td>58</td>
+                <td>147</td>
+                <td>58</td>
+                <td>147</td>
+                <td>59</td>
+                <td>150</td>
+                <td>59</td>
+                <td>150</td>
+                <td>60</td>
+                <td>152</td>
+                <td>60</td>
+                <td>152</td>
+                <td>61</td>
+                <td>155</td>
+                <td>61</td>
+                <td>155</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="tab-pane" id="maintenance">
+          	<h4>Maintenance</h4>
+            <ol>
+            	<li>When you bought home your beloved wedding dress, after the wedding, you need to preserve it careful and forever. But if you just leave it to a small laundry on the street, you may be regretful, because the maintenance of this wedding dress is different from other expensive clothes. The simple thing you need to do is to know some little tips, and it won't be hard for you to clean and preserve wedding dress by yourself.</li>
+                <li>Wet cleaning is the key of washing wedding dress, because the little decorations on the wedding dress like beadings or lace can not stand the erosion from chemical materials during dry cleaning. The best way is soak wedding dress in the water with mild neutral detergent for a while but not too long. In this way you can clean the stain like red wine, or lard, and even invisible perspiration or white wine can be cleaned.</li>
+                <li>After you cleaned wedding dress and dry thoroughly, then you can collect and preserve it in the cool and dry place, such as closet and even under the bed. But remember, please do not hang it up, because even just the weight of wedding dress has vertical force, which may lengthen it and even tear it.</li>
+                <li>Last but not the least, before you preserve your wedding dress, please do remember clean your hands, and do not stuck on makeup, otherwise, there will be small macula lute on the dress for a long time. What's more, the skirt hoop in the wedding dress can be twisted, but every year, when you ted clothes, please recover the shape of skirt hoop, or it will lose elasticity.</li>
+            </ol>
+          </div>  
+        </div>
+        
+        <!--begin featured product-->
+        <div class="featured-product clearfix" style=" position:relative; margin-top:10px;">
+            <h4>RELATEED PRODUCTS</h4>
+            <!-- begin slider -->
+            <div class="customNavigation">
+              <a class=" prev"><i class="iconfont-angle-left round-icon"></i></a>
+              <a class=" next"><i class="iconfont-angle-right round-icon"></i></a>
+            </div>
+            
+            <div class="owl-carousel owl-example" style="display:block;">
+              <!--begin item-->	
+              <div class="product">
+              	<div class="sale-icon">SALE</div>
+                <div class="photo-wrapper">
+                    <img src="images/pro-24.jpg" alt="" class="img-portrait thumb" />
+                    <div class="icon-style">
+                    	<a href="product_detail.html" class="img-link"></a>
+                        <a href="cart.html" title="Add to Cart"><i class="iconfont-shopping-cart icon-01"></i> </a>
+
+                        <a href="my_account.html" title="Add to Wishlist"><i class="iconfont-heart icon-02"></i></a>
+
+                        <a href="compare_product.html" title="Add to Comapre"><i class="iconfont-refresh icon-03"></i></a>
+                    </div>
+                </div>
+                
+                <div class="entry-main clearfix">
+                	<div class="rate-bar">
+                    	<div class="rateit-selected "></div>
+                    </div>
+                	<span class="recent-order">
+                    	<span class="order">325</span>
+                        <span>orders</span>
+                    </span>
+                    <h5 class="entry-title"><a href="#">Beautiful Strapless Sweetheart Slit Chiffon Pageant Dress</a></h5>                    
+                    <div class="entry-price">
+                    	<s class="entry-discount">$ 380.00</s>
+                        <span class="price">$ 240.00</span>
+                    </div>
+                </div>
+              </div>
+              <!--end item-->
+              
+              <!--begin item-->	
+              <div class="product">
+                <div class="photo-wrapper">
+                    <img src="images/pro-25.jpg" alt="" class="img-portrait thumb" />
+                    <div class="icon-style">
+                    	<a href="product_detail.html" class="img-link"></a>
+                        <a href="cart.html" title="Add to Cart"><i class="iconfont-shopping-cart icon-01"></i> </a>
+
+                        <a href="my_account.html" title="Add to Wishlist"><i class="iconfont-heart icon-02"></i></a>
+
+                        <a href="compare_product.html" title="Add to Comapre"><i class="iconfont-refresh icon-03"></i></a>
+                    </div>
+                </div>
+                
+                <div class="entry-main clearfix">
+                	<div class="rate-bar">
+                    	<div class="rateit-selected "></div>
+                    </div>
+                	<span class="recent-order">
+                    	<span class="order">369</span>
+                        <span>orders</span>
+                    </span>
+                    <h5 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h5>                    
+                    <div class="entry-price">
+                        <span class="price">$ 250.00</span>
+                    </div>
+                </div>
+              </div>
+              <!--end item-->
+              
+              <!--begin item-->	
+              <div class="product">
+              	<div class="sale-icon">SALE</div>
+                <div class="photo-wrapper">
+                    <img src="images/pro-26.jpg" alt="" class="img-portrait thumb" />
+                    <div class="icon-style">
+                    	<a href="product_detail.html" class="img-link"></a>
+                        <a href="cart.html" title="Add to Cart"><i class="iconfont-shopping-cart icon-01"></i> </a>
+
+                        <a href="my_account.html" title="Add to Wishlist"><i class="iconfont-heart icon-02"></i></a>
+
+                        <a href="compare_product.html" title="Add to Comapre"><i class="iconfont-refresh icon-03"></i></a>
+                    </div>
+                </div>
+                
+                <div class="entry-main clearfix">
+                	<div class="rate-bar">
+                    	<div class="rateit-selected "></div>
+                    </div>
+                	<span class="recent-order">
+                    	<span class="order">168</span>
+                        <span>orders</span>
+                    </span>
+                    <h5 class="entry-title"><a href="#">Halter Rhinestone Sleeveless Cocktail Dresses</a></h5>                    
+                    <div class="entry-price">
+                    	<s class="entry-discount">$ 630.00</s>
+                        <span class="price">$ 510.00</span>
+                    </div>
+                </div>
+              </div>
+              <!--end item-->
+              
+              <!--begin item-->	
+              <div class="product">
+                <div class="photo-wrapper">
+                    <img src="images/pro-16.jpg" alt="" class="img-portrait thumb" />
+                    <div class="icon-style">
+                    	<a href="product_detail.html" class="img-link"></a>
+                        <a href="cart.html" title="Add to Cart"><i class="iconfont-shopping-cart icon-01"></i> </a>
+
+                        <a href="my_account.html" title="Add to Wishlist"><i class="iconfont-heart icon-02"></i></a>
+
+                        <a href="compare_product.html" title="Add to Comapre"><i class="iconfont-refresh icon-03"></i></a>
+                    </div>
+                </div>
+                
+                <div class="entry-main clearfix">
+                	<div class="rate-bar">
+                    	<div class="rateit-selected "></div>
+                    </div>
+                	<span class="recent-order">
+                    	<span class="order">210</span>
+                        <span>orders</span>
+                    </span>
+                    <h5 class="entry-title"><a href="#">Halter Rhinestone Sleeveless Cocktail Dresses</a></h5>                    
+                    <div class="entry-price">
+                        <span class="price">$ 250.00</span>
+                    </div>
+                </div>
+              </div>
+              <!--end item-->
+              
+              <!--begin item-->	
+              <div class="product">
+                <div class="entry-media">
+                    <img src="images/pro-15.jpg" alt="" class="img-portrait thumb" />
+                    <div class="icon-style">
+                    	<a href="product_detail.html" class="img-link"></a>
+                        <a href="cart.html" title="Add to Cart"><i class="iconfont-shopping-cart icon-01"></i> </a>
+
+                        <a href="my_account.html" title="Add to Wishlist"><i class="iconfont-heart icon-02"></i></a>
+
+                        <a href="compare_product.html" title="Add to Comapre"><i class="iconfont-refresh icon-03"></i></a>
+                    </div>
+                </div>
+                
+                <div class="entry-main clearfix">
+                	<div class="rate-bar">
+                    	<div class="rateit-selected "></div>
+                    </div>
+                	<span class="recent-order">
+                    	<span class="order">210</span>
+                        <span>orders</span>
+                    </span>
+                    <h5 class="entry-title"><a href="#">Les Deux Magots Dress</a></h5>                    
+                    <div class="entry-price">
+                        <span class="price">$ 250.00</span>
+                    </div>
+                </div>
+              </div>
+              <!--end item-->
+              
+            </div>
+        </div>
+        <!--- end slider -->
+        
+    </div>
+    <!--footer-->
+<footer class="clearfix">
+	<div class="widgets col-xs-12 col-sm-6 col-md-3">
+        <h5 class="widget-title">Customer Service</h5>
+        <div class="widget-content">
+            <ul class="unstyled">
+                <li>
+                    <a href="">Specials</a>
+                </li> 
+                <li>
+                    <a href="">New products</a>
+                </li>
+                <li>
+                    <a href="">Best sellers</a>
+                </li>
+                <li>
+                    <a href="">Our stores</a>
+                </li>
+                <li>
+                    <a href="">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="widgets col-xs-12 col-sm-6 col-md-3">
+        <h5 class="widget-title">INFORMATION</h5>
+        <div class="widget-content">
+            <ul class="unstyled">
+                <li>
+                    <a href="">My Account</a>
+                </li> 
+                <li>
+                    <a href="">Shipping</a>
+                </li>
+                <li>
+                    <a href="">Payment & Return</a>
+                </li>
+                <li>
+                    <a href="">Privacy policy</a>
+                </li>
+                <li>
+                    <a href="">Terms & Conditions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="widgets col-xs-12 col-sm-6 col-md-3">
+        <h5 class="widget-title">My Account</h5>
+        <div class="widget-content">
+            <ul class="unstyled">
+                <li>
+                    <a href="">My Account</a>
+                </li> 
+                <li>
+                    <a href="">Order History</a>
+                </li>
+                <li>
+                    <a href="">Wish List</a>
+                </li>
+                <li>
+                    <a href="">Newsletter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+     
+     
+	<div class="widgets col-xs-12 col-sm-6 col-md-3 clearfix">
+        <h5 class="widget-title">Contact Us</h5>
+        <div class="widget-content">
+            <ul class="unstyled">
+                <li>
+                    <i class="round-icon iconfont-map-marker list-icon"></i>
+                    <a href="" class="list-content">1259, CALIFORNIA ST<br /> NEW YORK.</a>
+                </li>
+                <li>
+                    <i class="round-icon iconfont-phone list-icon"></i>
+                    <a href="" class="list-content">843.724.0123 <br /> 843.724.0234</a>
+                </li>
+                <li>
+                    <i class="round-icon iconfont-envelope-alt list-icon"></i>
+                    <a href="" class="list-content">info@company.com <br />ndt_kim@yahoo.com.vn</a>
+                </li>
+            </ul>
+        </div>
+    </div>   
+    
+            
+    <div class="footer-sub clearfix col-md-12 col-xs-12">
+    	<div class="footer-links center-xs pull-left">
+          <p class="copyright center-xs">© 2014 Fashion Demo Store designed by Kim Nguyen. All Rights Reserved. </p>
+        </div>
+        <div class="center-xs vmid pull-right">
+        	<span>Payment Accept</span>
+            <a href="#"><img src="images/icon-mastercard.png" width="41" height="27"/></a>
+            <a href="#"><img src="images/icon-paypal.png" width="41" height="27"/></a>
+            <a href="#"><img src="images/icon-visa-e.png" width="41" height="27"/></a>
+        </div>
+    </div>
+    <div id="back-top">
+        <a href="#"><i class="iconfont-chevron-up"></i></a>
+    </div>
+</footer>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.dlmenu.js"></script>
+
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/jquery.elevateZoom-3.0.8.min.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox-buttons.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		 $(function () {
+			$("[rel='tooltip']").tooltip();
+		});
+		// Mega menu
+		 $('.has-child').hover(function(){
+			$(this).find('.dropdown-content').stop().slideDown('400','easeInQuad');
+		  },
+		  function(){
+			$(this).find('.dropdown-content').stop().slideUp('slow');
+		  });
+		  
+		  
+		// hide #back-top first
+		$("#back-top").hide();
+		
+		// fade in #back-top
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#back-top').fadeIn();
+				} else {
+					$('#back-top').fadeOut();
+				}
+			});
+	
+			// scroll body to 0px on click
+			$('#back-top a').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+		var owl = $(".owl-example");
+ 		owl.owlCarousel({
+	      navigation : true, // Show next and prev buttons
+		  items : 5,
+		  itemsTablet:	[768,2],
+		  itemsMobile:	[479,1]
+	    });
+		 // Custom Navigation Events
+		  $(".featured-product .next").click(function(){
+			owl.trigger('owl.next');
+		  })
+		  $(".featured-product .prev").click(function(){
+			owl.trigger('owl.prev');
+		  })
+		  
+		$('#myTab a').click(function (e) {
+		  e.preventDefault();
+		  $(this).tab('show');
+		})	  
+		 
+		 $(".zoom").elevateZoom({
+			gallery:'gallery_01', 
+			cursor: 'pointer', 
+			galleryActiveClass: 'active', 
+			imageCrossfade: true, 
+			loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+		}); 
+		
+		//pass the images to Fancybox
+		$(".zoom").bind("click", function(e) {  
+		  var ez =   $('.zoom').data('elevateZoom');	
+			$.fancybox(ez.getGalleryList(),{
+				closeBtn  : false,
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+	
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			  }
+		  });
+		  return false;
+		});	
+
+		$("#gallery_01").owlCarousel({
+		  nav: true,
+		  pagination: false,
+		  items: 5,
+		  // itemsDesktop : [1199,4],
+		  // itemsDesktopSmall : [979,3],
+		  // itemsTablet: [768,3],
+          // smartSpeed:450,
+          // animateOut: 'slideOutUp',
+          // animateIn: 'flipInX',
+		  navText: ['<i class="iconfont-angle-left round-icon" title="Previous"></i>', '<i class="iconfont-angle-right round-icon" title="Next"></i>']
+		});
+		
+		$( '#dl-menu' ).dlmenu();
+	});
+</script>
+</body>
+</html>

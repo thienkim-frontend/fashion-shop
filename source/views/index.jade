@@ -1,0 +1,75 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block content
+  aside.sidebar.col-sm-4.col-md-3.hidden-xs
+    //- category
+    section.category-block
+      header Categories
+      .content-block 
+        ul.list-unstyled
+          +li(["New Arrivals <span>(547)</span>", ""])  
+          +li(["Tops <span>(547)</span>", ""])  
+          +li(["Shirts & Blouses <span>(860)</span>", ""])  
+          +li(["Trousers <span>(118)</span>", ""])  
+          +li(["Jeans <span>(131)</span>", ""])  
+          +li(["Dresses <span>(624)</span>", ""]) 
+    //- visited product 
+    +side-item("product", "You have visited",[["One Shoulder Asymmetric Dress", "pro-02", "125,90"], ["One Shoulder Asymmetric Dress", "pro-02", "125,90"]]).visited-block
+    section.tag-block
+      header Tag Cloud
+      .content-block
+        .tag-cloud
+          +a("New collections", "") 
+          +a("Jacket", "") 
+          +a("Fashion", "") 
+          +a("Casual", "") 
+          +a("Tommy Mancini", "") 
+          +a("Utamur tincidunt", "")
+    +side-item("article", "Latest Articles",[["Quisque a justo magna. Curabitur nec dui non massa.", "blog-10", "Sep 5, 2013"], ["One Shoulder Asymmetric Dress", "pro-02", "125,90"]]).latest-articles
+
+  #col-right.col-md-9.col-sm-8.col-xs-12.default-padding
+    //- home-slider
+    .main-slider.owl-carousel
+      +carousel([["slice01","#"],["slice04","#"], ["slice05", "#"]]).carousel-item        
+    .row.banner-block.clearfix.hidden-sm.margin-20
+      +banner("banner01", "free shipping", "on orders", "over $120")
+      +banner("banner01", "free shipping", "on orders", "over $120")
+      +banner("banner01", "free shipping", "on orders", "over $120")
+    //- featured-product  
+    .featured-product.has-carousel.clearfix
+      h2 New products
+      .customNavigation
+        a.prev: i.fa.fa-angle-left.round-icon
+        a.next: i.fa.fa-angle-right.round-icon
+      .owl-carousel.product-carousel
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+    //- newsletter
+    .newsletter.clearfix
+      .col-md-7
+        span SUBSCRIBE TO NEWSLETTER
+        span.highlight GET A 10% DISCOUNT ON 1ST PURCHASE
+      .col-md-5
+        form(action='', method='post')
+          input(type='email', value='', placeholder='Enter Your Email')
+          button(type='submit') Subscribe
+    .brands.has-carousel.clearfix
+      h2 Our Brand
+      .customNavigation
+        a.prev: i.fa.fa-angle-left.round-icon
+        a.next: i.fa.fa-angle-right.round-icon
+      .owl-carousel.brand-carousel
+        +carousel([["brand01","#"], ["brand02","#"], ["brand03","#"], ["brand04","#"], ["brand05", "#"], ["brand06", "#"], ["brand02","#"], ["brand03","#"]]).brand-item
+
+  
+
+     
