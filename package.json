@@ -1,7 +1,7 @@
 {
-  "name": "Fashion shop - multi pages, responsive website - jade, sass, compass",
+  "name": "Fashion shop",
   "version": "1.0.0",
-  "description": "This website was buit on bootstrap3, html5, css3",
+  "description": "This website was buit on bootstrap3, html5, css3, multi pages, responsive website - jade, sass, compass",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
