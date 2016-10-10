@@ -1,0 +1,228 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block content
+  // Nav tabs
+  ul.cart_nav.nav.nav-tabs
+    li.col-md-3
+      a(href='#cart', data-toggle='tab') Shopping cart
+    li.active.col-md-3
+      a(href='#address', data-toggle='tab') Delivery address
+    li.col-md-3
+      a(href='#shipping', data-toggle='tab') Shipping / payment
+    li.col-md-3
+      a(href='#summary', data-toggle='tab') Summary
+  // Tab panes
+  .tab-content.cart_content
+    #cart.tab-pane.clearfix
+      table.tbl-cart
+        tr
+          th Product Name
+          th.hidden-xs(width='15%') Options
+          th.hidden-xs(width='15%') Unit Price
+          th.hidden-xs(width='15%') Quantity
+          th(width='15%') Sub Total
+        tr
+          td
+            a.cart-thumbnail(href='')
+              img.img-responsive(src='images/pro-20.jpg', alt='')
+            h5
+              a.cart-title(href='')
+                | A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress
+            p.grey-color Order No. 9479976560 - 91
+          td.hidden-xs
+            p
+              span Brand:
+              |  Levise
+            p
+              span Color:
+              |  Black
+            p
+              span Size:
+              |  S
+          td
+            span.unit-price $350.00
+          td
+            input(type='number', value='3')
+          td.hidden-xs
+            button.close(type='button') ×
+            span $350.00
+        tr
+          td
+            a.cart-thumbnail(href='')
+              img.img-responsive(src='images/pro-20.jpg', alt='')
+            h5
+              a.cart-title(href='')
+                | A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress
+            p.grey-color Order No. 9479976560 - 91
+          td.hidden-xs
+            p
+              span Brand:
+              |  Levise
+            p
+              span Color:
+              |  Black
+            p
+              span Size:
+              |  S
+          td
+            span.unit-price $350.00
+          td
+            input(type='number', value='3')
+          td.hidden-xs
+            button.close(type='button') ×
+            span $350.00
+        tr.calculation-block
+          td(colspan='3')
+          td.title-total.text-right
+            p Sub-Total:
+            p VAT (17.5%):
+            p Total:
+          td
+            p $350.00
+            p $350.00
+            p.total $350.00
+      .col-md-12
+        .row
+          button.btn-grey.pull-left(type='button') Continue shopping
+          button.btn-cta.pull-right(type='button') Checkout
+    // end cart
+    // begin address
+    #address.tab-pane.active
+      .row
+        form.form-horizontal.grey-bg(method='post', action='#')
+          fieldset.billing_address.col-md-6.col-sm-6
+            h4 BILLING ADRESS
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12.required First Name
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='firstname')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12.required Last Name
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='lastname')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12 Street name
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='streetname')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12 City
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='city')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12 Country
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='country')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12.required Phone
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='phone')
+            .element.row
+              label.col-md-3.col-sm-4.col-xs-12 Order Comment
+              textarea.col-md-8.col-sm-6.col-xs-12(rows='5', name='message')
+        form.form-horizontal(method='post', action='#')
+          fieldset.shipping_address.col-md-6.col-md-6.col-sm-6
+            .row
+              .col-md-6.col-sm-8.col-xs-12
+                h4 SHIPPING ADRESS
+              .col-md-5.text-right(style='padding-right:0;')
+                label.custom_checkbox.delivery
+                  input(type='checkbox', name='delivery', checked='checked')
+                  b.cb
+                span Same as billing
+            .element.row
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='firstname', disabled='')
+              label.col-md-3.col-sm-4.col-xs-12 First Name
+            .element.row
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='lastname', disabled='')
+              label.col-md-3.col-sm-4.col-xs-12 Last Name
+            .element.row
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='streetname', disabled='')
+              label.col-md-3.col-sm-4.col-xs-12 Street name
+            .element.row
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='city', disabled='')
+              label.col-md-3.col-sm-4.col-xs-12 City
+            .element.row
+              select.disabled.col-md-8.col-sm-6.col-xs-12
+                option(disabled='') Chose option
+                option(disabled='') Chose option
+              label.col-md-3.col-sm-4.col-xs-12 Country
+            .element.row
+              input.col-md-8.col-sm-6.col-xs-12(type='text', name='phone', disabled='')
+              label.col-md-3.col-sm-4.col-xs-12 Phone
+        .col-md-12.col-sm-12.col-xs-12.actions
+          .row
+            a.btn-grey.pull-left(href='') Back to cart
+            a.btn-cta.pull-right(href='') Proceed to shipping
+    // end address
+    // begin shipping
+    #shipping.tab-pane
+      .row
+        form(method='post', action='#')
+          fieldset.col-md-6
+            h4 CHOOSE A TRANSPORT METHOD
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='', checked='checked')
+                a.checked(href='')
+                label(for='') Pick up in store
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='')
+                a(href='')
+                label(for='') Transport courier
+          fieldset.col-md-6
+            h4 SELECT A PAYMENT METHOD
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='', checked='checked')
+                a.checked(href='')
+                label(for='') Bank transfer
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='')
+                a(href='')
+                label(for='') Paypal
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='')
+                a(href='')
+                label(for='') Checkque payment
+            .radio.has-pretty-child
+              .clearfix.prettyradio
+                input.prettyCheckable(type='radio', name='customer', id='')
+                a(href='')
+                label(for='') Secure payment by credit card
+          .col-md-12.actions
+            a.btn-grey.pull-left(href='') Back to delivery
+            a.btn-black.pull-right(href='') Proceed to summary
+    // end shipping
+    // begin summary
+    #summary.tab-pane.clearfix
+      .sumary-blocks.flex.row
+        .col-md-4.col-sm-4.col-sm-12
+          .content-block
+            h4 BILLING INFORMATION
+            ul.list-unstyled
+              li Mr. John Doe
+              li Bakerstreet no.24
+              li 841 11 Bratislava
+              li Slovak Republic
+              li john@doe.com
+        .col-md-4.col-sm-4.col-sm-12
+          .content-block
+            h4 SHIPPING ADRESS
+            ul.list-unstyled
+              li Mr. John Doe
+              li Bakerstreet no.24
+              li 841 11 Bratislava
+              li Slovak Republic
+              li john@doe.com
+        .col-md-4.col-sm-4.col-sm-12
+          .content-block
+            h4 PAYMENT AND DELIVERY
+            ul.list-unstyled
+              li Payment: Cash on delivery
+              li Delivery: Eshop right post
+      .col-md-12.actions
+        a.btn-grey.pull-left(href='') Back to shipping
+        a.btn-cta.pull-right(href='') Send order
+      // end summay

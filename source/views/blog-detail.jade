@@ -1,0 +1,105 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block content
+  .blog-content.col-md-9.col-sm-8.col-xs-12
+    .post-block
+      .post-frame
+        img(src='images/blog.jpg', alt='', style='width:100%;')
+        .post-date
+          .camera.iconfont-camera
+          span 23-09-2013
+      .post-detail.clearfix
+        h3
+          | Tommy Mancini brings the Summer Collection 2013
+          ul.list-unstyled
+            li
+              i.iconfont-user
+              | by Admin
+            li
+              i.iconfont-comments
+              | 4 Comments
+            li
+              i.iconfont-tags
+              |                             Casual, Fashion, Vintage
+          .social-icon
+            a(href='#')
+              i.iconfont-facebook
+            a(href='#')
+              i.iconfont-rss
+            a(href='#')
+              i.iconfont-xing
+            a(href='#')
+              i.iconfont-pinterest
+            a(href='#')
+              i.iconfont-twitter
+      p Lorem ipsum dolor sit amet, consectetur acing elit. Curabitur consequat metus a elittincidunt, a eleifend libero pellentesque. Quisque lputate lorem a vehicula porta. Vestibulum sem ipsum, porttitor tristique pharetra in, commodo eget ipsum. Morbi dui nulla, consequat eget gravida eu, hendrerit posuere tellus.
+      blockquote
+        p A good design can feel like something you have always been waiting for without knowing. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        cite From WWF's website
+      p Lorem ipsum dolor sit amet, consectetur acing elit. Curabitur consequat metus a elittincidunt, a eleifend libero pellentesque. Quisque lputate lorem a vehicula porta. Vestibulum sem ipsum, porttitor tristique pharetra in, commodo eget ipsum. Morbi dui nulla, consequat eget gravida eu, hendrerit posuere tellus. Vestibulum sodales ante a purus volutpat euismod. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor. Morbi non nibh sit amet ligula blandit ullamcorper in nec risus. Pellentesque fringilla diam faucibus tortor bibendum vulputate. Etiam turpis urna, rhoncus et mattis ut, dapibus eu nunc. Nunc sed aliquet nisi.
+    .blog-comment-block
+      h3 Comments (4)
+      ol.list-unstyled
+        li
+          .comment-content.clearfix
+            .comment-block.clearfix
+              .user-avatar
+                img.img-responsive(src='images/avatar-default.jpg', alt='')
+              .comment-text
+                p Ut case complectitur sit. Cum sumo movet necessitatibus et, no sale invidunt usu, ad vix semper latine consectetuer. In per perfecto suscipiantur. Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.
+            .comment-info
+              a.btn-grey.pull-right(href='')
+                i.iconfont-reply-all
+                | Reply
+              strong.user-name Ariston Atilio
+              span.comment-date 20 September, 2013, 21:00
+          ul.list-unstyled.has-child
+            li
+              .comment-content.clearfix
+                .comment-block.clearfix
+                  .user-avatar
+                    img.img-responsive(src='images/avatar-01.jpg', alt='')
+                  .comment-text
+                    p Cum sumo movet necessitatibus et, no sale invidunt usu, ad vix semper latine consectetuer. In per perfecto suscipiantur. Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.
+                .comment-info
+                  a.btn-grey.pull-right(href='')
+                    i.iconfont-reply-all
+                    | Reply
+                  strong.user-name John Smith
+                  span.comment-date 20 September, 2013, 21:00
+        li
+          .comment-content.clearfix
+            .comment-block.clearfix
+              .user-avatar
+                img.img-responsive(src='images/avatar-04.jpg', alt='')
+              .comment-text
+                p
+                  | Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.
+            .comment-info
+              a.btn-grey.pull-right(href='')
+                i.iconfont-reply-all
+                | Reply
+              strong.user-name Luisinho Alojz
+              span.comment-date 20 September, 2013, 21:00
+    .comment-form-block.clearfix
+      h3 Leave a Comment
+      form.col-md-8(action='', method='post')
+        .form-group.row
+          label.required.col-xs-3.col-form-label(for='') Your name:
+          .col-xs-9
+            input.error.form-control(type='text', placeholder='Your name', id='')
+          span.error-msg
+            i.iconfont-warning-sign
+            | This is an error message
+        .form-group.row
+          label.required.col-xs-3.col-form-label(for='') Email:
+          input.col-xs-9(type='text', placeholder='Your name')
+        .form-group.row
+          label.required.col-xs-3.col-form-label(for='') Comment:
+          textarea.col-xs-9(placeholder='Your name', id='', cols='9', rows='9')
+        input.btn-black.col-xs-push-3(type='submit', value='Post a Comment')

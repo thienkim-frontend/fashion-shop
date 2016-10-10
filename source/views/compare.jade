@@ -1,0 +1,31 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block content
+  // begin compare item
+  .compare-column.compare-item.clearfix.col-md-4.col-sm-4.col-xs-6
+    a.remove(href='') ×
+    header PRO-D50021
+    .compare-row.compare-image
+      a(href='', title='')
+        img.img-responsive(src='images/pro-19.jpg', alt='')
+    .compare-row.compare-product
+      a(href='', title='') Les Deux Magots Dress
+    .compare-row.compare-rating.middle-color
+      .rate-bar
+        .rateit-selected
+      span 16 reviews
+    .compare-row.compare-price.active-color
+      strong 125,90 €
+      del.middle-color 147,00 €
+    .compare-row.compare-text
+      | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
+    .compare-row.compare-action
+      button.btn-cta(type='submit') Add to cart
+  // compare item
+  
+
