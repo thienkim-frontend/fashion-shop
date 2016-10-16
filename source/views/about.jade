@@ -1,6 +1,49 @@
-ol.breadcrumb
-  li
-    a(href='#') Home
-  li
-    a(href='#') My account
-  li.active JOHN DOE
+//- extends layout to your side
+extends layout/layout
+mixin feature-item(icon, title, text)
+  .col-md-3.col-sm-6.col-xs-12
+      .content-block
+        .flipImage
+          i(class="iconfont-#{icon} frontImg")
+          i(class="iconfont-#{icon} backImg")
+        h4.title= title
+        p!= text
+mixin team-item(img, name, position, text)
+  .col-md-3.col-sm-6.col-xs-12
+    .content-block
+      .photo-wrapper
+        img.img-responsive(src='images/#{img}.jpg', alt='')
+        .icon-style
+          a(href='javascript:void(0);'): i.iconfont-facebook.icon-01
+          a(href='javascript:void(0);'): i.iconfont-twitter.icon-02
+          a(href='javascript:void(0);'): i.iconfont-rss.icon-03
+      h3= name
+      span.team-position= position
+      p= text
+
+block var
+  - scriptpage = "home";
+  - subPage = "about";
+  - title = "About us";
+block content
+  section.row.flex.who-we-are
+    .col-md-5.col-sm-5
+      img.img-responsive(src='images/about-us-01.jpg', alt='img')
+    .col-md-7.col-sm-7.content-block
+      h2.pusher-t-20 WHO WE ARE
+      blockquote We will increase the value of our company and our global portfolio of diversified brands by exceeding customers' expectations and achieving market leadership and operating excellence in every segment of our company.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel velit ullamcorper arcu pretium porttitor. Nunc enim nisi, posuere ac ipsum nec, condimentum mollis velit. Suspendisse dapibus dui imperdiet, consequat est sagittis, tincidunt metus.
+      p Nunc a fermentum urna. Fusce et lectus vel nisl volutpat egestas. Nulla at diam arcu. Proin faucibus quam nulla. Fusce sed lacinia lorem, sed posuere nunc. Vestibulum congue rhoncus orci sit amet adipiscing. Nullam dignissim porta massa vel tristique. Nulla eget interdum risus. Maecenas blandit ipsum sit amet diam semper pharetra. Donec volutpat commodo libero at adipiscing. Phasellus quis nisl vulputate, pellentesque quam ac, iaculis enim. Praesent rutrum eros a tellus feugiat, non ultricies mauris aliquam. Maecenas ut elit massa.
+  section.features.row.flex
+    +feature-item("gift", "NEW STYLES EVERY DAY", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
+    +feature-item("gift", "NEW STYLES EVERY DAY", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
+    +feature-item("gift", "NEW STYLES EVERY DAY", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
+    
+  section.row.our-team.clearfix
+    h2(style='padding:0 15px;') Meet
+      span.main-color our Team
+    +team-item("team-img-02", "Mr. Vicente Gaby ", "sale assistant", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
+    +team-item("team-img-02", "Mr. Vicente Gaby ", "sale assistant", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
+    +team-item("team-img-02", "Mr. Vicente Gaby ", "sale assistant", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
+    +team-item("team-img-02", "Mr. Vicente Gaby ", "sale assistant", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
+    

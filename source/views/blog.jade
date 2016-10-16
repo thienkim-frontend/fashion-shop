@@ -1,0 +1,56 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block content
+  h2 New collections
+  // Begin blog list
+  .blog-content.clearfix
+    .blog-img.col-md-3.col-sm-4.col-xs-12
+      .row
+        a(href='')
+        img(src='images/blog-02.jpg', alt='')
+        span.thumbnail-arrow
+          i.iconfont-zoom-in
+  .blog-detail.col-md-9.col-sm-8.col-xs-12
+    h4 Zara Lauren brings the Summer Collection 2014
+    .blog-action.clearfix
+      ul.list-unstyled
+        li
+          i.iconfont-user
+          | by Admin |
+        li
+          i.iconfont-comments
+          | 4 Comments |
+        li
+          i.iconfont-time
+          | September 5, 2014
+    p Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia. Suspendisse faucibus, erat ut gravida rhoncus, sapien eros ullamcorper felis, et cursus purus magna id mi.
+    a.btn-black(href='') Read more 
+  // blog list
+
+  // PAGINATION
+  .col-xs-12.col-sm-12.center-xs.default-padding
+    .pagination(style='display:block !important;')
+      ul.unstyled.pull-right.list-inline.center-xs
+        li
+          a(href='')
+            i.iconfont-angle-left
+        li
+          a.active(href='') 1
+        li
+          a(href='') 2
+        li
+          a(href='') 3
+        li
+          a(href='')
+            i.iconfont-angle-right
+      .page-info.pull-left.center-xs
+        | Displaying 
+        strong 1 
+        | to 
+        strong 5
+        |  (of 47 articles)

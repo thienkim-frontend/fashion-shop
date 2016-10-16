@@ -1,356 +1,121 @@
-#accordion.panel-group.account-block
-  .panel.panel-default
-    #headingOne.panel-heading(role='tab')
-      h2.panel-title
-        a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
-          span.step 01
-          |                             Acccount Infomation
-    #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
-      .panel-body
-        div
-          form.form-horizontal(role='form')
-            .row.pusher-b-20
-              .col-xs-12.col-sm-12.col-md-6
-                h3 YOUR PERSONAL DETAILS
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputFirstname') First Name
-                  .col-sm-8.col-lg-8
-                    input#inputFirstname.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputLastname') Last Name
-                  .col-sm-8.col-lg-8
-                    input#inputLastname.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputEmail2') E-Mail
-                  .col-sm-8.col-lg-8
-                    input#inputEmail2.form-control(type='email')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputPhone') Telephone
-                  .col-sm-8.col-lg-8
-                    input#inputPhone.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label(for='inputFax') Fax
-                  .col-sm-8.col-lg-8
-                    input#inputFax.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label(for='inputCompany') Mobile
-                  .col-sm-8.col-lg-8
-                    input#inputCompany.form-control(type='text')
-              .col-xs-12.col-sm-12.col-md-6
-                h3 YOUR ADRESS
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputAddress1') Company
-                  .col-sm-8.col-lg-8
-                    input#inputAddress1.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label(for='inputAddress2') Address
-                  .col-sm-8.col-lg-8
-                    input#inputAddress2.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputCity') City
-                  .col-sm-8.col-lg-8
-                    input#inputCity.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputPostcode') Post Code
-                  .col-sm-8.col-lg-8
-                    input#inputPostcode.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputCountry') Country
-                  .col-sm-8.col-lg-8
-                    select#inputCountry.form-control
-                      option select country
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required(for='inputState') Region/state
-                  .col-sm-8.col-lg-8
-                    select#inputState.form-control
-                      option select state/region
-            .row
-              .col-xs-12.col-sm-12.col-md-6
-                h3 YOUR PASSWORD
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label(for='inputCompany') Password
-                  .col-sm-8.col-lg-8
-                    input#inputCompany.form-control(type='text')
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label(for='inputCompany') Confirm Password
-                  .col-sm-8.col-lg-8
-                    input#inputCompany.form-control(type='text')
-              .col-xs-12.col-sm-12.col-md-6
-                h3 NEWSLETTER
-                .form-group
-                  label.col-sm-4.col-lg-4.control-label.required Subscribe
-                  .col-sm-2.col-lg-3
-                    .radio
-                      .clearfix
-                        input#radio-subscribe-yes.hide(type='radio', name='customer', checked='checked')
-                        a(href='javascript:void(0);')
-                        label(for='radio-subscribe-yes') Yes
-                  .col-sm-2.col-lg-3
-                    .radio.has-child
-                      .clearfix.prettyradio
-                        input#radio-subscribe-no.hide(type='radio', name='customer')
-                        a(href='javascript:void(0);')
-                        label(for='radio-subscribe-no') No
-            .pull-right
-              button.btn-grey Edit
-              button.btn-cta Save
-            .space20.clearfix
-  .panel.panel-default
-    #headingTwo.panel-heading(role='tab')
-      h2.panel-title
-        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-          span.step 02
-          |                                 MY ORDERS
-    #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
-      .panel-body
-        .col-xs-12.col-sm-12
+//- extends layout to your side
+extends layout/layout
+mixin input(id, label, type)
+  .form-group
+    label(class="col-sm-4 col-lg-4 control-label" for=id)&attributes(attributes)= label
+    .col-sm-8.col-lg-8
+      input.form-control(type=type, id=id)
+mixin select(id, label, arrOpt)
+  .form-group
+    label.col-sm-4.col-lg-4.control-label.required(for='inputCountry')= label
+    .col-sm-8.col-lg-8
+      select#inputCountry.form-control
+        for item in arrOpt
+          option= item
+//- table 
+mixin row(arr)
+  tr
+    each item in arr
+      td!= item        
+ 
+
+block var
+  - scriptpage = "home";
+  - subPage = "account";
+  - title = "My account";
+block breadcrumb
+  +breadcrumb([["Home", "index.html"],["Account", "account.html"]], "Kim Nguyen")
+block content
+  #accordion.panel-group.account-block
+    .panel.panel-default
+      #headingOne.panel-heading(role='tab')
+        h2.panel-title
+          a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+            span.step 01
+            | Acccount Infomation
+      #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+        .panel-body
           div
-            table.table.table-responsive.table-striped
-              thead
-                tr
-                  td.width20  Order No. 
-                  td  Order Date 
-                  td  Total 
-                  td  Status 
-                  td.text-right.width13  Details 
-              tbody
-                tr
-                  td
-                    a(href='#')
-                      strong 8172
-                  td Aug 5, 2013
-                  td $109.00
-                  td On hold
-                  td.text-right
-                    a(href='#') View
-                tr
-                  td
-                    a(href='#')
-                      strong 8077
-                  td Jul 25, 2013
-                  td $140.00
-                  td Shipped
-                  td.text-right
-                    a(href='#') View
-                tr
-                  td
-                    a(href='#')
-                      strong 8007
-                  td Jul 18, 2013
-                  td $47.00
-                  td Cancelled
-                  td.text-right
-                    a(href='#') View
-                tr
-                  td
-                    a(href='#')
-                      strong 7980
-                  td Jul 3, 2013
-                  td $18.00
-                  td Shipped
-                  td.text-right
-                    a(href='#') View
-                tr
-                  td
-                    a(href='#')
-                      strong 7872
-                  td Jun 18, 2013
-                  td $35.00
-                  td Shipped
-                  td.text-right
-                    a(href='#') View
-                tr
-                  td
-                    a(href='#')
-                      strong 7723
-                  td May 28, 2013
-                  td $78.00
-                  td Shipped
-                  td.text-right
-                    a(href='#') View
-  .panel.panel-default
-    #headingThree.panel-heading(role='tab')
-      h2.panel-title
-        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-          span.step 03
-          |                             MY WISHLIST
-    #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
-      .panel-body
-        .col-xs-12.col-sm-12
-          .row
-            .col-md-4
-              // begin item
-              .product
-                .remove-icon
-                  i.iconfont-remove-sign
-                .sale-icon SALE
-                .photo-wrapper
-                  img.img-responsive(src='images/pro-15.jpg', alt='')
-                  .icon-style
-                    a.img-link(href='product_detail.html')
-                    a(href='cart.html', title='Add to Cart')
-                      i.iconfont-shopping-cart.icon-01
-                    a(href='my_account.html', title='Add to Wishlist')
-                      i.iconfont-heart.icon-02
-                    a(href='compare_product.html', title='Add to Comapre')
-                      i.iconfont-refresh.icon-03
-                .entry-main.clearfix
-                  .rate-bar
-                    .rateit-selected
-                  span.recent-order
-                    span.order 210
-                    span orders
-                  h5.entry-title
-                    a(href='#') Princess Floor-Length Shoulder Chiffon Dress
-                  .entry-price
-                    s.entry-discount $ 350.00
-                    span.price $ 250.00
-              // end item
-            .col-md-4
-              // begin item
-              .product
-                .remove-icon
-                  i.iconfont-remove-sign
-                .photo-wrapper
-                  img.img-responsive(src='images/pro-09.jpg', alt='')
-                  .icon-style
-                    a.img-link(href='product_detail.html')
-                    a(href='cart.html', title='Add to Cart')
-                      i.iconfont-shopping-cart.icon-01
-                    a(href='my_account.html', title='Add to Wishlist')
-                      i.iconfont-heart.icon-02
-                    a(href='compare_product.html', title='Add to Comapre')
-                      i.iconfont-refresh.icon-03
-                .entry-main.clearfix
-                  .rate-bar
-                    .rateit-selected
-                  span.recent-order
-                    span.order 210
-                    span orders
-                  h5.entry-title
-                    a(href='#') Princess Floor-Length Shoulder Chiffon Dress
-                  .entry-price
-                    span.price $ 250.00
-              // end item
-            .col-md-4
-              // begin item
-              .product
-                .remove-icon
-                  i.iconfont-remove-sign
-                .photo-wrapper
-                  img.img-responsive(src='images/pro-04.jpg', alt='')
-                  .icon-style
-                    a.img-link(href='product_detail.html')
-                    a(href='cart.html', title='Add to Cart')
-                      i.iconfont-shopping-cart.icon-01
-                    a(href='my_account.html', title='Add to Wishlist')
-                      i.iconfont-heart.icon-02
-                    a(href='compare_product.html', title='Add to Comapre')
-                      i.iconfont-refresh.icon-03
-                .entry-main.clearfix
-                  .rate-bar
-                    .rateit-selected
-                  span.recent-order
-                    span.order 210
-                    span orders
-                  h5.entry-title
-                    a(href='#') Princess Floor-Length Shoulder Chiffon Dress
-                  .entry-price
-                    span.price $ 250.00
-              // end item
-  .panel.panel-default
-    #headingFour.panel-heading(role='tab')
-      h2.panel-title
-        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
-          span.step 04
-          |                             Delivery Details
-    #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
-      .panel-body
-        form.form-horizontal(role='form')
-          .col-xs-12.col-sm-12.col-md-6
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputFirstname') First Name
-              .col-sm-8.col-lg-8
-                input#inputFirstname.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputLastname') Last Name
-              .col-sm-8.col-lg-8
-                input#inputLastname.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputEmail2') E-Mail
-              .col-sm-8.col-lg-8
-                input#inputEmail2.form-control(type='email')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputPhone') Telephone
-              .col-sm-8.col-lg-8
-                input#inputPhone.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label(for='inputFax') Fax
-              .col-sm-8.col-lg-8
-                input#inputFax.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label(for='inputCompany') Mobile
-              .col-sm-8.col-lg-8
-                input#inputCompany.form-control(type='text')
-          .col-xs-12.col-sm-12.col-md-6
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputAddress1') Company
-              .col-sm-8.col-lg-8
-                input#inputAddress1.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label(for='inputAddress2') Address
-              .col-sm-8.col-lg-8
-                input#inputAddress2.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputCity') City
-              .col-sm-8.col-lg-8
-                input#inputCity.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputPostcode') Post Code
-              .col-sm-8.col-lg-8
-                input#inputPostcode.form-control(type='text')
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputCountry') Country
-              .col-sm-8.col-lg-8
-                select#inputCountry.form-control
-                  option select country
-            .form-group
-              label.col-sm-4.col-lg-4.control-label.required(for='inputState') Region/state
-              .col-sm-8.col-lg-8
-                select#inputState.form-control
-                  option select state/region
-  .panel.panel-default
-    #headingFive.panel-heading(role='tab')
-      h2.panel-title
-        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
-          span.step 05
-          |                             Payment Method
-    #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
-      .panel-body
-        .col-xs-12.col-sm-12
-          form.paymethod(role='form')
-            .form-group
-              .radio.has-pretty-child
-                .clearfix.prettyradio
-                  input#radio-subscribe-yes.prettyCheckable.hide(type='radio', name='customer', checked='checked')
-                  a.checked(href='')
-                  label(for='radio-subscribe-yes') Direct Bank Transfer
-              p
-                | Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit.
-            .form-group
-              .radio.has-pretty-child
-                .clearfix.prettyradio
-                  input#radio-subscribe-yes.prettyCheckable.hide(type='radio', name='customer', checked='checked')
-                  a(href='')
-                  label(for='radio-subscribe-yes') C.O.D
-              p
-                | Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit.
-            .form-group
-              .radio.has-pretty-child
-                .clearfix.prettyradio
-                  input#radio-subscribe-yes.prettyCheckable.hide(type='radio', name='customer', checked='checked')
-                  a(href='')
-                  label(for='radio-subscribe-yes') PayPal
-              p
-                | Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit.
-            .space20.clearfix
+            form.form-horizontal(role='form', action="#", method="post")
+              .row.pusher-b-20
+                .col-xs-12.col-sm-12.col-md-6
+                  h3 YOUR PERSONAL DETAILS
+                  +input("first-name", "First Name", "text")
+                  +input("last-name", "Last Name", "text")
+                  +input("email", "E-Mail", "email")
+                  +input("phone", "Telephone", "number")
+                  +input("mobile", "Mobile", "number")
+                  +input("fax", "Fax", "number")
+                  
+                .col-xs-12.col-sm-12.col-md-6
+                  h3 YOUR ADRESS
+                  +input("company", "Company", "text")
+                  +input("address", "Address", "text")
+                  +input("city", "City", "text")
+                  +input("post-code", "Post Code", "number")
+                  +select("country", "Country", ["Select Country", "VietNam"])
+                  +select("region", "Region/state", ["Select State/region"])
+              .row
+                .col-xs-12.col-sm-12.col-md-6
+                  h3 YOUR PASSWORD
+                  +input("pass", "Password", "password")
+                  +input("confirm-pass", "Confirm Password", "password")
+
+                .col-xs-12.col-sm-12.col-md-6
+                  h3 NEWSLETTER
+                  .form-group
+                    label.col-sm-4.col-lg-4.control-label.required Subscribe
+                    .col-sm-2.col-lg-3
+                      .radio
+                        .clearfix
+                          input#radio-subscribe-yes.hide(type='radio', name='customer', checked='checked')
+                          a(href='javascript:void(0);')
+                          label(for='radio-subscribe-yes') Yes
+                    .col-sm-2.col-lg-3
+                      .radio.has-child
+                        .clearfix.prettyradio
+                          input#radio-subscribe-no.hide(type='radio', name='customer')
+                          a(href='javascript:void(0);')
+                          label(for='radio-subscribe-no') No
+              .pull-right
+                button.btn-grey Edit
+                button.btn-cta Save
+              .space20.clearfix
+    .panel.panel-default
+      #headingTwo.panel-heading(role='tab')
+        h2.panel-title
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+            span.step 02
+            | MY ORDERS
+      #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+        .panel-body
+          .col-xs-12.col-sm-12
+              table.table.table-responsive.table-striped
+                thead
+                  +row(["No.", "Order Date", "Total", "Status", "Details "])
+                tbody
+                  +row(["8172", "Aug 5, 2013", "$109.00", "On hold", "<a href='javascript:void(0);'>View</a> "])
+                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                  
+    .panel.panel-default
+      #headingThree.panel-heading(role='tab')
+        h2.panel-title
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+            span.step 03
+            | MY WISHLIST
+      #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+        .panel-body
+          .col-xs-12.col-sm-12
+            .row
+              .col-md-4
+                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "$350.00", "210", "$350.00", "-15%", "removable")
+              .col-md-4
+                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+              .col-md-4
+                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+              .col-md-4
+                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+
+    

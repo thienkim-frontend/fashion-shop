@@ -1,13 +1,6 @@
 - function capitalize(string) {
   - return string.charAt(0).toUpperCase() + string.slice(1);
 - }
-mixin breadcrumb(objs, lastitem)
-  ol.col-md-9.hasebz_breadcrumb
-    each item in objs.items
-      li
-        a(href=item[1], title=item[0])!=item[0]
-    li.active!=lastitem
-+breadcrumb({"items":[["Home", "index.html"]]}, "Product")
 mixin filterSize(arr)
   ul.list-unstyled
     each item in arr
@@ -23,6 +16,8 @@ block var
   - scriptpage = "product";
   - subPage = "product";
   - title = "Product page";
+block breadcrumb
+  +breadcrumb([["Home", "index.html"]], "Product")
 block content
   section.filter-block
     header Filter

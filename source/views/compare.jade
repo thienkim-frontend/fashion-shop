@@ -1,0 +1,35 @@
+//- extends layout to your side
+extends layout/layout
+mixin compare-item(id, img, name, reviews, price, discount, description)
+  .compare-column.compare-item.clearfix.col-md-4.col-sm-4.col-xs-6
+    a.remove(href='javscript:void(0);') ×
+    header=id
+    .compare-row.compare-image
+      a(href='javscript:void(0);', title=name)
+        img.img-responsive(src='images/#{img}.jpg', alt=name)
+    .compare-row.compare-product
+      a(href='javscript:void(0);', title=name)= name
+    .compare-row.compare-rating.middle-color
+      .rate-bar
+        .rateit-selected
+      span #{reviews} reviews
+    .compare-row.compare-price.active-color
+      strong= price
+      if (discount)
+        del.middle-color= discount
+    .compare-row.compare-text!= description
+    .compare-row.compare-action
+      button.btn-cta(type='submit') Add to cart
+block var
+  - scriptpage = "home";
+  - subPage = "compare";
+  - title = "Compare page";
+block breadcrumb
+  +breadcrumb([["Home", "index.html"],["Product", "product.html"]], "Compare product")
+block content
+  +compare-item("PRO-D50021", "pro-19", "Les Deux Magots Dress", "16", "125,90 €", "147,00 €", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...")
+  +compare-item("PRO-D50021", "pro-19", "Les Deux Magots Dress", "16", "125,90 €", "147,00 €", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...")
+  +compare-item("PRO-D50021", "pro-19", "Les Deux Magots Dress", "16", "125,90 €", "147,00 €", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...")
+
+  
+

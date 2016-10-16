@@ -1,3 +1,13 @@
+mixin a(text, href)
+  - var href= (typeof(href) === 'undefined' || href =="")? "javascript:void(0);" : href;
+  a(href=href, title=text)&attributes(attributes) #{text}
+mixin breadcrumb(arr, lastitem)
+  ol.col-md-9.hasebz_breadcrumb
+    - for (items in arr)
+      - var item = arr[items]
+      li
+        a(href=item[1], title=item[0])!=item[0]
+    li.active!=lastitem
 mixin carouselProduct(arr)
   #gallery_01.thumbs
     each url in arr
@@ -63,8 +73,14 @@ mixin banner(url, title1, title2, title3)
         p.title01= title1
         p.title02= title2
         p.title03= title3
-mixin product(name, url, price, order)
+mixin product(name, url, price, order, discount, savepercent, removeicon)
+  // begin item
   .product
+    if (removeicon)
+      .remove-icon
+        i.iconfont-remove-sign
+    if (savepercent)
+      .sale-icon= savepercent
     .photo-wrapper
       img(src='images/#{url}.jpg', alt='')
       .icon-style.hidden-list
@@ -82,9 +98,11 @@ mixin product(name, url, price, order)
         span.order= order
         span &nbsp;orders
       h4.entry-title: a(href='#')= name
-      span.price $#{price}
+      s.entry-discount= discount
+      span.price= price
       if(block)
         block
+  // end item
 mixin infoProduct(text)
   .entry-description.visible-list
     p= text

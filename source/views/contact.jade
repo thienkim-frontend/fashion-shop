@@ -1,0 +1,48 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Fashion Shop";
+block breadcrumb
+  +breadcrumb([["Home", "index.html"]], "Contact us")
+block content
+  #map-canvas(style='width: 100%; height:350px; vertical-align:central; margin-bottom:10px;')
+  .col-md-8.col-sm-7.col-sm-12.contact-form.grey-bg
+    .row
+      header(style='text-align:left;') Leave Us a Message 
+      form(action='', method='post')
+        ul
+          li.col-md-4.col-sm-12.col-sm-12
+            input(type='text', name='name', placeholder='Name*', style='width:100%;')
+          li.col-md-4.col-sm-12.col-sm-12
+            input(type='text', name='email', placeholder='Email*', style='width:100%;')
+          li.col-md-4.col-sm-12.col-sm-12
+            input(type='text', name='website', placeholder='Website*', style='width:100%;')
+          li.col-md-12.col-sm-12.col-sm-12
+            textarea(rows='10', cols='10', name='comment', placeholder='Comment*', style='width:100%; margin:10px 0;')
+          li.col-md-2
+            input.btn-black(type='submit', name='name', value='Continue', style='margin-bottom:10px;')
+  .col-md-4.col-sm-5.col-xs-12.address-box(style='padding-right:0;')
+    header Address
+    .address-area(style='padding:0px 10px 10px 10px;')
+      ul.list-unstyled.clearfix
+        li
+          i.round-icon.iconfont-map-marker.list-icon
+          a.list-content(href='')
+            | 1259, CALIFORNIA ST
+            br
+            |  NEW YORK.
+        li
+          i.round-icon.iconfont-phone.list-icon
+          a.list-content(href='')
+            | 843.724.0123 
+            br
+            |  843.724.0234
+        li
+          i.round-icon.iconfont-envelope-alt.list-icon
+          a.list-content(href='')
+            | info@company.com 
+            br
+            | (And we will respond you right away)

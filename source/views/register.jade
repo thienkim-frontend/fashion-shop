@@ -1,0 +1,48 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "register";
+  - title = "Fashion Shop | Register page";
+block content
+  header Account Login
+  .col-xs-12.col-sm-6.col-md-6
+    form(action="#", method="post")#register-frm
+      h4 New Customer
+      .inner
+        p Checkout Options:
+        .form-account
+          .radio.has-pretty-child
+            .clearfix.prettyradio.labelright.blue.fakeInput
+              input#radio-register.prettyCheckable.hide(type='radio', name='customer', checked='checked')
+              a.checked(href='')
+              label(for='radio-register') Register Account
+          .radio.has-pretty-child
+            .clearfix.prettyradio.labelright.blue.fakeInput
+              input#radio-register.prettyCheckable.hide(type='radio', name='customer', checked='checked')
+              a(href='')
+              label(for='radio-register') Guest Checkout
+          p.light-color
+            | By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+          button.btn-grey Continue
+  .col-xs-12.col-sm-6.col-md-6
+    form
+      h4 Returning Customer
+      .inner
+        p I'm a Returning Customer
+        .form-login
+          .form-group.stylish-input
+            label.required(for='inputEmail') Email
+            div(style='position:relative;')
+              input#inputEmail(type='email', style='width:93%;', placeholder='ndt_kim@yahoo.com.vn')
+              .ok-tipbox
+                i.iconfont-ok-sign
+          .form-group.stylish-input
+            label.required(for='inputPassword') Password
+            div(style='position:relative;')
+              input#inputPassword(type='text', style='width:93%;')
+              .error-tipbox
+                i.iconfont-remove-sign
+            a.help-block(href='') Forgot your password?
+          button.btn-black Login
