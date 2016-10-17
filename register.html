@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
+    <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
+    <meta name="author" content="Nguyen Dao Thien Kim">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Fashion Shop | Fashion Shop | Register page</title>
+    <link href="css/plugin.min.css" rel="stylesheet" media="all">
+    <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body class="register">
+    <div class="container">
+      <header class="header-section">
+        <div class="header-inner">
+          <div class="logo-block clearfix">
+            <div class="logo-wrapper"><a href="index.html">Fashion Shop</a></div>
+          </div>
+          <div id="dl-menu" class="dl-menuwrapper visible-xs pull-right">
+            <button class="dl-trigger"><i class="fa fa-reorder"></i></button>
+                  <ul class="dl-menu">
+                          <li class="active"><a href="index.html" title="Home">Home</a>
+                          </li>
+                          <li><a href="javascript:void(0);" title="Women">Women</a></li>
+                          <li><a href="javascript:void(0);" title="Men">Men</a></li>
+                          <li><a href="javascript:void(0);" title="Template pages">Template pages
+                                    <ul class="dl-submenu">
+                                            <li><a href="product_list.html" title="Products grid listing">Products grid listing</a></li>
+                                            <li><a href="product_detail.html" title="Product detail page">Product detail page</a></li>
+                                            <li><a href="compare_product.html" title="Compare products">Compare products</a></li>
+                                            <li><a href="blog.html" title="Blog page">Blog page</a></li>
+                                            <li><a href="cart.html" title="Cart page">Cart page</a></li>
+                                    </ul></a></li>
+                  </ul>
+          </div>
+          <div class="sub-menu hidden-xs">
+            <div class="menu-item clearfix">
+                    <ul class="unstyled-list option-list">
+                      <li class="active"><a href="javascript:void(0);" title="$">$</a></li>
+                      <li><a href="javascript:void(0);" title="£">£</a></li>
+                      <li><a href="javascript:void(0);" title="€">€</a></li>
+                    </ul>
+                    <ul class="unstyled-list option-list">
+                      <li class="active"><a href="javascript:void(0);" title="EN">EN</a></li>
+                      <li><a href="javascript:void(0);" title="FR">FR</a></li>
+                      <li><a href="javascript:void(0);" title="DE">DE</a></li>
+                    </ul>
+            </div>
+            <div class="menu-item">
+                    <ul class="unstyled-list menu-list center-xs">
+                      <li><a href="my_account.html" title="My Account">My Account</a></li>
+                      <li><a href="my_account.html" title="My Wishlist(3)">My Wishlist(3)</a></li>
+                      <li><a href="compare_product.html" title="My Compare(2)">My Compare(2)</a></li>
+                      <li><a href="cart.html" title="Checkout">Checkout</a></li>
+                      <li><a href="register.html" title="Log Out">Log Out</a></li>
+                    </ul>
+            </div>
+          </div>
+          <nav class="menu-block clearfix hidden-xs hidden-sm">
+            <ul class="main-menu unstyled-list">
+                    <li><a href="javascript:void(0);" title="">Home</a>
+                    </li>
+                    <li><a href="javascript:void(0);" title="">Women</a>
+                    </li>
+                    <li><a href="javascript:void(0);" title="">Men</a>
+                    </li>
+                    <li class="has-child"><a href="javascript:void(0);" title="">Template pages<b class='caret'></b></a>
+                      <div class="dropdown-content mega-menu col-md-12"> 
+                              <div class="col-md-3">
+                                <h4 class="menu-title">Common pages</h4>
+                                      <ul class="unstyled-list">
+                                        <li><a href="index.html" title="Home page">Home page</a></li>
+                                        <li><a href="product_list.html" title="Products grid listing">Products grid listing</a></li>
+                                        <li><a href="product_detail.html" title="Product detail page">Product detail page</a></li>
+                                        <li><a href="compare_product.html" title="Compare products">Compare products</a></li>
+                                        <li><a href="my_account.html" title="Wishlist page">Wishlist page</a></li>
+                                      </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h4 class="menu-title">Cart pages</h4>
+                                      <ul class="unstyled-list">
+                                        <li><a href="javascript:void(0);" title="Emty cart">Emty cart</a></li>
+                                        <li><a href="cart.html" title="Checkout step 1">Checkout step 1</a></li>
+                                        <li><a href="blog.html" title="Checkout step 2">Checkout step 2</a></li>
+                                        <li><a href="cart.html" title="Checkout step 3">Checkout step 3</a></li>
+                                        <li><a href="cart.html" title="Checkout step 4">Checkout step 4</a></li>
+                                      </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h4 class="menu-title">My pages</h4>
+                                      <ul class="unstyled-list">
+                                        <li><a href="register.html" title="Registration">Registration</a></li>
+                                        <li><a href="my_account.html" title="My account">My account</a></li>
+                                        <li><a href="blog.html" title="Blog listing">Blog listing</a></li>
+                                        <li><a href="blog_detail.html" title="Blog detail">Blog detail</a></li>
+                                        <li><a href="about_us.html" title="About us">About us</a></li>
+                                        <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                                      </ul>
+                              </div>
+                        <div class="col-md-3">
+                          <div class="carousel">
+                            <div class="carousel-inner">
+                              <div class="item active"><img src="images/slide1.jpg" alt=""></div>
+                              <div class="item"><img src="images/slide2.jpg" alt=""></div>
+                            </div>
+                          </div>
+                          <h5>Lorem ipsum dolor sit, consectetur adipiscing elit. </h5><a href="#" class="btn-black">Go to Shop &rarr;</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="about_us.html" title="">About us</a>
+                    </li>
+                    <li><a href="contact.html" title="">Contact us</a>
+                    </li>
+            </ul>
+            <div class="cart-block has-child pull-right"><a href="#" class="cart-view"><i class="fa fa-shopping-cart"></i><span>My Cart: 4 item(s) - $ 790.00 </span></a>
+              <div class="sub-cart subHeader dropdown-content">
+                <div class="cart-header text-center"><span class="empty-cart hide">Your cart is currently empty.</span><span>Displaying 2 of 4 items</span><a href="#">(See All)</a></div>
+                <ul class="cart-items list-unstyled"> 
+                        <li class="item clearfix">
+                          <button class="close">&times;</button><a href="#" class="entry-thumbnail"><img src="images/pro-17.jpg" alt="pro-17" class="img-responsive"></a>
+                          <div class="info"><a href="#" class="entry-title">Halter Rhinestone Sleeveless Cocktail Dresses</a><span class="entry-price">1 x $ 450.00</span></div>
+                        </li>
+                        <li class="item clearfix">
+                          <button class="close">&times;</button><a href="#" class="entry-thumbnail"><img src="images/pro-21.jpg" alt="pro-21" class="img-responsive"></a>
+                          <div class="info"><a href="#" class="entry-title">Sweetheart High Side Slit Chiffon Pageant Dress</a><span class="entry-price">2 x $ 320.00</span></div>
+                        </li>
+                </ul>
+                <div class="cart-total clearfix"><span class="pull-left">Total</span><span class="pull-right">$790</span></div><a href="javascript:void(0);" class="btn-viewcart pull-right" View Cart ></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="contentWrapper row">
+        <header>Account Login</header>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <form action="#" method="post" id="register-frm">
+            <h4>New Customer</h4>
+            <div class="inner">
+              <p>Checkout Options:</p>
+              <div class="form-account">
+                <div class="radio has-pretty-child">
+                  <div class="clearfix prettyradio labelright blue fakeInput">
+                    <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href="" class="checked"></a>
+                    <label for="radio-register">Register Account</label>
+                  </div>
+                </div>
+                <div class="radio has-pretty-child">
+                  <div class="clearfix prettyradio labelright blue fakeInput">
+                    <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href=""></a>
+                    <label for="radio-register">Guest Checkout</label>
+                  </div>
+                </div>
+                <p class="light-color">By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+                <button class="btn-grey">Continue</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <form>
+            <h4>Returning Customer</h4>
+            <div class="inner">
+              <p>I'm a Returning Customer</p>
+              <div class="form-login">
+                <div class="form-group stylish-input">
+                  <label for="inputEmail" class="required">Email</label>
+                  <div style="position:relative;">
+                    <input id="inputEmail" type="email" style="width:93%;" placeholder="ndt_kim@yahoo.com.vn">
+                    <div class="ok-tipbox"><i class="iconfont-ok-sign"></i></div>
+                  </div>
+                </div>
+                <div class="form-group stylish-input">
+                  <label for="inputPassword" class="required">Password</label>
+                  <div style="position:relative;">
+                    <input id="inputPassword" type="text" style="width:93%;">
+                    <div class="error-tipbox"><i class="iconfont-remove-sign"></i></div>
+                  </div><a href="" class="help-block">Forgot your password?</a>
+                </div>
+                <button class="btn-black">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="widgets clearfix">               
+                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                  <h5 class="widget-title">Customer Service
+                    <div class="widget-content">
+                            <ul class="unstyled-list">
+                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                            </ul>
+                    </div>
+                  </h5>
+                </div>
+                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                  <h5 class="widget-title">Customer Service
+                    <div class="widget-content">
+                            <ul class="unstyled-list">
+                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                            </ul>
+                    </div>
+                  </h5>
+                </div>
+                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                  <h5 class="widget-title">Customer Service
+                    <div class="widget-content">
+                            <ul class="unstyled-list">
+                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                            </ul>
+                    </div>
+                  </h5>
+                </div>
+          <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
+            <h5 class="widget-title">Contact Us</h5>
+            <div class="widget-content">
+              <ul class="list-unstyled">
+                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-sub clearfix col-md-12 col-xs-12">
+          <div class="footer-links center-xs pull-left">
+            <p class="copyright center-xs">&copy; 2014 Fashion Demo Store designed by Kim Nguyen. All Rights Reserved. </p>
+          </div>
+          <div class="center-xs vmid pull-right"><span>Payment Accept</span><a href="#"><img src="images/icon-mastercard.png" width="41" height="27"></a><a href="#"><img src="images/icon-paypal.png" width="41" height="27"></a><a href="#"><img src="images/icon-visa-e.png" width="41" height="27"></a></div>
+        </div>
+      </footer>
+    </div>
+    <div id="back-top"><a href="" title="Back to top"><i class="fa fa-chevron-up"></i></a></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/plugin.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
