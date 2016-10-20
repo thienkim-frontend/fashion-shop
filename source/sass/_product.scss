@@ -238,11 +238,15 @@ product layout - list
 		padding-right: 0;
 	}
 	a{
+		display: block;
 		background:#fff;
 		padding: 10px 15px;
 		&.active{
 			color:#DF0A71 !important;
 		}
+	}
+	.page-info{
+		margin-top: 10px;
 	}
 }
 .product-control{

@@ -19,12 +19,24 @@ block var
 block breadcrumb
   +breadcrumb([["Home", "index.html"]], "Product")
 block content
-  section.filter-block
-    header Filter
-    .content-block
-      .filter-price
-        h5 Filter By Price
-        .noUiSlider
+  aside.sidebar.col-sm-4.col-md-3.hidden-xs
+    //- category
+    section.category-block
+      header Categories
+      .content-block 
+        ul.list-unstyled
+          +li(["New Arrivals <span>(547)</span>", ""])  
+          +li(["Tops <span>(547)</span>", ""])  
+          +li(["Shirts & Blouses <span>(860)</span>", ""])  
+          +li(["Trousers <span>(118)</span>", ""])  
+          +li(["Jeans <span>(131)</span>", ""])  
+          +li(["Dresses <span>(624)</span>", ""]) 
+    section.filter-block
+      header Filter
+      .content-block
+        .filter-price
+          h5 Filter By Price
+          .noUiSlider
         .range-slider-value.clear
           span Price: 
           span#value-min $
@@ -37,8 +49,8 @@ block content
       .filter-color
         h5 Filter By Color
         +filterColor(['white', 'silver', 'black', 'tan', 'green', 'yellow', 'pink', 'tomato', 'purple', 'pattern'])
-  section.products-wrapper
-    header
+  #col-right.col-md-9.col-sm-8.col-xs-12.default-padding
+    section.products-wrapper
       .col-xs-12.col-sm-12.center-xs.product-control(style='background: #fff; margin-bottom: 15px; padding:5px 10px')
         .pull-left.view-filter
           a(href='')
@@ -59,40 +71,40 @@ block content
             select
               option 9 per page
               option 12
-    .products-layout.list.clearfix.row
-      .col-md-4
-        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
-          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
-      .col-md-4
-        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
-          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
-      .col-md-4
-        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
-          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
-      .col-md-4
-        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
-          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
-      .col-md-4
-        +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
-          +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
-      
-  // PAGINATION
-  .pagination
-    ul.unstyled.pull-right.list-inline.center-xs
-      li
-        a(href='')
-          i.iconfont-angle-left
-      li
-        a.active(href='') 1
-      li
-        a(href='') 2
-      li
-        a(href='') 3
-      li ...
-      li
-        a(href='')
-          i.iconfont-angle-right
-    .page-info.pull-left.center-xs
-      | Displaying 
-      strong 1 
-      | to 4 (of 32 products)
+      .products-layout.list.clearfix.row
+        .col-md-4
+          +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+            +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+        .col-md-4
+          +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+            +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+        .col-md-4
+          +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+            +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+        .col-md-4
+          +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+            +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+        .col-md-4
+          +product('Sleeveless Satin Princess Ankle-length Girl Dresses', 'pro-17', '250.00', '210')
+            +infoProduct('Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.')
+        
+    // PAGINATION
+    .pagination
+      ul.unstyled.pull-right.list-inline.center-xs
+        li
+          a(href='')
+            i.iconfont-angle-left
+        li
+          a.active(href='') 1
+        li
+          a(href='') 2
+        li
+          a(href='') 3
+        li ...
+        li
+          a(href='')
+            i.iconfont-angle-right
+      .page-info.pull-left.center-xs
+        | Displaying 
+        strong 1 
+        | to 4 (of 32 products)

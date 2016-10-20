@@ -1,56 +1,68 @@
 //- extends layout to your side
 extends layout/layout
-
-block var
-  - scriptpage = "home";
-  - subPage = "index";
-  - title = "Fashion Shop";
-block content
-  h2 New collections
+mixin blog-item(img, title, author, comment, date, content)
   // Begin blog list
   .blog-content.clearfix
     .blog-img.col-md-3.col-sm-4.col-xs-12
-      .row
-        a(href='')
-        img(src='images/blog-02.jpg', alt='')
+      a(href='')
+        img(src='images/#{img}.jpg', alt=title).img-responsive
         span.thumbnail-arrow
-          i.iconfont-zoom-in
-  .blog-detail.col-md-9.col-sm-8.col-xs-12
-    h4 Zara Lauren brings the Summer Collection 2014
-    .blog-action.clearfix
-      ul.list-unstyled
-        li
-          i.iconfont-user
-          | by Admin |
-        li
-          i.iconfont-comments
-          | 4 Comments |
-        li
-          i.iconfont-time
-          | September 5, 2014
-    p Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia. Suspendisse faucibus, erat ut gravida rhoncus, sapien eros ullamcorper felis, et cursus purus magna id mi.
-    a.btn-black(href='') Read more 
+          i.fa.fa-search-plus
+    .blog-detail.col-md-9.col-sm-8.col-xs-12
+      h4= title
+      .blog-action.clearfix
+        ul.list-inline
+          li
+            i.fa.fa-user 
+            | by #{author}
+          li
+            i.fa.fa-comments 
+            | #{comment} Comments
+          li
+            i.fa.fa-clock-o
+            | #{date}
+      p!= content
+      +a("Read more", "").btn-cta
   // blog list
+block var
+  - scriptpage = "home";
+  - subPage = "blog-page";
+  - title = "Blog page";
+block breadcrumb
+  +breadcrumb([["Home", "index.html"],["Blog", ""]], "New collections")
+block content
+  aside.sidebar.col-sm-4.col-md-3.hidden-xs
+    //- category
+    section.category-block
+      header Categories
+      .content-block 
+        ul.list-unstyled
+          +li(["New Arrivals <span>(547)</span>", ""])  
+          +li(["Tops <span>(547)</span>", ""])  
+          +li(["Shirts & Blouses <span>(860)</span>", ""])  
+          +li(["Trousers <span>(118)</span>", ""])  
+          +li(["Jeans <span>(131)</span>", ""])  
+          +li(["Dresses <span>(624)</span>", ""]) 
+    //- visited product 
+    +side-item("product", "You have visited",[["One Shoulder Asymmetric Dress", "pro-02", "125,90"], ["One Shoulder Asymmetric Dress", "pro-02", "125,90"]]).visited-block
+    section.tag-block
+      header Tag Cloud
+      .content-block
+        .tag-cloud
+          +a("New collections", "") 
+          +a("Jacket", "") 
+          +a("Fashion", "") 
+          +a("Casual", "") 
+          +a("Tommy Mancini", "") 
+          +a("Utamur tincidunt", "")
+    +side-item("article", "Latest Articles",[["Quisque a justo magna. Curabitur nec dui non massa.", "blog-10", "Sep 5, 2013"], ["One Shoulder Asymmetric Dress", "pro-02", "125,90"]]).latest-articles
 
-  // PAGINATION
-  .col-xs-12.col-sm-12.center-xs.default-padding
-    .pagination(style='display:block !important;')
-      ul.unstyled.pull-right.list-inline.center-xs
-        li
-          a(href='')
-            i.iconfont-angle-left
-        li
-          a.active(href='') 1
-        li
-          a(href='') 2
-        li
-          a(href='') 3
-        li
-          a(href='')
-            i.iconfont-angle-right
-      .page-info.pull-left.center-xs
-        | Displaying 
-        strong 1 
-        | to 
-        strong 5
-        |  (of 47 articles)
+  #col-right.col-md-9.col-sm-8.col-xs-12
+    //- h2 New collections
+    +blog-item("blog-02", "Zara Lauren brings the Summer Collection 2014", "Admin", "4", "September 5, 2014", "Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.")
+    +blog-item("blog-02", "Zara Lauren brings the Summer Collection 2014", "Admin", "4", "September 5, 2014", "Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.")
+    +blog-item("blog-02", "Zara Lauren brings the Summer Collection 2014", "Admin", "4", "September 5, 2014", "Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.")
+    +blog-item("blog-02", "Zara Lauren brings the Summer Collection 2014", "Admin", "4", "September 5, 2014", "Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.")
+
+    // PAGINATION
+    +pagination(3, 5, 4, 22)

@@ -2,7 +2,7 @@ mixin a(text, href)
   - var href= (typeof(href) === 'undefined' || href =="")? "javascript:void(0);" : href;
   a(href=href, title=text)&attributes(attributes) #{text}
 mixin breadcrumb(arr, lastitem)
-  ol.col-md-9.hasebz_breadcrumb
+  ol.breadcrumb
     - for (items in arr)
       - var item = arr[items]
       li
@@ -34,28 +34,27 @@ mixin article(title, author, date, content)
         span.date= date
       p!= content
       +social-icon(['twitter', 'linkedin', 'facebook', 'xing', 'rss'])
-mixin pagination(start, numPages, curr, base)
+mixin pagination(start, numPages, curr, total)
   - start    = start    || 1
   - numPages = numPages || 10
   - curr     = curr     || 1
   .pagination
-    ul
+    ul.pull-right.list-inline.center-xs&attributes(attributes)
       - if(curr==1) 
         li.disabled
-          a(href='#') Prev
+          a(href='#'): i.fa.fa-angle-left
       - else
-        li
-          a(href='#') Prev
+        li 
+          a(href='#'): i.fa.fa-angle-left
       - for(var i=start;i<start+numPages;i++)
         - if(i==curr)
-          li.active
-            a(href="javascript:void(0);") #{i}
+          li.active: a(href="javascript:void(0);") #{i}
         - else
-          li
-            a(href="javascript:void(0);") #{i}
+          li: a(href="javascript:void(0);") #{i}
       li
-        a(href='#') Next
-
+        a(href='#'): i.fa.fa-angle-right
+    .page-info.pull-left.center-xs
+      | Displaying #{start} to #{start+numPages-1} (of #{total} articles)
 
 //- home page
 mixin carousel(url)
@@ -123,7 +122,7 @@ mixin side-item(type, heading, arr)
       ul.list-unstyled
         for item in arr
           li.list-item.clearfix
-            a(href=''): img(src='../images/#{item[1]}.jpg', alt='')
+            a(href=''): img(src='./images/#{item[1]}.jpg', alt='')
             .detail
               span.title= item[0]
               if (type == "article")

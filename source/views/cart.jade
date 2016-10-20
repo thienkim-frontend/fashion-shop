@@ -1,9 +1,9 @@
 //- extends layout to your side
 extends layout/layout
-mixin radio-custom(id, label, checked)
+mixin radio-custom(id, label)
   .radio.has-pretty-child
     .clearfix.prettyradio
-      input.prettyCheckable(type='radio', name=id, id=id, checked)
+      input.prettyCheckable(type='radio', name=id, id=id)&attributes(attributes)
       a.checked(href='')
       label(for=id)= label
 mixin input-cart(id, label, type)
@@ -37,7 +37,7 @@ mixin cart-row(img, name, id, brand, color, size, price, number, total)
       span= total
 block var
   - scriptpage = "home";
-  - subPage = "index";
+  - subPage = "cart";
   - title = "Fashion Shop";
 block breadcrumb
   +breadcrumb([["Home", "index.html"]], "Cart page")
@@ -63,7 +63,7 @@ block content
           th.hidden-xs(width='15%') Quantity
           th(width='15%') Sub Total
         +cart-row("pro-20", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")
-          
+        +cart-row("pro-20", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")  
         tr.calculation-block
           td(colspan='3')
           td.title-total.text-right
@@ -125,15 +125,15 @@ block content
         form(method='post', action='#')
           fieldset.col-md-6
             h4 CHOOSE A TRANSPORT METHOD
-            +radio-custom("store", "Pick up in store", "checked")
-            +radio-custom("courier", "Transport courier", "")
+            +radio-custom("store", "Pick up in store")(checked)
+            +radio-custom("courier", "Transport courier")
 
           fieldset.col-md-6
             h4 SELECT A PAYMENT METHOD
-            +radio-custom("bank", "Bank transfer", "checked")
-            +radio-custom("paypal", "Paypal", "")
-            +radio-custom("checkque", "Checkque payment", "")
-            +radio-custom("card", "Secure payment by credit card", "")
+            +radio-custom("bank", "Bank transfer")(checked)
+            +radio-custom("paypal", "Paypal")
+            +radio-custom("checkque", "Checkque payment")
+            +radio-custom("card", "Secure payment by credit card")
 
           .col-md-12.actions
             +a("Back to delivery", "").btn-grey.pull-left 

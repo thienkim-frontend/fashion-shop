@@ -1,8 +1,8 @@
 mixin footer-menu(heading, content) 
   .widget.col-xs-12.col-sm-6.col-md-3
     h5.widget-title Customer Service
-      .widget-content
-        +menu(content)
+    .widget-content
+      +menu(content)
 footer
   .widgets.clearfix                
     +footer-menu('Customer Service', [['Specials',''], ['New products',''], ['Best sellers',''], ['Our stores',''], ['Contact us','contact.html']])
@@ -13,13 +13,13 @@ footer
       .widget-content
         ul.list-unstyled
           li
-            i.round-icon.iconfont-map-marker.list-icon
+            i.round-icon.fa.fa-map-marker.list-icon
             span 1259, CALIFORNIA ST <br/> NEW YORK.
           li
-            i.round-icon.iconfont-phone.list-icon
+            i.round-icon.fa.fa-phone.list-icon
             span 843.724.0123 <br/> 843.724.0234
           li
-            i.round-icon.iconfont-envelope-alt.list-icon
+            i.round-icon.fa.fa-envelope.list-icon
             span info@company.com <br/> ndt_kim@yahoo.com.vn
   .footer-sub.clearfix.col-md-12.col-xs-12
     .footer-links.center-xs.pull-left

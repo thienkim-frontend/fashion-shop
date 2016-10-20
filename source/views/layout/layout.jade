@@ -16,7 +16,7 @@ html(lang='en')
     meta(name='description', content='Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.')
     meta(name='keywords', content='html5, responsive, shop theme, CSS3, bootstrap theme ')
     meta(name='author', content='Nguyen Dao Thien Kim')
-    link(rel='icon', href='images/favicon.ico' type='image/x-icon')    
+    link(rel='icon', href='./images/favicon.ico' type='image/x-icon')    
     title Fashion Shop | #{title}
     link(href='css/plugin.min.css', rel='stylesheet', media='all')
     link(href='css/style.css', rel='stylesheet', media='all')
@@ -50,6 +50,8 @@ html(lang='en')
     .container
         //- include header
         include ../includes/header
+        .breadcrumb-wrapper
+            block breadcrumb
         .contentWrapper.row
             block content
         //- include footer
