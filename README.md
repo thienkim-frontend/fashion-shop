@@ -12,19 +12,21 @@
 
 ### Overview
 
+```
 Fashion shop is a responsive website built on
 
-  * [Jade](https://github.com/pugjs/pug)
-  * [Sass](http://sass-lang.com/)
-  * [Compass](http://compass-style.org/)
-  * [Grunt](http://gruntjs.com/)
-  * [Bootstrap](http://getbootstrap.com/)
-  * [Font Awesome](http://fontawesome.io/)
-  * [OWL Carousel js](http://owlgraphic.com/owlcarousel/)
-  * [Fancybox js](http://fancybox.net/)
-  * [Dlmenu js](http://www.jqueryscript.net/menu/jQuery-Responsive-Multi-Level-Menu-Plugin-Dlmenu.html)
-  * [ Elevatezoom js](http://www.elevateweb.co.uk/image-zoom)
-  * [ noUiSlider js](https://refreshless.com/nouislider/)
+Jade                 https://github.com/pugjs/pug
+Sass                 http://sass-lang.com/
+Compass              http://compass-style.org/
+Grunt                http://gruntjs.com/
+Bootstrap            http://getbootstrap.com/
+Font Awesome         http://fontawesome.io/
+OWL Carousel js      http://owlgraphic.com/owlcarousel/
+Fancybox js          http://fancybox.net/
+Dlmenu js            http://www.jqueryscript.net/menu/jQuery-Responsive-Multi-Level-Menu-Plugin-Dlmenu.html
+ Elevatezoom js      http://www.elevateweb.co.uk/image-zoom
+ noUiSlider js       https://refreshless.com/nouislider/
+```
 
 ### What's included
 
