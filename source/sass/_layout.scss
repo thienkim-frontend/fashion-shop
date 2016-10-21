@@ -2,6 +2,7 @@ body{
   background: #f8f8f8 url(../images/white_wall.png);
   font-family: $font;
   font-size: $base-fontsize;
+  line-height: 1.5em;
 }
 h2{
   text-transform: uppercase;
@@ -119,6 +120,9 @@ blockquote{
   &-grey{
     background-color: rgb(221, 221, 221);
   }
+  &-black{
+    background-color: $black;
+  }
   &-outline{
     color: $grey;
     border: 1px solid $grey;
@@ -179,4 +183,16 @@ input:disabled, option:disabled, select.disabled{
     -moz-osx-font-smoothing: grayscale;
     cursor: default;
   }
+}
+.content-inner{
+  padding: 15px;
+  background-color: $white;
+}
+.list-icon {
+  float: left;
+  margin-right: 10px;
+}
+.list-block li{
+  margin-top: 15px;
+  display: block;
 }

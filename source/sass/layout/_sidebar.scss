@@ -1,16 +1,16 @@
+.contentWrapper header{
+	padding: 10px 15px;
+	color: $white;
+	font-weight:bold;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $black;
+}
 .sidebar{
 	section {
 		margin-bottom: 20px;
 		background: $white;
 		@include box-shadow(0 1px 4px rgba(0,0,0,.2)) ; 
-	}
-	header{
-		padding: 10px 15px;
-		color: $white;
-		font-weight:bold;
-		text-align: center;
-		text-transform: uppercase;
-		background-color: $black;
 	}
 	.content-block{
 		padding: 10px;

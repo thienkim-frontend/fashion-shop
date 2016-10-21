@@ -47,6 +47,7 @@ module.exports = function (grunt) {
                     cssDir: '<%= meta.public %>css',
                     environment: 'production',
                     outputStyle: 'expanded',
+                    sourcemap: true,
                     force: true
                 }
             }
@@ -56,7 +57,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= meta.imgs %>',
-                    src: '**/*.{png,gif,jpg,sgv,pdf}',
+                    src: '**/*.{png,gif,jpg,sgv,pdf,ico}',
                     dest: '<%= meta.public %>images',
                     filter: 'isFile',
                     flatten: false
@@ -123,7 +124,7 @@ module.exports = function (grunt) {
             options: {
                 base: 'public',
                 branch: 'gh-pages',
-                repo: 'https://github.com/thienkim2610/cv.git'
+                repo: 'https://github.com/thienkim-frontend/fashion-shop.git'
             },
             src: '**/*'
         }
