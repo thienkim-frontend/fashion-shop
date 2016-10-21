@@ -10,7 +10,7 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Fashion Shop | Fashion Shop | Product Detail</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
@@ -140,6 +140,8 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+      </div>
       <div class="contentWrapper row">
         <div class="preview-block clearfix">
           <div class="product-preview col-md-4">
@@ -329,15 +331,16 @@
                 </div>
               </article>
               <div class="pagination">
-                <ul>
-                  <li class="disabled"><a href="#">Prev</a></li>
+                <ul class="pull-right list-inline center-xs">
+                  <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
                   <li><a href="javascript:void(0);">2</a></li>
                   <li><a href="javascript:void(0);">3</a></li>
                   <li><a href="javascript:void(0);">4</a></li>
                   <li><a href="javascript:void(0);">5</a></li>
                   <li><a href="javascript:void(0);">6</a></li>
-                  <li><a href="#">Next</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                 </ul>
+                <div class="page-info pull-left center-xs">Displaying 2 to 6 (of  articles)</div>
               </div>
             </div>
           </div>
@@ -548,50 +551,47 @@
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>

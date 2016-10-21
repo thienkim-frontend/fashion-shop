@@ -10,14 +10,14 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Fashion Shop | Fashion Shop</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Fashion Shop | Blog page</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body class="index">
+  <body class="blog-page">
     <div class="container">
       <header class="header-section">
         <div class="header-inner">
@@ -140,87 +140,196 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="" title="Blog">Blog</a></li>
+          <li class="active">New collections</li>
+        </ol>
+      </div>
       <div class="contentWrapper row">
-        <h2>New collections</h2>
-        <!-- Begin blog list-->
-        <div class="blog-content clearfix">
-          <div class="blog-img col-md-3 col-sm-4 col-xs-12">
-            <div class="row"><a href=""></a><img src="images/blog-02.jpg" alt=""><span class="thumbnail-arrow"><i class="iconfont-zoom-in"></i></span></div>
+        <aside class="sidebar col-sm-4 col-md-3 hidden-xs">
+          <section class="category-block">
+            <header>Categories</header>
+            <div class="content-block"> 
+              <ul class="list-unstyled">
+                      <li><a href="javascript:void(0);" title="">New Arrivals <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Tops <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Shirts & Blouses <span>(860)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Trousers <span>(118)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Jeans <span>(131)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Dresses <span>(624)</span></a> 
+                      </li>
+              </ul>
+            </div>
+          </section>
+          <section class="visited-block">
+            <header>You have visited</header>
+            <div class="content-block">
+              <ul class="list-unstyled">
+                <li class="list-item clearfix"><a href=""><img src="./images/pro-02.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">One Shoulder Asymmetric Dress</span><span class="price">$125,90</span>
+                  </div>
+                </li>
+                <li class="list-item clearfix"><a href=""><img src="./images/pro-02.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">One Shoulder Asymmetric Dress</span><span class="price">$125,90</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="tag-block">
+            <header>Tag Cloud</header>
+            <div class="content-block">
+              <div class="tag-cloud"><a href="javascript:void(0);" title="New collections">New collections</a><a href="javascript:void(0);" title="Jacket">Jacket</a><a href="javascript:void(0);" title="Fashion">Fashion</a><a href="javascript:void(0);" title="Casual">Casual</a><a href="javascript:void(0);" title="Tommy Mancini">Tommy Mancini</a><a href="javascript:void(0);" title="Utamur tincidunt">Utamur tincidunt</a>
+              </div>
+            </div>
+          </section>
+          <section class="latest-articles">
+            <header>Latest Articles</header>
+            <div class="content-block">
+              <ul class="list-unstyled">
+                <li class="list-item clearfix"><a href=""><img src="./images/blog-10.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">Quisque a justo magna. Curabitur nec dui non massa.</span><span><i class="fa fa-clock-o"></i>Sep 5, 2013 </span>
+                  </div>
+                </li>
+                <li class="list-item clearfix"><a href=""><img src="./images/pro-02.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">One Shoulder Asymmetric Dress</span><span><i class="fa fa-clock-o"></i>125,90 </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </aside>
+        <div id="col-right" class="col-md-9 col-sm-8 col-xs-12">
+          <!-- Begin blog list-->
+          <div class="blog-content clearfix">
+            <div class="blog-img col-md-3 col-sm-4 col-xs-12"><a href=""><img src="images/blog-02.jpg" alt="Zara Lauren brings the Summer Collection 2014" class="img-responsive"/><span class="thumbnail-arrow"><i class="fa fa-search-plus"></i></span></a></div>
+            <div class="blog-detail col-md-9 col-sm-8 col-xs-12">
+              <h4>Zara Lauren brings the Summer Collection 2014</h4>
+              <div class="blog-action clearfix">
+                <ul class="list-inline">
+                  <li><i class="fa fa-user"> </i>by Admin</li>
+                  <li><i class="fa fa-comments"> </i>4 Comments</li>
+                  <li><i class="fa fa-clock-o"></i>September 5, 2014</li>
+                </ul>
+              </div>
+              <p>Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.</p><a href="javascript:void(0);" title="Read more" class="btn-cta">Read more</a>
+            </div>
           </div>
-        </div>
-        <div class="blog-detail col-md-9 col-sm-8 col-xs-12">
-          <h4>Zara Lauren brings the Summer Collection 2014</h4>
-          <div class="blog-action clearfix">
-            <ul class="list-unstyled">
-              <li><i class="iconfont-user"></i>by Admin |</li>
-              <li><i class="iconfont-comments"></i>4 Comments |</li>
-              <li><i class="iconfont-time"></i>September 5, 2014</li>
-            </ul>
+          <!-- blog list-->
+          <!-- Begin blog list-->
+          <div class="blog-content clearfix">
+            <div class="blog-img col-md-3 col-sm-4 col-xs-12"><a href=""><img src="images/blog-02.jpg" alt="Zara Lauren brings the Summer Collection 2014" class="img-responsive"/><span class="thumbnail-arrow"><i class="fa fa-search-plus"></i></span></a></div>
+            <div class="blog-detail col-md-9 col-sm-8 col-xs-12">
+              <h4>Zara Lauren brings the Summer Collection 2014</h4>
+              <div class="blog-action clearfix">
+                <ul class="list-inline">
+                  <li><i class="fa fa-user"> </i>by Admin</li>
+                  <li><i class="fa fa-comments"> </i>4 Comments</li>
+                  <li><i class="fa fa-clock-o"></i>September 5, 2014</li>
+                </ul>
+              </div>
+              <p>Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.</p><a href="javascript:void(0);" title="Read more" class="btn-cta">Read more</a>
+            </div>
           </div>
-          <p>Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia. Suspendisse faucibus, erat ut gravida rhoncus, sapien eros ullamcorper felis, et cursus purus magna id mi.</p><a href="" class="btn-black">Read more </a>
-        </div>
-        <!-- blog list-->
-        <!-- PAGINATION-->
-        <div class="col-xs-12 col-sm-12 center-xs default-padding">
-          <div style="display:block !important;" class="pagination">
-            <ul class="unstyled pull-right list-inline center-xs">
-              <li><a href=""><i class="iconfont-angle-left"></i></a></li>
-              <li><a href="" class="active">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-              <li><a href=""><i class="iconfont-angle-right"></i></a></li>
+          <!-- blog list-->
+          <!-- Begin blog list-->
+          <div class="blog-content clearfix">
+            <div class="blog-img col-md-3 col-sm-4 col-xs-12"><a href=""><img src="images/blog-02.jpg" alt="Zara Lauren brings the Summer Collection 2014" class="img-responsive"/><span class="thumbnail-arrow"><i class="fa fa-search-plus"></i></span></a></div>
+            <div class="blog-detail col-md-9 col-sm-8 col-xs-12">
+              <h4>Zara Lauren brings the Summer Collection 2014</h4>
+              <div class="blog-action clearfix">
+                <ul class="list-inline">
+                  <li><i class="fa fa-user"> </i>by Admin</li>
+                  <li><i class="fa fa-comments"> </i>4 Comments</li>
+                  <li><i class="fa fa-clock-o"></i>September 5, 2014</li>
+                </ul>
+              </div>
+              <p>Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.</p><a href="javascript:void(0);" title="Read more" class="btn-cta">Read more</a>
+            </div>
+          </div>
+          <!-- blog list-->
+          <!-- Begin blog list-->
+          <div class="blog-content clearfix">
+            <div class="blog-img col-md-3 col-sm-4 col-xs-12"><a href=""><img src="images/blog-02.jpg" alt="Zara Lauren brings the Summer Collection 2014" class="img-responsive"/><span class="thumbnail-arrow"><i class="fa fa-search-plus"></i></span></a></div>
+            <div class="blog-detail col-md-9 col-sm-8 col-xs-12">
+              <h4>Zara Lauren brings the Summer Collection 2014</h4>
+              <div class="blog-action clearfix">
+                <ul class="list-inline">
+                  <li><i class="fa fa-user"> </i>by Admin</li>
+                  <li><i class="fa fa-comments"> </i>4 Comments</li>
+                  <li><i class="fa fa-clock-o"></i>September 5, 2014</li>
+                </ul>
+              </div>
+              <p>Quisque a justo magna. Curabitur nec dui non massa tempor dictum. Pellentesque leo lacus, venenatis quis rhoncus eu, vulputate sed ante. Mauris mattis tempus velit vel lacinia.</p><a href="javascript:void(0);" title="Read more" class="btn-cta">Read more</a>
+            </div>
+          </div>
+          <!-- blog list-->
+          <!-- PAGINATION-->
+          <div class="pagination">
+            <ul class="pull-right list-inline center-xs">
+              <li> <a href="#"><i class="fa fa-angle-left"></i></a></li>
+              <li><a href="javascript:void(0);">3</a></li>
+              <li class="active"><a href="javascript:void(0);">4</a></li>
+              <li><a href="javascript:void(0);">5</a></li>
+              <li><a href="javascript:void(0);">6</a></li>
+              <li><a href="javascript:void(0);">7</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
             </ul>
-            <div class="page-info pull-left center-xs">Displaying <strong>1 </strong>to <strong>5</strong> (of 47 articles)</div>
+            <div class="page-info pull-left center-xs">Displaying 3 to 7 (of 22 articles)</div>
           </div>
         </div>
       </div>
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>

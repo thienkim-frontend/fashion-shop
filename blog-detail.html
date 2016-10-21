@@ -10,14 +10,14 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Fashion Shop | Fashion Shop</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body class="index">
+  <body class="blog-detail">
     <div class="container">
       <header class="header-section">
         <div class="header-inner">
@@ -140,126 +140,156 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="" title="Blog">Blog</a></li>
+          <li><a href="" title="New collections">New collections</a></li>
+          <li class="active">Summer collections 2013</li>
+        </ol>
+      </div>
       <div class="contentWrapper row">
-        <div class="blog-content col-md-9 col-sm-8 col-xs-12">
-          <div class="post-block">
-            <div class="post-frame"><img src="images/blog.jpg" alt="" style="width:100%;">
-              <div class="post-date">
-                <div class="camera iconfont-camera"></div><span>23-09-2013</span>
+        <aside class="sidebar col-sm-4 col-md-3 hidden-xs">
+          <section class="category-block">
+            <header>Categories</header>
+            <div class="content-block"> 
+              <ul class="list-unstyled">
+                      <li><a href="javascript:void(0);" title="">New Arrivals <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Tops <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Shirts & Blouses <span>(860)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Trousers <span>(118)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Jeans <span>(131)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Dresses <span>(624)</span></a> 
+                      </li>
+              </ul>
+            </div>
+          </section>
+          <section class="visited-block">
+            <header>You have visited</header>
+            <div class="content-block">
+              <ul class="list-unstyled">
+                <li class="list-item clearfix"><a href=""><img src="./images/pro-02.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">One Shoulder Asymmetric Dress</span><span class="price">$125,90</span>
+                  </div>
+                </li>
+                <li class="list-item clearfix"><a href=""><img src="./images/pro-02.jpg" alt=""/></a>
+                  <div class="detail"><span class="title">One Shoulder Asymmetric Dress</span><span class="price">$125,90</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="tag-block">
+            <header>Tag Cloud</header>
+            <div class="content-block">
+              <div class="tag-cloud"><a href="javascript:void(0);" title="New collections">New collections</a><a href="javascript:void(0);" title="Jacket">Jacket</a><a href="javascript:void(0);" title="Fashion">Fashion</a><a href="javascript:void(0);" title="Casual">Casual</a><a href="javascript:void(0);" title="Tommy Mancini">Tommy Mancini</a><a href="javascript:void(0);" title="Utamur tincidunt">Utamur tincidunt</a>
               </div>
             </div>
-            <div class="post-detail clearfix">
-              <h3>Tommy Mancini brings the Summer Collection 2013
+          </section>
+        </aside>
+        <div id="col-right" class="col-md-9 col-sm-8 col-xs-12">
+          <div class="blog-content">
+            <div class="post-block">
+              <div class="post-frame"><img src="images/blog.jpg" alt="" style="width:100%;">
+                <div class="post-date">
+                  <div class="camera fa fa-camera"></div><span>23-09-2013</span>
+                </div>
+              </div>
+              <div class="post-detail clearfix">
+                <h3>Tommy Mancini brings the Summer Collection 2013</h3>
                 <ul class="list-unstyled">
-                  <li><i class="iconfont-user">by Admin</i></li>
-                  <li><i class="iconfont-comments">4 Comments</i></li>
-                  <li><i class="iconfont-tags">Casual, Fashion, Vintage</i></li>
+                  <li><i class="fa fa-user"> </i>by Admin</li>
+                  <li><i class="fa fa-comments"> </i>4 Comments</li>
+                  <li><i class="fa fa-tags"> </i>Casual, Fashion, Vintage</li>
                 </ul>
                 <div class="social-icon"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a><a href="javascript:void(0);"><i class="fa fa-xing"></i></a><a href="javascript:void(0);"><i class="fa fa-rss"></i></a>
                 </div>
-              </h3>
+              </div>
+              <blockquote>
+                <p>A good design can feel like something you have always been waiting for without knowing. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <cite>From WWF's website</cite>
+              </blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur acing elit. Curabitur consequat metus a elittincidunt, a eleifend libero pellentesque. Quisque lputate lorem a vehicula porta. Vestibulum sem ipsum, porttitor tristique pharetra in, commodo eget ipsum. Morbi dui nulla, consequat eget gravida eu, hendrerit posuere tellus. Vestibulum sodales ante a purus volutpat euismod. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor. Morbi non nibh sit amet ligula blandit ullamcorper in nec risus. Pellentesque fringilla diam faucibus tortor bibendum vulputate. Etiam turpis urna, rhoncus et mattis ut, dapibus eu nunc. Nunc sed aliquet nisi.</p>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur acing elit. Curabitur consequat metus a elittincidunt, a eleifend libero pellentesque. Quisque lputate lorem a vehicula porta. Vestibulum sem ipsum, porttitor tristique pharetra in, commodo eget ipsum. Morbi dui nulla, consequat eget gravida eu, hendrerit posuere tellus.</p>
-            <blockquote>
-              <p>A good design can feel like something you have always been waiting for without knowing. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-              <cite>From WWF's website</cite>
-            </blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur acing elit. Curabitur consequat metus a elittincidunt, a eleifend libero pellentesque. Quisque lputate lorem a vehicula porta. Vestibulum sem ipsum, porttitor tristique pharetra in, commodo eget ipsum. Morbi dui nulla, consequat eget gravida eu, hendrerit posuere tellus. Vestibulum sodales ante a purus volutpat euismod. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor. Morbi non nibh sit amet ligula blandit ullamcorper in nec risus. Pellentesque fringilla diam faucibus tortor bibendum vulputate. Etiam turpis urna, rhoncus et mattis ut, dapibus eu nunc. Nunc sed aliquet nisi.</p>
-          </div>
-          <div class="blog-comment-block">
-            <h3>Comments (4)</h3>
-            <ol class="list-unstyled">
-              <li class="comment-content clearfix">
-                <div class="comment-block clearfix">
-                  <div class="user-avatar"><img src="images/avatar-default.jpg" alt="" class="img-responsive"/>
+            <div class="blog-comment-block">
+              <h3>Comments (4)</h3>
+              <ol class="list-unstyled">
+                <li class="comment-content clearfix">
+                  <div class="comment-block clearfix">
+                    <div class="user-avatar"><img src="images/avatar-default.jpg" alt="" class="img-responsive"/>
+                    </div>
+                    <div class="comment-text">
+                      <p>Ut case complectitur sit. Cum sumo movet necessitatibus et, no sale invidunt usu, ad vix semper latine consectetuer. In per perfecto suscipiantur. Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.</p>
+                    </div>
                   </div>
-                  <div class="comment-text">
-                    <p>Ut case complectitur sit. Cum sumo movet necessitatibus et, no sale invidunt usu, ad vix semper latine consectetuer. In per perfecto suscipiantur. Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.</p>
-                  </div>
-                </div>
-                <div class="comment-info"><a href="" class="btn-grey pull-right"><i class="iconfont-reply-all"></i>Reply</a><strong class="user-name">Ariston Atilio</strong><span class="comment-date">20 September, 2013, 21:00</span></div>
-              </li>
-              <li class="comment-content clearfix">
-                <div class="comment-block clearfix">
-                  <div class="user-avatar"><img src="images/avatar-04.jpg" alt="" class="img-responsive"/>
-                  </div>
-                  <div class="comment-text">
-                    <p>Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.</p>
-                  </div>
-                </div>
-                <div class="comment-info"><a href="" class="btn-grey pull-right"><i class="iconfont-reply-all"></i>Reply</a><strong class="user-name">Luisinho Alojz</strong><span class="comment-date">20 September, 2013, 21:00</span></div>
-              </li>
-            </ol>
-          </div>
-          <div class="comment-form-block clearfix">
-            <h3>Leave a Comment</h3>
-            <form action="" method="post" class="col-md-8">
-              <div class="form-group row">
-                <label for="" class="required col-xs-3 col-form-label">Your name:</label>
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Your name" id="" class="error form-control">
-                </div><span class="error-msg"><i class="iconfont-warning-sign"></i>This is an error message</span>
-              </div>
-              <div class="form-group row">
-                <label for="" class="required col-xs-3 col-form-label">Email:</label>
-                <input type="text" placeholder="Your name" class="col-xs-9">
-              </div>
-              <div class="form-group row">
-                <label for="" class="required col-xs-3 col-form-label">Comment:</label>
-                <textarea placeholder="Your name" id="" cols="9" rows="9" class="col-xs-9"></textarea>
-              </div>
-              <input type="submit" value="Post a Comment" class="btn-black col-xs-push-3">
-            </form>
+                  <div class="comment-info"><a href="" class="btn-grey pull-right"><i class="fa fa-reply-all"></i>Reply</a><strong class="user-name">Ariston Atilio</strong><span class="comment-date">20 September, 2013, 21:00</span></div>
+                  <ul class="list-unstyled has-child">
+                    <li class="comment-content clearfix">
+                      <div class="comment-block clearfix">
+                        <div class="user-avatar"><img src="images/avatar-01.jpg" alt="" class="img-responsive"/>
+                        </div>
+                        <div class="comment-text">
+                          <p>Cum sumo movet necessitatibus et, no sale invidunt usu, ad vix semper latine consectetuer. In per perfecto suscipiantur. Eos ad admodum detraxit oportere. Id exerci vivendum ius, has wisi omittam ei, est an eros argumentum scriptorem.</p>
+                        </div>
+                      </div>
+                      <div class="comment-info"><a href="" class="btn-grey pull-right"><i class="fa fa-reply-all"></i>Reply</a><strong class="user-name">Ariston Atilio</strong><span class="comment-date">20 September, 2013, 21:00</span></div>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>

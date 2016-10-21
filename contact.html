@@ -10,14 +10,14 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Fashion Shop | Fashion Shop</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Fashion Shop | Contact us</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body class="index">
+  <body class="contact">
     <div class="container">
       <header class="header-section">
         <div class="header-inner">
@@ -140,39 +140,55 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li class="active">Contact us</li>
+        </ol>
+      </div>
       <div class="contentWrapper row">
         <div id="map-canvas" style="width: 100%; height:350px; vertical-align:central; margin-bottom:10px;"></div>
         <div class="col-md-8 col-sm-7 col-sm-12 contact-form grey-bg">
-          <div class="row">
-            <header style="text-align:left;">Leave Us a Message </header>
-            <form action="" method="post">
-              <ul>
-                <li class="col-md-4 col-sm-12 col-sm-12">
-                  <input type="text" name="name" placeholder="Name*" style="width:100%;">
-                </li>
-                <li class="col-md-4 col-sm-12 col-sm-12">
-                  <input type="text" name="email" placeholder="Email*" style="width:100%;">
-                </li>
-                <li class="col-md-4 col-sm-12 col-sm-12">
-                  <input type="text" name="website" placeholder="Website*" style="width:100%;">
-                </li>
-                <li class="col-md-12 col-sm-12 col-sm-12">
-                  <textarea rows="10" cols="10" name="comment" placeholder="Comment*" style="width:100%; margin:10px 0;"></textarea>
-                </li>
-                <li class="col-md-2">
-                  <input type="submit" name="name" value="Continue" style="margin-bottom:10px;" class="btn-black">
-                </li>
-              </ul>
+          <header style="text-align:left;">Leave Us a Message</header>
+          <div class="content-inner"> 
+            <form action="#" method="post" id="frm-contact">
+              <div class="row">
+                <div class="col-md-4 col-sm-12 col-sm-12">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Name*" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-sm-12">
+                  <div class="form-group">
+                    <input type="text" name="email" placeholder="Email*" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-sm-12">
+                  <div class="form-group">
+                    <input type="text" name="website" placeholder="Website*" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-sm-12">
+                  <div class="form-group">
+                    <textarea rows="10" cols="10" name="comment" placeholder="Comment*" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <input type="submit" name="name" value="Continue" class="btn-black">
+                </div>
+              </div>
             </form>
           </div>
         </div>
         <div style="padding-right:0;" class="col-md-4 col-sm-5 col-xs-12 address-box">
           <header>Address</header>
-          <div style="padding:0px 10px 10px 10px;" class="address-area">
-            <ul class="list-unstyled clearfix">
-              <li><i class="round-icon iconfont-map-marker list-icon"></i><a href="" class="list-content">1259, CALIFORNIA ST<br> NEW YORK.</a></li>
-              <li><i class="round-icon iconfont-phone list-icon"></i><a href="" class="list-content">843.724.0123 <br> 843.724.0234</a></li>
-              <li><i class="round-icon iconfont-envelope-alt list-icon"></i><a href="" class="list-content">info@company.com <br>(And we will respond you right away)</a></li>
+          <div class="address-area content-inner">
+            <ul class="list-unstyled list-block">
+              <li><i class="round-icon fa fa-map-marker list-icon"></i><a href="" class="list-content">1259, CALIFORNIA ST<br> NEW YORK.</a></li>
+              <li><i class="round-icon fa fa-phone list-icon"></i><a href="" class="list-content">843.724.0123 <br> 843.724.0234</a></li>
+              <li><i class="round-icon fa fa-envelope list-icon"></i><a href="" class="list-content">info@company.com <br>(And we will respond you right away)</a></li>
             </ul>
           </div>
         </div>
@@ -180,50 +196,47 @@
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>

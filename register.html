@@ -10,8 +10,8 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Fashion Shop | Fashion Shop | Register page</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Fashion Shop | Register</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -140,105 +140,121 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="" title="Account">Account</a></li>
+          <li class="active">Register</li>
+        </ol>
+      </div>
       <div class="contentWrapper row">
-        <header>Account Login</header>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <form action="#" method="post" id="register-frm">
-            <h4>New Customer</h4>
-            <div class="inner">
-              <p>Checkout Options:</p>
-              <div class="form-account">
-                <div class="radio has-pretty-child">
-                  <div class="clearfix prettyradio labelright blue fakeInput">
-                    <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href="" class="checked"></a>
-                    <label for="radio-register">Register Account</label>
+        <aside class="sidebar col-sm-4 col-md-3 hidden-xs">
+          <section class="account-block">
+            <header>Categories</header>
+            <ul class="list-unstyle">
+              <li class="active"><a href="javascript:void(0);" title="Acccount Infomation">Acccount Infomation</a></li>
+              <li><a href="javascript:void(0);" title="Delivery Details">Delivery Details</a></li>
+              <li><a href="javascript:void(0);" title="MY ORDERS">MY ORDERS</a></li>
+              <li><a href="javascript:void(0);" title=" MY WISHLIST"> MY WISHLIST</a></li>
+              <li><a href="javascript:void(0);" title="Payment Method">Payment Method</a></li>
+              <li><a href="javascript:void(0);" title="Returns">Returns</a></li>
+              <li><a href="javascript:void(0);" title="Downloads">Downloads</a></li>
+              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+              <li><a href="javascript:void(0);" title="Logout">Logout</a></li>
+            </ul>
+          </section>
+        </aside>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="content-inner">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <h4>New Customer</h4>
+                <p>Checkout Options:</p>
+                <form action="#" method="post" id="register-frm">
+                  <div class="radio has-pretty-child">
+                    <div class="clearfix prettyradio labelright blue fakeInput">
+                      <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href="" class="checked"></a>
+                      <label for="radio-register">Register Account</label>
+                    </div>
                   </div>
-                </div>
-                <div class="radio has-pretty-child">
-                  <div class="clearfix prettyradio labelright blue fakeInput">
-                    <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href=""></a>
-                    <label for="radio-register">Guest Checkout</label>
+                  <div class="radio has-pretty-child">
+                    <div class="clearfix prettyradio labelright blue fakeInput">
+                      <input id="radio-register" type="radio" name="customer" checked="checked" class="prettyCheckable hide"><a href=""></a>
+                      <label for="radio-register">Guest Checkout</label>
+                    </div>
                   </div>
-                </div>
-                <p class="light-color">By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
-                <button class="btn-grey">Continue</button>
+                  <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+                  <button class="btn-grey">Continue</button>
+                </form>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <h4>Returning Customer</h4>
+                <form action="#" method="post" id="login-frm">
+                  <div class="form-group stylish-input">
+                    <label for="inputEmail" class="required">Email</label>
+                    <div style="position:relative;">
+                      <input id="inputEmail" type="email" style="width:93%;" placeholder="ndt_kim@yahoo.com.vn">
+                      <div class="ok-tipbox"><i class="iconfont-ok-sign"></i></div>
+                    </div>
+                  </div>
+                  <div class="form-group stylish-input">
+                    <label for="inputPassword" class="required">Password</label>
+                    <div style="position:relative;">
+                      <input id="inputPassword" type="text" style="width:93%;">
+                      <div class="error-tipbox"><i class="iconfont-remove-sign"></i></div>
+                    </div><a href="" class="help-block">Forgot your password?</a>
+                  </div>
+                  <button class="btn-black">Login</button>
+                </form>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-          <form>
-            <h4>Returning Customer</h4>
-            <div class="inner">
-              <p>I'm a Returning Customer</p>
-              <div class="form-login">
-                <div class="form-group stylish-input">
-                  <label for="inputEmail" class="required">Email</label>
-                  <div style="position:relative;">
-                    <input id="inputEmail" type="email" style="width:93%;" placeholder="ndt_kim@yahoo.com.vn">
-                    <div class="ok-tipbox"><i class="iconfont-ok-sign"></i></div>
-                  </div>
-                </div>
-                <div class="form-group stylish-input">
-                  <label for="inputPassword" class="required">Password</label>
-                  <div style="position:relative;">
-                    <input id="inputPassword" type="text" style="width:93%;">
-                    <div class="error-tipbox"><i class="iconfont-remove-sign"></i></div>
-                  </div><a href="" class="help-block">Forgot your password?</a>
-                </div>
-                <button class="btn-black">Login</button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>

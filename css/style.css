@@ -231,9 +231,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #fff;
 }
 .cart-block .cart-view .fa-shopping-cart {
-  font-size: 20px;
+  font-size: 16px;
   position: relative;
-  top: 4px;
   padding: 0 10px;
 }
 .cart-block .cart-view span {
@@ -355,20 +354,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #888686;
 }
 
-.sidebar section {
-  margin-bottom: 20px;
-  background: #fff;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-.sidebar header {
+.contentWrapper header {
   padding: 10px 15px;
   color: #fff;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   background-color: #000;
+}
+
+.sidebar section {
+  margin-bottom: 20px;
+  background: #fff;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .sidebar .content-block {
   padding: 10px;
@@ -407,13 +407,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .tag-block a {
-  -moz-box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  background: #CCC;
-  margin-bottom: 5px;
   display: inline-block;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  background-color: #eee;
 }
 
 .latest-articles .fa {
@@ -546,13 +544,14 @@ body {
   background: #f8f8f8 url(../images/white_wall.png);
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
+  line-height: 1.5em;
 }
 
 h2 {
   text-transform: uppercase;
   margin-bottom: 20px;
   font-size: 28px;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
 h3 {
@@ -688,6 +687,9 @@ blockquote:before {
 .btn-grey {
   background-color: #dddddd;
 }
+.btn-black {
+  background-color: #000;
+}
 .btn-outline {
   color: #eee;
   border: 1px solid #eee;
@@ -757,6 +759,21 @@ input:disabled + label, option:disabled + label, select.disabled + label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
+}
+
+.content-inner {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.list-icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.list-block li {
+  margin-top: 15px;
+  display: block;
 }
 
 /* col-md and col-lg */
@@ -1375,11 +1392,15 @@ product layout - list
   padding-right: 0;
 }
 .pagination a {
+  display: block;
   background: #fff;
   padding: 10px 15px;
 }
 .pagination a.active {
   color: #DF0A71 !important;
+}
+.pagination .page-info {
+  margin-top: 10px;
 }
 
 .product-control .layout-mode li {
@@ -1460,7 +1481,8 @@ input[type=password],
 input[type=tel],
 input[type=text],
 input[type=number],
-select, textarea {
+select,
+textarea, .form-group textarea {
   background-color: #eee;
   padding: 5px 10px;
   border: 0;
@@ -1516,27 +1538,24 @@ label.required:after {
   border: 0;
 }
 
-.menu-style2 {
+.account-block {
   background: none;
 }
-
-.menu-style2 li {
+.account-block li {
   padding: 10px;
   border-bottom: 1px solid #dedede;
-  background: #fff;
+  background-color: #fff;
   text-transform: uppercase;
 }
-
-.menu-style2 .active, .menu-style2 li:hover {
+.account-block .active, .account-block li:hover {
   background: #f2f2f2;
 }
 
 .checkout legend {
+  margin-bottom: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 5px;
 }
-
 .checkout fieldset > .inner {
   padding: 15px;
 }
@@ -1544,19 +1563,16 @@ label.required:after {
 #register_page #col-right {
   background: #f2f2f2;
   padding-bottom: 20px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-
 #register_page #col-right header {
   padding: 7px 15px;
-  background: #fff;
+  background-color: #fff;
   text-transform: uppercase;
   font-weight: bold;
 }
-
 #register_page #col-right .inner {
   padding: 10px;
 }
@@ -1832,13 +1848,6 @@ body {
   padding: 0 5px;
   font-size: 14px;
 }
-.blog-detail .tag-cloud a {
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 4px 1px rgba(0, 0, 0, 0.07), 0px 1px 0px rgba(255, 255, 255, 0.1);
-  padding: 5px;
-  background: #CCC;
-  margin: 0px 0px 5px 0px;
-  display: inline-block;
-}
 .blog-detail .user-avatar {
   width: 73px;
   height: 90px;
@@ -1857,7 +1866,7 @@ body {
 .blog-detail .blog-comment-block li {
   margin-bottom: 15px;
 }
-.blog-detail .blog-comment-block li .has-child {
+.blog-detail .blog-comment-block li .has-child li {
   padding-left: 50px;
 }
 .blog-detail .blog-comment-block li .has-child .comment-block {
@@ -1874,7 +1883,11 @@ body {
 }
 .blog-detail .blog-comment-block .user-name {
   display: block;
-  color: #DF0A71;
+  color: #888686;
+}
+.blog-detail .blog-comment-block .comment-date {
+  color: #888686;
+  font-size: 12px;
 }
 .blog-detail .comment-form-block form {
   float: none;
@@ -1897,6 +1910,7 @@ body {
   background-color: #fff;
 }
 .post-frame .post-date .camera {
+  display: block;
   margin-bottom: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid #dedede;
@@ -1928,7 +1942,9 @@ body {
  Blog page
 ========================*/
 .blog-page .blog-content {
-  padding: 15px;
+  border-top: 1px solid #eee;
+  padding: 15px 5px;
+  background-color: #fff;
 }
 .blog-page .thumbnail-arrow {
   border-bottom: 45px solid rgba(223, 10, 113, 0.8);
@@ -1955,7 +1971,15 @@ body {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+.blog-page .blog-detail li + li {
+  padding-left: 10px;
+  border-left: 1px solid #888686;
+}
+.blog-page .blog-detail .fa {
+  margin-right: 5px;
+}
 .blog-page .blog-action {
+  color: #888686;
   margin-bottom: 15px;
 }
 
@@ -2332,6 +2356,9 @@ body {
   padding: 10px 20px;
   border-top: 1px solid #eee;
 }
+.compare-column .compare-row img {
+  margin: auto;
+}
 .compare-column header {
   margin: 0 -10px;
   padding: 10px;
@@ -2388,3 +2415,5 @@ body {
   linear-gradient(to bottom right, #333, #0c0),
   radial-gradient(#c00, #fff 100px));
 */
+
+/*# sourceMappingURL=style.css.map */

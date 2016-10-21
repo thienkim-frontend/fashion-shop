@@ -10,7 +10,7 @@
     <meta name="description" content="Fashon Shop is a responsive website using Jade, Bootstrap, Less framework.">
     <meta name="keywords" content="html5, responsive, shop theme, CSS3, bootstrap theme ">
     <meta name="author" content="Nguyen Dao Thien Kim">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Fashion Shop | Product page</title>
     <link href="css/plugin.min.css" rel="stylesheet" media="all">
     <link href="css/style.css" rel="stylesheet" media="all"><!--[if lt IE 9]>
@@ -140,13 +140,40 @@
           </nav>
         </div>
       </header>
+      <div class="breadcrumb-wrapper">
+        <ol class="breadcrumb">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li class="active">Product</li>
+        </ol>
+      </div>
       <div class="contentWrapper row">
-        <section class="filter-block">
-          <header>Filter</header>
-          <div class="content-block">
-            <div class="filter-price">
-              <h5>Filter By Price</h5>
-              <div class="noUiSlider"></div>
+        <aside class="sidebar col-sm-4 col-md-3 hidden-xs">
+          <section class="category-block">
+            <header>Categories</header>
+            <div class="content-block"> 
+              <ul class="list-unstyled">
+                      <li><a href="javascript:void(0);" title="">New Arrivals <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Tops <span>(547)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Shirts & Blouses <span>(860)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Trousers <span>(118)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Jeans <span>(131)</span></a> 
+                      </li>
+                      <li><a href="javascript:void(0);" title="">Dresses <span>(624)</span></a> 
+                      </li>
+              </ul>
+            </div>
+          </section>
+          <section class="filter-block">
+            <header>Filter</header>
+            <div class="content-block">
+              <div class="filter-price">
+                <h5>Filter By Price</h5>
+                <div class="noUiSlider"></div>
+              </div>
               <div class="range-slider-value clear"><span>Price: </span><span id="value-min">$</span>-<span id="value-max">$</span></div>
             </div>
             <div class="filter-size">
@@ -175,10 +202,10 @@
                 <li><a href="javascript:void(0)" class="round-icon color-box pattern"></a></li>
               </ul>
             </div>
-          </div>
-        </section>
-        <section class="products-wrapper">
-          <header>
+          </section>
+        </aside>
+        <div id="col-right" class="col-md-9 col-sm-8 col-xs-12 default-padding">
+          <section class="products-wrapper">
             <div style="background: #fff; margin-bottom: 15px; padding:5px 10px" class="col-xs-12 col-sm-12 center-xs product-control">
               <div class="pull-left view-filter"><a href=""><span class="filter-newest">Newest</span></a><a href=""><span class="filter-best-sellers">Best sellers</span></a><a href=""><span class="filter-price">Price</span></a></div>
               <!-- DISPLAY MODE-->
@@ -196,170 +223,167 @@
                 </div>
               </div>
             </div>
-          </header>
-          <div class="products-layout list clearfix row">
-            <div class="col-md-4">
-              <!-- begin item-->
-              <div class="product">
-                <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
-                  <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
-                </div>
-                <div class="entry-main clearfix">
-                  <div class="rate-bar">
-                    <div class="rateit-selected"></div>
-                  </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
-                  <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
-                  <s class="entry-discount"></s><span class="price">250.00</span>
-                  <div class="entry-description visible-list">
-                    <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+            <div class="products-layout list clearfix row">
+              <div class="col-md-4">
+                <!-- begin item-->
+                <div class="product">
+                  <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
+                    <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
                   </div>
-                  <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
-                </div>
-              </div>
-              <!-- end item-->
-            </div>
-            <div class="col-md-4">
-              <!-- begin item-->
-              <div class="product">
-                <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
-                  <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
-                </div>
-                <div class="entry-main clearfix">
-                  <div class="rate-bar">
-                    <div class="rateit-selected"></div>
-                  </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
-                  <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
-                  <s class="entry-discount"></s><span class="price">250.00</span>
-                  <div class="entry-description visible-list">
-                    <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                  <div class="entry-main clearfix">
+                    <div class="rate-bar">
+                      <div class="rateit-selected"></div>
+                    </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
+                    <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
+                    <s class="entry-discount"></s><span class="price">250.00</span>
+                    <div class="entry-description visible-list">
+                      <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                    </div>
+                    <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
                   </div>
-                  <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
                 </div>
+                <!-- end item-->
               </div>
-              <!-- end item-->
-            </div>
-            <div class="col-md-4">
-              <!-- begin item-->
-              <div class="product">
-                <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
-                  <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
-                </div>
-                <div class="entry-main clearfix">
-                  <div class="rate-bar">
-                    <div class="rateit-selected"></div>
-                  </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
-                  <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
-                  <s class="entry-discount"></s><span class="price">250.00</span>
-                  <div class="entry-description visible-list">
-                    <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+              <div class="col-md-4">
+                <!-- begin item-->
+                <div class="product">
+                  <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
+                    <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
                   </div>
-                  <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
-                </div>
-              </div>
-              <!-- end item-->
-            </div>
-            <div class="col-md-4">
-              <!-- begin item-->
-              <div class="product">
-                <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
-                  <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
-                </div>
-                <div class="entry-main clearfix">
-                  <div class="rate-bar">
-                    <div class="rateit-selected"></div>
-                  </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
-                  <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
-                  <s class="entry-discount"></s><span class="price">250.00</span>
-                  <div class="entry-description visible-list">
-                    <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                  <div class="entry-main clearfix">
+                    <div class="rate-bar">
+                      <div class="rateit-selected"></div>
+                    </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
+                    <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
+                    <s class="entry-discount"></s><span class="price">250.00</span>
+                    <div class="entry-description visible-list">
+                      <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                    </div>
+                    <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
                   </div>
-                  <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
                 </div>
+                <!-- end item-->
               </div>
-              <!-- end item-->
-            </div>
-            <div class="col-md-4">
-              <!-- begin item-->
-              <div class="product">
-                <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
-                  <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
-                </div>
-                <div class="entry-main clearfix">
-                  <div class="rate-bar">
-                    <div class="rateit-selected"></div>
-                  </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
-                  <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
-                  <s class="entry-discount"></s><span class="price">250.00</span>
-                  <div class="entry-description visible-list">
-                    <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+              <div class="col-md-4">
+                <!-- begin item-->
+                <div class="product">
+                  <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
+                    <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
                   </div>
-                  <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
+                  <div class="entry-main clearfix">
+                    <div class="rate-bar">
+                      <div class="rateit-selected"></div>
+                    </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
+                    <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
+                    <s class="entry-discount"></s><span class="price">250.00</span>
+                    <div class="entry-description visible-list">
+                      <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                    </div>
+                    <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
+                  </div>
                 </div>
+                <!-- end item-->
               </div>
-              <!-- end item-->
+              <div class="col-md-4">
+                <!-- begin item-->
+                <div class="product">
+                  <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
+                    <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
+                  </div>
+                  <div class="entry-main clearfix">
+                    <div class="rate-bar">
+                      <div class="rateit-selected"></div>
+                    </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
+                    <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
+                    <s class="entry-discount"></s><span class="price">250.00</span>
+                    <div class="entry-description visible-list">
+                      <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                    </div>
+                    <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
+                  </div>
+                </div>
+                <!-- end item-->
+              </div>
+              <div class="col-md-4">
+                <!-- begin item-->
+                <div class="product">
+                  <div class="photo-wrapper"><img src="images/pro-17.jpg" alt=""/>
+                    <div class="icon-style hidden-list"><a href="product_detail.html" class="img-link"></a><a href="cart.html" title="Add to Cart"><i class="fa fa-shopping-cart icon-01"></i></a><a href="my_account.html" title="Add to Wishlist"><i class="fa fa-heart icon-02"></i></a><a href="compare_product.html" title="Add to Comapre"><i class="fa fa-refresh icon-03"></i></a></div>
+                  </div>
+                  <div class="entry-main clearfix">
+                    <div class="rate-bar">
+                      <div class="rateit-selected"></div>
+                    </div><span class="recent-order"><span class="order">210</span><span>&nbsp;orders</span></span>
+                    <h4 class="entry-title"><a href="#">Sleeveless Satin Princess Ankle-length Girl Dresses</a></h4>
+                    <s class="entry-discount"></s><span class="price">250.00</span>
+                    <div class="entry-description visible-list">
+                      <p>Sed ornare cras donec litora integer curabitur orci, at nullam aliquam libero nam himenaeos, amet massa amet ut ipsum viverra mauris rhoncus neque aenean rhoncus gravida orci facilisis quis dui consectetur.</p>
+                    </div>
+                    <div class="button-group unstyled clearfix visible-list"><a href="#" class="btn-cta"><i class="iconfont-shopping-cart"></i> ADD TO CARD</a><a href="#" title="Add to Wishlist" class="btn-outline"><i class="iconfont-heart"></i>Wishlist</a><a href="#" title="Comapre" class="btn-outline"><i class="iconfont-retweet"></i>Comapre        </a></div>
+                  </div>
+                </div>
+                <!-- end item-->
+              </div>
             </div>
+          </section>
+          <!-- PAGINATION-->
+          <div class="pagination">
+            <ul class="unstyled pull-right list-inline center-xs">
+              <li><a href=""><i class="iconfont-angle-left"></i></a></li>
+              <li><a href="" class="active">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li>...</li>
+              <li><a href=""><i class="iconfont-angle-right"></i></a></li>
+            </ul>
+            <div class="page-info pull-left center-xs">Displaying <strong>1 </strong>to 4 (of 32 products)</div>
           </div>
-        </section>
-        <!-- PAGINATION-->
-        <div class="pagination">
-          <ul class="unstyled pull-right list-inline center-xs">
-            <li><a href=""><i class="iconfont-angle-left"></i></a></li>
-            <li><a href="" class="active">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li>...</li>
-            <li><a href=""><i class="iconfont-angle-right"></i></a></li>
-          </ul>
-          <div class="page-info pull-left center-xs">Displaying <strong>1 </strong>to 4 (of 32 products)</div>
         </div>
       </div>
       <footer>
         <div class="widgets clearfix">               
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
-                              <li><a href="javascript:void(0);" title="New products">New products</a></li>
-                              <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
-                              <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
-                              <li><a href="contact.html" title="Contact us">Contact us</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Specials">Specials</a></li>
+                            <li><a href="javascript:void(0);" title="New products">New products</a></li>
+                            <li><a href="javascript:void(0);" title="Best sellers">Best sellers</a></li>
+                            <li><a href="javascript:void(0);" title="Our stores">Our stores</a></li>
+                            <li><a href="contact.html" title="Contact us">Contact us</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
-                              <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
-                              <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
-                              <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
-                              <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="My Account">My Account</a></li>
+                            <li><a href="javascript:void(0);" title="Shipping">Shipping</a></li>
+                            <li><a href="javascript:void(0);" title="Payment &amp; Return">Payment &amp; Return</a></li>
+                            <li><a href="javascript:void(0);" title="Privacy policy">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+                          </ul>
+                  </div>
                 </div>
                 <div class="widget col-xs-12 col-sm-6 col-md-3">
-                  <h5 class="widget-title">Customer Service
-                    <div class="widget-content">
-                            <ul class="unstyled-list">
-                              <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
-                              <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
-                              <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
-                              <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
-                            </ul>
-                    </div>
-                  </h5>
+                  <h5 class="widget-title">Customer Service</h5>
+                  <div class="widget-content">
+                          <ul class="unstyled-list">
+                            <li><a href="javascript:void(0);" title="Order History">Order History</a></li>
+                            <li><a href="javascript:void(0);" title="Wish List">Wish List</a></li>
+                            <li><a href="javascript:void(0);" title="Newsletter">Newsletter</a></li>
+                            <li><a href="javascript:void(0);" title="Log in">Log in</a></li>
+                          </ul>
+                  </div>
                 </div>
           <div class="widget col-xs-12 col-sm-6 col-md-3 clearfix">
             <h5 class="widget-title">Contact Us</h5>
             <div class="widget-content">
               <ul class="list-unstyled">
-                <li><i class="round-icon iconfont-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
-                <li><i class="round-icon iconfont-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
-                <li><i class="round-icon iconfont-envelope-alt list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
+                <li><i class="round-icon fa fa-map-marker list-icon"></i><span>1259, CALIFORNIA ST <br/> NEW YORK.</span></li>
+                <li><i class="round-icon fa fa-phone list-icon"></i><span>843.724.0123 <br/> 843.724.0234</span></li>
+                <li><i class="round-icon fa fa-envelope list-icon"></i><span>info@company.com <br/> ndt_kim@yahoo.com.vn</span></li>
               </ul>
             </div>
           </div>
