@@ -1,5 +1,7 @@
 ### Website ###
+
 - - - - 
+
 https://thienkim-frontend.github.io/fashion-shop/
 https://thienkim-frontend.github.io/fashion-shop/register
 https://thienkim-frontend.github.io/fashion-shop/account
@@ -11,7 +13,9 @@ https://thienkim-frontend.github.io/fashion-shop/about
 https://thienkim-frontend.github.io/fashion-shop/contact
 
 ### Overview ###
+
 - - - - 
+
 Fashion shop is a responsive website built on 
 1. Jade
 https://github.com/pugjs/pug
@@ -37,7 +41,9 @@ http://www.elevateweb.co.uk/image-zoom
 https://refreshless.com/nouislider/
 
 ### What's included ###
+
 - - - - 
+
 https://github.com/thienkim-frontend/fashion-shop.git
 
 ├── source/
@@ -53,7 +59,9 @@ https://github.com/thienkim-frontend/fashion-shop.git
 ├── README.md
 
 ### What's included ###
+
 - - - - 
+
 * Item 1
 * Item 2
 * Item 3
