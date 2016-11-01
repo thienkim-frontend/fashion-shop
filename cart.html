@@ -146,262 +146,268 @@
         </ol>
       </div>
       <div class="contentWrapper row">
-        <!-- Nav tabs-->
-        <ul class="cart_nav nav nav-tabs">
-          <li class="col-md-3 active"><a href="#cart" data-toggle="tab">Shopping cart</a></li>
-          <li class="col-md-3"><a href="#address" data-toggle="tab">Delivery address</a></li>
-          <li class="col-md-3"><a href="#shipping" data-toggle="tab">Shipping / payment</a></li>
-          <li class="col-md-3"><a href="#summary" data-toggle="tab">Summary</a></li>
-        </ul>
-        <!-- Tab panes-->
-        <div class="tab-content cart_content">
-          <div id="cart" class="tab-pane clearfix active">
-            <table class="tbl-cart">
-              <tr>
-                <th>Product Name</th>
-                <th width="15%" class="hidden-xs">Options</th>
-                <th width="15%" class="hidden-xs">Unit Price</th>
-                <th width="15%" class="hidden-xs">Quantity</th>
-                <th width="15%">Sub Total</th>
-              </tr>
-              <tr>
-                <td><a href="javascript:void(0);" class="cart-thumbnail"><img src="images/pro-20.jpg" alt="A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress" class="img-responsive"/></a>
-                  <h5><a href="" class="cart-title">A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress</a></h5>
-                  <p class="grey-color">Order No. 9479976560 - 91</p>
-                </td>
-                <td class="hidden-xs">
-                  <p><span>Brand:</span> Levise</p>
-                  <p><span>Color:</span>Black</p>
-                  <p><span>Size:</span>S</p>
-                </td>
-                <td><span class="unit-price">$350.00</span></td>
-                <td>
-                  <input type="number" value="3"/>
-                </td>
-                <td class="hidden-xs">
-                  <button type="button" class="close">×</button><span>$350.00</span>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="javascript:void(0);" class="cart-thumbnail"><img src="images/pro-20.jpg" alt="A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress" class="img-responsive"/></a>
-                  <h5><a href="" class="cart-title">A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress</a></h5>
-                  <p class="grey-color">Order No. 9479976560 - 91</p>
-                </td>
-                <td class="hidden-xs">
-                  <p><span>Brand:</span> Levise</p>
-                  <p><span>Color:</span>Black</p>
-                  <p><span>Size:</span>S</p>
-                </td>
-                <td><span class="unit-price">$350.00</span></td>
-                <td>
-                  <input type="number" value="3"/>
-                </td>
-                <td class="hidden-xs">
-                  <button type="button" class="close">×</button><span>$350.00</span>
-                </td>
-              </tr>
-              <tr class="calculation-block">
-                <td colspan="3"></td>
-                <td class="title-total text-right">
-                  <p>Sub-Total:</p>
-                  <p>VAT (17.5%):</p>
-                  <p>Total:</p>
-                </td>
-                <td>
-                  <p>$350.00</p>
-                  <p>$350.00</p>
-                  <p class="total">$350.00</p>
-                </td>
-              </tr>
-            </table>
-            <div class="col-md-12">
-              <div class="row"><a href="javascript:void(0);" title="Continue shopping" class="btn-grey pull-left">Continue shopping</a><a href="javascript:void(0);" title="Checkout" class="btn-cta pull-right">Checkout</a>
-              </div>
-            </div>
-          </div>
-          <!-- end cart-->
-          <!-- begin address-->
-          <div id="address" class="tab-pane">
-            <div class="row">
-              <form method="post" action="#" class="form-horizontal grey-bg">
-                <fieldset class="billing_address col-md-6 col-sm-6">
-                  <h4>BILLING ADRESS</h4>
-                  <div class="element row">
-                    <label for="firstname" class="col-md-3 col-sm-4 col-xs-12 required">First Name</label>
-                    <input type="text" id="firstname" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="lastname" class="col-md-3 col-sm-4 col-xs-12 required">Last Name</label>
-                    <input type="text" id="lastname" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="street" class="col-md-3 col-sm-4 col-xs-12 required">Street name</label>
-                    <input type="text" id="street" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="city" class="col-md-3 col-sm-4 col-xs-12 required">City</label>
-                    <input type="text" id="city" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="country" class="col-md-3 col-sm-4 col-xs-12 required">Country</label>
-                    <input type="text" id="country" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="phone" class="col-md-3 col-sm-4 col-xs-12 required">Phone</label>
-                    <input type="number" id="phone" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="comment" class="col-md-3 col-sm-4 col-xs-12">Order Comment</label>
-                    <textarea id="comment" rows="5" name="message" class="col-md-8 col-sm-6 col-xs-12"></textarea>
-                  </div>
-                </fieldset>
-              </form>
-              <form method="post" action="#" class="form-horizontal">
-                <fieldset class="shipping_address col-md-6 col-md-6 col-sm-6">
-                  <div class="row">
-                    <div class="col-md-6 col-sm-8 col-xs-12">
-                      <h4>SHIPPING ADRESS</h4>
-                    </div>
-                    <div style="padding-right:0;" class="col-md-5 text-right">
-                      <label class="custom_checkbox delivery">
-                        <input type="checkbox" name="delivery" checked="checked"><b class="cb"></b>
-                      </label><span>Same as billing</span>
-                    </div>
-                  </div>
-                  <div class="element row">
-                    <label for="firstname" class="col-md-3 col-sm-4 col-xs-12 required">First Name</label>
-                    <input type="text" id="firstname" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="lastname" class="col-md-3 col-sm-4 col-xs-12 required">Last Name</label>
-                    <input type="text" id="lastname" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="street" class="col-md-3 col-sm-4 col-xs-12 required">Street name</label>
-                    <input type="text" id="street" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <label for="city" class="col-md-3 col-sm-4 col-xs-12 required">City</label>
-                    <input type="text" id="city" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                  <div class="element row">
-                    <select class="disabled col-md-8 col-sm-6 col-xs-12">
-                      <option disabled="">Chose option</option>
-                      <option disabled="">Chose option</option>
-                    </select>
-                    <label class="col-md-3 col-sm-4 col-xs-12">Country</label>
-                  </div>
-                  <div class="element row">
-                    <label for="phone" class="col-md-3 col-sm-4 col-xs-12 required">Phone</label>
-                    <input type="number" id="phone" class="col-md-8 col-sm-6 col-xs-12"/>
-                  </div>
-                </fieldset>
-              </form>
-              <div class="col-md-12 col-sm-12 col-xs-12 actions">
-                <div class="row"><a href="javascript:void(0);" title="Back to cart" class="btn-grey pull-left">Back to cart</a><a href="javascript:void(0);" title="Proceed to shipping" class="btn-cta pull-right">Proceed to shipping</a>
+        <div class="col-md-12">
+          <!-- Nav tabs-->
+          <ul class="cart_nav nav nav-tabs">
+            <li class="col-md-3 active"><a href="#cart" data-toggle="tab">Shopping cart</a></li>
+            <li class="col-md-3"><a href="#address" data-toggle="tab">Delivery address</a></li>
+            <li class="col-md-3"><a href="#shipping" data-toggle="tab">Shipping / payment</a></li>
+            <li class="col-md-3"><a href="#summary" data-toggle="tab">Summary</a></li>
+          </ul>
+        </div>
+        <div class="col-md-12">
+          <!-- Tab panes-->
+          <div class="tab-content cart_content">
+            <div id="cart" class="tab-pane active">
+              <table class="tbl-cart">
+                <tr>
+                  <th>Product Name</th>
+                  <th width="15%" class="hidden-xs">Options</th>
+                  <th width="15%" class="hidden-xs">Unit Price</th>
+                  <th width="15%" class="hidden-xs">Quantity</th>
+                  <th width="15%">Sub Total</th>
+                </tr>
+                <tr>
+                  <td><a href="javascript:void(0);" class="cart-thumbnail"><img src="images/pro-20.jpg" alt="A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress" class="img-responsive"/></a>
+                    <h5><a href="" class="cart-title">A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress</a></h5>
+                    <p class="grey-color">Order No. 9479976560 - 91</p>
+                  </td>
+                  <td class="hidden-xs">
+                    <p><span>Brand:</span> Levise</p>
+                    <p><span>Color:</span>Black</p>
+                    <p><span>Size:</span>S</p>
+                  </td>
+                  <td class="hidden-xs"><span class="unit-price">$350.00</span></td>
+                  <td class="hidden-xs">
+                    <input type="number" value="3"/>
+                  </td>
+                  <td class="hidden-xs">
+                    <button type="button" class="close hidden-xs">×</button><span>$350.00</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="javascript:void(0);" class="cart-thumbnail"><img src="images/pro-04.jpg" alt="A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress" class="img-responsive"/></a>
+                    <h5><a href="" class="cart-title">A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress</a></h5>
+                    <p class="grey-color">Order No. 9479976560 - 91</p>
+                  </td>
+                  <td class="hidden-xs">
+                    <p><span>Brand:</span> Levise</p>
+                    <p><span>Color:</span>Black</p>
+                    <p><span>Size:</span>S</p>
+                  </td>
+                  <td class="hidden-xs"><span class="unit-price">$350.00</span></td>
+                  <td class="hidden-xs">
+                    <input type="number" value="3"/>
+                  </td>
+                  <td class="hidden-xs">
+                    <button type="button" class="close hidden-xs">×</button><span>$350.00</span>
+                  </td>
+                </tr>
+                <tr class="calculation-block">
+                  <td colspan="3" class="hidden-xs"></td>
+                  <td class="title-total text-right">
+                    <p>Sub-Total:</p>
+                    <p>VAT (17.5%):</p>
+                    <p>Total:</p>
+                  </td>
+                  <td>
+                    <p>$350.00</p>
+                    <p>$350.00</p>
+                    <p class="total">$350.00</p>
+                  </td>
+                </tr>
+              </table>
+              <div class="col-md-12">
+                <div class="row"><a href="javascript:void(0);" title="Continue shopping" class="btn-grey pull-left">Continue shopping</a><a href="javascript:void(0);" title="Checkout" class="btn-cta pull-right">Checkout</a>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- end address-->
-          <!-- begin shipping-->
-          <div id="shipping" class="tab-pane">
-            <div class="row">
-              <form method="post" action="#">
-                <fieldset class="col-md-6">
-                  <h4>CHOOSE A TRANSPORT METHOD</h4>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="store" id="store" class="prettyCheckable" checked="checked"/><a href="" class="checked"></a>
-                      <label for="store">Pick up in store</label>
+            <!-- end cart-->
+            <!-- begin address-->
+            <div id="address" class="tab-pane">
+              <div class="row">
+                <form method="post" action="#" class="form-horizontal grey-bg">
+                  <fieldset class="billing_address col-md-6 col-sm-6">
+                    <h4>BILLING ADRESS</h4>
+                    <div class="element row">
+                      <label for="firstname" class="col-md-3 col-sm-4 col-xs-12 required">First Name</label>
+                      <input type="text" id="firstname" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
-                  </div>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="courier" id="courier" class="prettyCheckable"/><a href="" class="checked"></a>
-                      <label for="courier">Transport courier</label>
+                    <div class="element row">
+                      <label for="lastname" class="col-md-3 col-sm-4 col-xs-12 required">Last Name</label>
+                      <input type="text" id="lastname" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
-                  </div>
-                </fieldset>
-                <fieldset class="col-md-6">
-                  <h4>SELECT A PAYMENT METHOD</h4>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="bank" id="bank" class="prettyCheckable" checked="checked"/><a href="" class="checked"></a>
-                      <label for="bank">Bank transfer</label>
+                    <div class="element row">
+                      <label for="street" class="col-md-3 col-sm-4 col-xs-12 required">Street name</label>
+                      <input type="text" id="street" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
-                  </div>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="paypal" id="paypal" class="prettyCheckable"/><a href="" class="checked"></a>
-                      <label for="paypal">Paypal</label>
+                    <div class="element row">
+                      <label for="city" class="col-md-3 col-sm-4 col-xs-12 required">City</label>
+                      <input type="text" id="city" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
-                  </div>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="checkque" id="checkque" class="prettyCheckable"/><a href="" class="checked"></a>
-                      <label for="checkque">Checkque payment</label>
+                    <div class="element row">
+                      <label for="country" class="col-md-3 col-sm-4 col-xs-12 required">Country</label>
+                      <input type="text" id="country" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
-                  </div>
-                  <div class="radio has-pretty-child">
-                    <div class="clearfix prettyradio">
-                      <input type="radio" name="card" id="card" class="prettyCheckable"/><a href="" class="checked"></a>
-                      <label for="card">Secure payment by credit card</label>
+                    <div class="element row">
+                      <label for="phone" class="col-md-3 col-sm-4 col-xs-12 required">Phone</label>
+                      <input type="number" id="phone" class="col-md-8 col-sm-6 col-xs-12"/>
                     </div>
+                    <div class="element row">
+                      <label for="comment" class="col-md-3 col-sm-4 col-xs-12">Order Comment</label>
+                      <textarea id="comment" rows="5" name="message" class="col-md-8 col-sm-6 col-xs-12"></textarea>
+                    </div>
+                  </fieldset>
+                </form>
+                <form method="post" action="#" class="form-horizontal">
+                  <fieldset class="shipping_address col-md-6 col-md-6 col-sm-6">
+                    <div class="row title">
+                      <div class="col-md-6 col-sm-8 col-xs-6">
+                        <h4>SHIPPING ADRESS</h4>
+                      </div>
+                      <div style="padding-right:0;" class="col-md-5 col-xs-6 text-right">
+                        <label class="custom_checkbox delivery">
+                          <input type="checkbox" name="delivery" checked="checked"><b class="cb"></b>
+                        </label><span>Same as billing</span>
+                      </div>
+                    </div>
+                    <div class="hidden-xs">
+                      <div class="element row">
+                        <label for="firstname" class="col-md-3 col-sm-4 col-xs-12 required">First Name</label>
+                        <input type="text" id="firstname" class="col-md-8 col-sm-6 col-xs-12"/>
+                      </div>
+                      <div class="element row">
+                        <label for="lastname" class="col-md-3 col-sm-4 col-xs-12 required">Last Name</label>
+                        <input type="text" id="lastname" class="col-md-8 col-sm-6 col-xs-12"/>
+                      </div>
+                      <div class="element row">
+                        <label for="street" class="col-md-3 col-sm-4 col-xs-12 required">Street name</label>
+                        <input type="text" id="street" class="col-md-8 col-sm-6 col-xs-12"/>
+                      </div>
+                      <div class="element row">
+                        <label for="city" class="col-md-3 col-sm-4 col-xs-12 required">City</label>
+                        <input type="text" id="city" class="col-md-8 col-sm-6 col-xs-12"/>
+                      </div>
+                      <div class="element row">
+                        <select class="disabled col-md-8 col-sm-6 col-xs-12">
+                          <option disabled="">Chose option</option>
+                          <option disabled="">Chose option</option>
+                        </select>
+                        <label class="col-md-3 col-sm-4 col-xs-12">Country</label>
+                      </div>
+                      <div class="element row">
+                        <label for="phone" class="col-md-3 col-sm-4 col-xs-12 required">Phone</label>
+                        <input type="number" id="phone" class="col-md-8 col-sm-6 col-xs-12"/>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+                <div class="col-md-12 col-sm-12 col-xs-12 actions">
+                  <div class="row"><a href="javascript:void(0);" title="Back to cart" class="btn-grey pull-left">Back to cart</a><a href="javascript:void(0);" title="Proceed to shipping" class="btn-cta pull-right">Proceed to shipping</a>
                   </div>
-                </fieldset>
-                <div class="col-md-12 actions"><a href="javascript:void(0);" title="Back to delivery" class="btn-grey pull-left">Back to delivery</a><a href="javascript:void(0);" title="Proceed to summary" class="btn-black pull-right">Proceed to summary</a>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!-- end shipping-->
-          <!-- begin summary-->
-          <div id="summary" class="tab-pane clearfix">
-            <div class="sumary-blocks flex row">
-              <div class="col-md-4 col-sm-4 col-sm-12">
-                <div class="content-block">
-                  <h4>BILLING INFORMATION</h4>
-                  <ul class="list-unstyled">
-                    <li>Mr. John Doe</li>
-                    <li>Bakerstreet no.24</li>
-                    <li>841 11 Bratislava</li>
-                    <li>Slovak Republic</li>
-                    <li>john@doe.com</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-4 col-sm-12">
-                <div class="content-block">
-                  <h4>SHIPPING ADRESS</h4>
-                  <ul class="list-unstyled">
-                    <li>Mr. John Doe</li>
-                    <li>Bakerstreet no.24</li>
-                    <li>841 11 Bratislava</li>
-                    <li>Slovak Republic</li>
-                    <li>john@doe.com</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-4 col-sm-12">
-                <div class="content-block">
-                  <h4>PAYMENT AND DELIVERY</h4>
-                  <ul class="list-unstyled">
-                    <li>Payment: Cash on delivery</li>
-                    <li>Delivery: Eshop right post</li>
-                  </ul>
                 </div>
               </div>
             </div>
-            <div class="col-md-12 actions"><a href="javascript:void(0);" title="Back to shipping" class="btn-grey pull-left">Back to shipping</a><a href="javascript:void(0);" title="Send order" class="btn-cta pull-right">Send order</a>
+            <!-- end address-->
+            <!-- begin shipping-->
+            <div id="shipping" class="tab-pane">
+              <div class="row">
+                <form method="post" action="#">
+                  <fieldset class="col-md-6">
+                    <h4>CHOOSE A TRANSPORT METHOD</h4>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="store" id="store" class="prettyCheckable" checked="checked"/><a href="" class="checked"></a>
+                        <label for="store">Pick up in store</label>
+                      </div>
+                    </div>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="courier" id="courier" class="prettyCheckable"/><a href="" class="checked"></a>
+                        <label for="courier">Transport courier</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="col-md-6">
+                    <h4>SELECT A PAYMENT METHOD</h4>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="bank" id="bank" class="prettyCheckable" checked="checked"/><a href="" class="checked"></a>
+                        <label for="bank">Bank transfer</label>
+                      </div>
+                    </div>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="paypal" id="paypal" class="prettyCheckable"/><a href="" class="checked"></a>
+                        <label for="paypal">Paypal</label>
+                      </div>
+                    </div>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="checkque" id="checkque" class="prettyCheckable"/><a href="" class="checked"></a>
+                        <label for="checkque">Checkque payment</label>
+                      </div>
+                    </div>
+                    <div class="radio has-pretty-child">
+                      <div class="clearfix prettyradio">
+                        <input type="radio" name="card" id="card" class="prettyCheckable"/><a href="" class="checked"></a>
+                        <label for="card">Secure payment by credit card</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="col-md-12 actions"><a href="javascript:void(0);" title="Back to delivery" class="btn-grey pull-left">Back to delivery</a><a href="javascript:void(0);" title="Proceed to summary" class="btn-cta pull-right">Proceed to summary</a>
+                  </div>
+                </form>
+              </div>
             </div>
-            <!-- end summay-->
+            <!-- end shipping-->
+            <!-- begin summary-->
+            <div id="summary" class="tab-pane clearfix">
+              <div class="sumary-blocks flex row">
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                  <div class="content-block">
+                    <h4>BILLING INFORMATION</h4>
+                    <ul class="list-unstyled">
+                      <li>Mr. John Doe</li>
+                      <li>Bakerstreet no.24</li>
+                      <li>841 11 Bratislava</li>
+                      <li>Slovak Republic</li>
+                      <li>john@doe.com</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                  <div class="content-block">
+                    <h4>SHIPPING ADRESS</h4>
+                    <ul class="list-unstyled">
+                      <li>Mr. John Doe</li>
+                      <li>Bakerstreet no.24</li>
+                      <li>841 11 Bratislava</li>
+                      <li>Slovak Republic</li>
+                      <li>john@doe.com</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-12">
+                  <div class="content-block">
+                    <h4>PAYMENT AND DELIVERY</h4>
+                    <ul class="list-unstyled">
+                      <li>Payment: Cash on delivery</li>
+                      <li>Delivery: Eshop right post</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 actions"><a href="javascript:void(0);" title="Back to shipping" class="btn-grey pull-left">Back to shipping</a><a href="javascript:void(0);" title="Send order" class="btn-cta pull-right">Send order</a>
+              </div>
+              <!-- end summay-->
+            </div>
           </div>
         </div>
       </div>
       <footer>
         <div class="widgets clearfix">               
-                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                <div class="widget col-xs-12 col-sm-6 col-md-3 hidden-xs">
                   <h5 class="widget-title">Customer Service</h5>
                   <div class="widget-content">
                           <ul class="unstyled-list">
@@ -413,7 +419,7 @@
                           </ul>
                   </div>
                 </div>
-                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                <div class="widget col-xs-12 col-sm-6 col-md-3 hidden-xs">
                   <h5 class="widget-title">Customer Service</h5>
                   <div class="widget-content">
                           <ul class="unstyled-list">
@@ -425,7 +431,7 @@
                           </ul>
                   </div>
                 </div>
-                <div class="widget col-xs-12 col-sm-6 col-md-3">
+                <div class="widget col-xs-12 col-sm-6 col-md-3 hidden-xs">
                   <h5 class="widget-title">Customer Service</h5>
                   <div class="widget-content">
                           <ul class="unstyled-list">

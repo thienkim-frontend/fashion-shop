@@ -682,6 +682,10 @@ blockquote:before {
 .btn-cta {
   background-color: #DF0A71;
 }
+.btn-cta:hover {
+  color: #fff;
+  background-color: #ae0858;
+}
 .btn-grey {
   background-color: #dddddd;
 }
@@ -774,138 +778,6 @@ input:disabled + label, option:disabled + label, select.disabled + label {
   display: block;
 }
 
-/* col-md and col-lg */
-@media only screen and (min-width: 992px) {
-  .products-layout .product:nth-child(3n) {
-    margin-right: 0px;
-  }
-}
-/* col-sm */
-@media (max-width: 991px) and (min-width: 768px) {
-  .products-layout .product:nth-child(2n) {
-    margin-right: 0px;
-  }
-
-  .products-layout .product {
-    width: 49%;
-  }
-}
-/* col-xs */
-@media only screen and (max-width: 767px) {
-  .center-xs {
-    display: table;
-    margin: 0 auto;
-    float: none !important;
-    position: static;
-    text-align: center;
-  }
-
-  .header-inner {
-    height: auto;
-  }
-
-  .banner li {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .banner li > a {
-    margin: auto;
-    display: block;
-  }
-
-  .products-layout .product {
-    width: 48%;
-  }
-
-  .info-details dt {
-    float: none;
-  }
-
-  .buy-protection-box {
-    display: none;
-  }
-
-  .boxes-bottom > ul > li {
-    margin-bottom: 15px;
-  }
-
-  .boxes-bottom .middle-box, .blog-list-detail {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-
-  .cart-sub-total dd {
-    width: 30%;
-  }
-
-  .blog-list h4 {
-    margin-top: 10px;
-  }
-
-  #single-blog-page .social-icon {
-    margin-top: 10px;
-  }
-
-  .emty-cart {
-    width: 100%;
-  }
-
-  .address-box {
-    padding: 0;
-  }
-}
-/* col-xs , col-sm */
-@media only screen and (max-width: 991px) {
-  .wraper {
-    width: auto;
-  }
-
-  .products-layout.list .button-group {
-    display: block;
-    border: none;
-    margin-left: 125px;
-  }
-
-  .comment-form label {
-    position: static;
-  }
-
-  .about .text {
-    margin-bottom: 10px;
-  }
-
-  .contact-form input[type=text] {
-    margin-top: 10px;
-  }
-}
-/* All but col-xs */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .products-layout .product {
-    width: 100%;
-  }
-
-  .breadcrumb-wrapper {
-    width: 100%;
-  }
-
-  .styled-dd {
-    width: 100%;
-  }
-
-  .user-avatar {
-    margin-top: 40px;
-  }
-
-  .comment-form form {
-    width: 100% !important;
-  }
-
-  .compare-item {
-    width: 100%;
-  }
-}
-/* col-md */
 .fancybox-ad {
   position: relative;
   width: 700px;
@@ -2392,6 +2264,92 @@ body {
   display: block;
 }
 
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .logo-wrapper a {
+    width: 200px;
+    height: 70px;
+  }
+
+  .header-section {
+    margin: 0 10px;
+  }
+
+  .dl-menuwrapper {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    margin-right: 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .breadcrumb li {
+    padding: 5px 5px 5px 20px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  footer {
+    margin-top: 15px;
+  }
+
+  .cart .cart_nav {
+    clear: both;
+  }
+  .cart .cart_nav li {
+    display: none;
+  }
+  .cart .cart_nav li.active {
+    display: block;
+  }
+  .cart .cart_nav li:after {
+    display: none;
+  }
+  .cart .tbl-cart {
+    margin-top: -30px;
+  }
+  .cart .tbl-cart th {
+    display: none;
+  }
+  .cart .tbl-cart td {
+    display: block;
+    overflow: auto;
+  }
+  .cart .tbl-cart .cart-thumbnail {
+    width: 80px;
+  }
+  .cart .tbl-cart .calculation-block {
+    text-align: right;
+  }
+  .cart .tbl-cart .calculation-block td {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .cart .tbl-cart h5 {
+    margin-bottom: 0;
+  }
+  .cart .title > div {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  .cart .sumary-blocks {
+    margin-bottom: 15px;
+  }
+}
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
 /* 
 @include font-face();
 @include box-shadow();
