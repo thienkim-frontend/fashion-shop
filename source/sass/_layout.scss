@@ -103,7 +103,7 @@ blockquote{
 }
 [class*='btn-']{
   @include border-radius();
-  min-width: 70px;
+  min-width: 100px;
   color: #fff;
   padding: .75em 1em;
   display: inline-block;

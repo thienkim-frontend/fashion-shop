@@ -2,13 +2,33 @@ jQuery(document).ready(function ($) {
   $(function () {
     $("[rel='tooltip']").tooltip();
   });
-  // Mega menu
-   $('.has-child').hover(function(){
-    $(this).find('.dropdown-content').stop().slideDown('400','easeInQuad');
-    },
-    function(){
-    $(this).find('.dropdown-content').stop().slideUp('slow');
+  function openTab(){
+    // Javascript to enable link to tab
+    var hash = document.location.hash;
+    if (hash) {
+        $('.nav-tabs a[href="'+ hash +'"]').tab('show');
+        // $('html,body').animate({scrollTop:$('.nav-tabs a[href="'+ hash +'"]').offset().top}, 600);
+    } 
+    // Change hash for page-reload
+    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
     });
+  }
+  openTab();
+  $('.dropdown-content a').on('click', function () {
+    var hash = this.hash;
+    if (hash) {
+      $('.nav-tabs a[href="'+ hash +'"]').tab('show');
+    } 
+  });
+
+  // Mega menu
+ $('.has-child').hover(function(){
+  $(this).find('.dropdown-content').stop().slideDown('400','easeInQuad');
+  },
+  function(){
+  $(this).find('.dropdown-content').stop().slideUp('slow');
+  });
     
     
   // hide #back-top first
@@ -109,11 +129,25 @@ jQuery(document).ready(function ($) {
       
   }
 
-   
-    
-    $( '#dl-menu' ).dlmenu();
-    
-    // $(".fancybox-ad").fancybox().trigger('click');
-
+  /*==================Map==================*/
+  function initialize() {
+    var mapOptions = {
+    zoom: 16,
+    center: new google.maps.LatLng(40.676498, -73.623132),
+    disableDefaultUI: true,
+    zoomControl: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); 
+    var marker = new google.maps.Marker({
+      position: map.getCenter(),
+      map: map,
+      icon:"images/map_marker_icon.png"
+    });
+    marker.setMap(map);     
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
   
+  $(".fancybox-ad").fancybox().trigger('click');
+  $( '#dl-menu' ).dlmenu();
 });

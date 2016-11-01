@@ -25,27 +25,27 @@ html(lang='en')
     script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
     <![endif]-->
   body(class=subPage)
-    if (subPage === "home")
+    if (subPage === "index")
         .fancybox-ad.clearfix(style="display:none;")
             .promo.col-md-5
-                img(src='images/img-add.jpg', alt='Advertisement')
+                img(src='images/img-ad.jpg', alt='Advertisement')
             .content.col-md-7
                 .header
                     span.off.highlight 20%
                     span.uppercase-text
                         | one day 
                         span.highlight discount
-                        | every month
+                        | <br/>every month
                 .main.clearfix
                     h4.uppercase.font-light Subscribe and don't miss it!
                     form(action='', method='post')
                         input(type='text', class='uppercase', name='email', placeholder='Your Email')
                         input(type='submit', class='btn', value='Send')
-                        .social-icon
-                            span recommend for friends
-                            a(href=""): i.fa.fa-facebook.round-icon
-                            a(href=""): i.fa.fa-twitter.round-icon
-                            a(href=""): i.fa.fa-rss.round-icon
+            ul.social-icon.list-inline
+                li: span recommend for friends
+                li: a(href=""): i.fa.fa-facebook.round-icon
+                li: a(href=""): i.fa.fa-twitter.round-icon
+                li: a(href=""): i.fa.fa-rss.round-icon
 
     .container
         //- include header
@@ -62,5 +62,6 @@ html(lang='en')
 
     //-  Include all compiled plugins (below), or include individual files as needed
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTt3yRgnZFOFWHKPqBR2PhnhQDBC1vhTs")    
     script(src='js/plugin.min.js')
     script(src='js/main.js')

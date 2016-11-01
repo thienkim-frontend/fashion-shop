@@ -1,9 +1,11 @@
 .fancybox-ad{
+	position: relative;
+	width:700px;
+	height: 300px;
+	background-color: $grey;
 	text-transform: uppercase;
-	width:700px!important;
-	background:#f0f0f0;
 	[class*="col"]{
-		padding:0px !important;
+		padding: 0;
 	}
 	.header{
 		padding:20px;
@@ -31,19 +33,25 @@
 	}
 	input[type="text"]{
 		border-radius: 0px;
-		border: 1px solid #e0e0e0;
-		padding: 8px 5px;
-		width:77%;
+		border: 1px solid $black;
+		padding: 8px 10px;
 	}
 	.btn{
-		font-size:12px;
-		background-color: #000;
-		border-radius: 0px;
 		padding: 8px 20px;
+		height: 40px;
+		color: $white;
+		background-color: $black;
+		border-radius: 0px;
+	}
+	.list-inline>li{
+	  padding-right: 0;
+	  .round-icon{ border-color: $grey;}
 	}
 	.social-icon{
 		margin-top: 80px;
-		float:right;
+		position: absolute;
+		right: 10px;
+		bottom: 20px;
 	}
 }
 .fancybox-skin{
@@ -118,7 +126,7 @@ overflow:hidden !important;
 	button{
 		position: absolute;
 		top: 0;
-		bottom: -1pxs;
+		bottom: -1px;
 		right: 10px;
 		padding: 0 10px;
 		border:0;

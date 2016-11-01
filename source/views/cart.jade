@@ -44,9 +44,9 @@ block breadcrumb
 block content
   // Nav tabs
   ul.cart_nav.nav.nav-tabs
-    li.col-md-3
+    li.col-md-3.active
       a(href='#cart', data-toggle='tab') Shopping cart
-    li.active.col-md-3
+    li.col-md-3
       a(href='#address', data-toggle='tab') Delivery address
     li.col-md-3
       a(href='#shipping', data-toggle='tab') Shipping / payment
@@ -54,7 +54,7 @@ block content
       a(href='#summary', data-toggle='tab') Summary
   // Tab panes
   .tab-content.cart_content
-    #cart.tab-pane.clearfix
+    #cart.tab-pane.clearfix.active
       table.tbl-cart
         tr
           th Product Name
@@ -80,7 +80,7 @@ block content
           +a("Checkout", "").btn-cta.pull-right
     // end cart
     // begin address
-    #address.tab-pane.active
+    #address.tab-pane
       .row
         form.form-horizontal.grey-bg(method='post', action='#')
           fieldset.billing_address.col-md-6.col-sm-6

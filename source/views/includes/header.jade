@@ -63,13 +63,13 @@ header.header-section
     #dl-menu.dl-menuwrapper.visible-xs.pull-right
       button.dl-trigger
         i.fa.fa-reorder
-      +dl-list([{"title":"Home", "url":"index.html"}, {"title":"Women", "url":""}, {"title":"Men", "url":""}, {"title":"Template pages", "url":"", "hasChild":[{"title":"Products grid listing", "url": "product_list.html"}, {"title":"Product detail page", "url":"product_detail.html"}, {"title":"Compare products", "url":"compare_product.html"}, {"title":"Blog page", "url":"blog.html"}, {"title":"Cart page", "url":"cart.html"}]}], "dl-menu")
+      +dl-list([{"title":"Home", "url":"index.html"}, {"title":"Women", "url":""}, {"title":"Men", "url":""}, {"title":"Template pages", "url":"", "hasChild":[{"title":"Products grid listing", "url": "product.html"}, {"title":"Product detail page", "url":"product-detail.html"}, {"title":"Compare products", "url":"compare.html"}, {"title":"Blog page", "url":"blog.html"}, {"title":"Cart page", "url":"cart.html"}]}], "dl-menu")
     .sub-menu.hidden-xs
       .menu-item.clearfix
         +menu([["$", "", "active"], ["£", ""], ["€", ""]]).option-list
         +menu([["EN","", "active"], ["FR", ""], ["DE", ""]]).option-list
       .menu-item
-        +menu([["My Account", "my_account.html"], ["My Wishlist(3)", "my_account.html"], ["My Compare(2)", "compare_product.html"], ["Checkout", "cart.html"], ["Log Out", "register.html"]]).menu-list.center-xs
+        +menu([["My Account", "account.html"], ["My Wishlist(3)", "account.html"], ["My Compare(2)", "compare.html"], ["Checkout", "cart.html"], ["Log Out", "register.html"]]).menu-list.center-xs
     nav.menu-block.clearfix.hidden-xs.hidden-sm
       ul.main-menu.unstyled-list
         +li(["Home", ""])
@@ -77,9 +77,9 @@ header.header-section
         +li(["Men", ""])
         +li(["Template pages<b class='caret'></b>", ""]).has-child
           .dropdown-content.mega-menu.col-md-12 
-            +mega-menu("Common pages", [["Home page", "index.html"], ["Products grid listing", "product_list.html"], ["Product detail page", "product_detail.html"], ["Compare products", "compare_product.html"], ["Wishlist page", "my_account.html"]])
-            +mega-menu("Cart pages", [["Emty cart", ""], ["Checkout step 1", "cart.html"], ["Checkout step 2", "blog.html"], ["Checkout step 3", "cart.html"], ["Checkout step 4", "cart.html"]])
-            +mega-menu("My pages", [["Registration", "register.html"], ["My account", "my_account.html"], ["Blog listing", "blog.html"], ["Blog detail", "blog_detail.html"], ["About us", "about_us.html"], ["Contact us", "contact.html"]])
+            +mega-menu("Common pages", [["Home page", "index.html"], ["Products grid listing", "product.html"], ["Product detail page", "product-detail.html"], ["Compare products", "compare.html"], ["Wishlist page", "account.html"]])
+            +mega-menu("Cart pages", [["Emty cart", ""], ["Checkout step 1", "cart.html#cart"], ["Checkout step 2", "cart.html#address"], ["Checkout step 3", "cart.html#shipping"], ["Checkout step 4", "cart.html#summary"]])
+            +mega-menu("My pages", [["Registration", "register.html"], ["My account", "account.html"], ["Blog listing", "blog.html"], ["Blog detail", "blog-detail.html"], ["About us", "about.html"], ["Contact us", "contact.html"]])
             .col-md-3
               .carousel
                 .carousel-inner
@@ -89,10 +89,10 @@ header.header-section
                     img(src='images/slide2.jpg', alt='')
               h5 Lorem ipsum dolor sit, consectetur adipiscing elit. 
               a.btn-black(href='#') Go to Shop &rarr;
-        +li(["About us", "about_us.html"])
+        +li(["About us", "about.html"])
         +li(["Contact us", "contact.html"])
       .cart-block.has-child.pull-right
-        a.cart-view(href='#')
+        a.cart-view(href='cart.html')
           i.fa.fa-shopping-cart
           span My Cart: 4 item(s) - $ 790.00 
         .sub-cart.subHeader.dropdown-content
@@ -106,5 +106,5 @@ header.header-section
           .cart-total.clearfix
             span.pull-left Total
             span.pull-right $790
-          +a("View Cart", "").btn-black.pull-right
+          +a("View Cart", "cart.html").btn-black.pull-right
 

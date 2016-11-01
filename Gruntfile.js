@@ -119,6 +119,9 @@ module.exports = function (grunt) {
           }, {
             files: 'source/sass/**',
             tasks: ['compass']
+          }, {
+            files: 'source/js/main.js',
+            tasks: ['uglify']        
         }],
         'gh-pages': {
             options: {
