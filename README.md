@@ -1,4 +1,4 @@
-### Website 
+### Website by [Thien Kim](https://thienkim-frontend.github.io/cv/)
 
 ```
 Home page            https://thienkim-frontend.github.io/fashion-shop/
@@ -25,7 +25,7 @@ Compass              http://compass-style.org/
 Grunt                http://gruntjs.com/
 Bootstrap            http://getbootstrap.com/
 Font Awesome         http://fontawesome.io/
-OWL Carousel js      http://owlgraphic.com/owlcarousel/
+Owl Carousel js      http://owlgraphic.com/owlcarousel/
 Fancybox js          http://fancybox.net/
 Dlmenu js            http://www.jqueryscript.net/menu/jQuery-Responsive-Multi-Level-Menu-Plugin-Dlmenu.html
 Elevatezoom js       http://www.elevateweb.co.uk/image-zoom
