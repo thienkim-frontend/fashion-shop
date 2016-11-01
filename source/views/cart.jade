@@ -28,12 +28,12 @@ mixin cart-row(img, name, id, brand, color, size, price, number, total)
       p
         span Size:
         | #{size}
-    td
+    td.hidden-xs
       span.unit-price= price
-    td
+    td.hidden-xs
       input(type='number', value=number)
     td.hidden-xs
-      button.close(type='button') ×
+      button.close(type='button').hidden-xs ×
       span= total
 block var
   - scriptpage = "home";
@@ -42,131 +42,134 @@ block var
 block breadcrumb
   +breadcrumb([["Home", "index.html"]], "Cart page")
 block content
-  // Nav tabs
-  ul.cart_nav.nav.nav-tabs
-    li.col-md-3.active
-      a(href='#cart', data-toggle='tab') Shopping cart
-    li.col-md-3
-      a(href='#address', data-toggle='tab') Delivery address
-    li.col-md-3
-      a(href='#shipping', data-toggle='tab') Shipping / payment
-    li.col-md-3
-      a(href='#summary', data-toggle='tab') Summary
-  // Tab panes
-  .tab-content.cart_content
-    #cart.tab-pane.clearfix.active
-      table.tbl-cart
-        tr
-          th Product Name
-          th.hidden-xs(width='15%') Options
-          th.hidden-xs(width='15%') Unit Price
-          th.hidden-xs(width='15%') Quantity
-          th(width='15%') Sub Total
-        +cart-row("pro-20", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")
-        +cart-row("pro-20", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")  
-        tr.calculation-block
-          td(colspan='3')
-          td.title-total.text-right
-            p Sub-Total:
-            p VAT (17.5%):
-            p Total:
-          td
-            p $350.00
-            p $350.00
-            p.total $350.00
-      .col-md-12
-        .row
-          +a("Continue shopping", "").btn-grey.pull-left 
-          +a("Checkout", "").btn-cta.pull-right
-    // end cart
-    // begin address
-    #address.tab-pane
-      .row
-        form.form-horizontal.grey-bg(method='post', action='#')
-          fieldset.billing_address.col-md-6.col-sm-6
-            h4 BILLING ADRESS
-            +input-cart("firstname", "First Name", "text").required
-            +input-cart("lastname", "Last Name", "text").required
-            +input-cart("street", "Street name", "text").required
-            +input-cart("city", "City", "text").required
-            +input-cart("country", "Country", "text").required
-            +input-cart("phone", "Phone", "number").required
-            .element.row
-              label.col-md-3.col-sm-4.col-xs-12(for="comment") Order Comment
-              textarea.col-md-8.col-sm-6.col-xs-12(id="comment", rows='5', name='message')
-        form.form-horizontal(method='post', action='#')
-          fieldset.shipping_address.col-md-6.col-md-6.col-sm-6
-            .row
-              .col-md-6.col-sm-8.col-xs-12
-                h4 SHIPPING ADRESS
-              .col-md-5.text-right(style='padding-right:0;')
-                label.custom_checkbox.delivery
-                  input(type='checkbox', name='delivery', checked='checked')
-                  b.cb
-                span Same as billing
-            +input-cart("firstname", "First Name", "text").required
-            +input-cart("lastname", "Last Name", "text").required
-            +input-cart("street", "Street name", "text").required
-            +input-cart("city", "City", "text").required
-            .element.row
-              select.disabled.col-md-8.col-sm-6.col-xs-12
-                option(disabled='') Chose option
-                option(disabled='') Chose option
-              label.col-md-3.col-sm-4.col-xs-12 Country
-            +input-cart("phone", "Phone", "number").required
-        .col-md-12.col-sm-12.col-xs-12.actions
+  .col-md-12
+    // Nav tabs
+    ul.cart_nav.nav.nav-tabs
+      li.col-md-3.active
+        a(href='#cart', data-toggle='tab') Shopping cart
+      li.col-md-3
+        a(href='#address', data-toggle='tab') Delivery address
+      li.col-md-3
+        a(href='#shipping', data-toggle='tab') Shipping / payment
+      li.col-md-3
+        a(href='#summary', data-toggle='tab') Summary
+  .col-md-12
+    // Tab panes
+    .tab-content.cart_content
+      #cart.tab-pane.active
+        table.tbl-cart
+          tr
+            th Product Name
+            th.hidden-xs(width='15%') Options
+            th.hidden-xs(width='15%') Unit Price
+            th.hidden-xs(width='15%') Quantity
+            th(width='15%') Sub Total
+          +cart-row("pro-20", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")
+          +cart-row("pro-04", "A Line Layered Evening Dress Floor Length Sweetheart Neck Taffeta Empire Prom Dress", "Order No. 9479976560 - 91", "Levise", "Black", "S", "$350.00", "3", "$350.00")  
+          tr.calculation-block
+            td(colspan='3').hidden-xs
+            td.title-total.text-right
+              p Sub-Total:
+              p VAT (17.5%):
+              p Total:
+            td
+              p $350.00
+              p $350.00
+              p.total $350.00
+        .col-md-12
           .row
-            +a("Back to cart", "").btn-grey.pull-left 
-            +a("Proceed to shipping", "").btn-cta.pull-right
-    // end address
-    // begin shipping
-    #shipping.tab-pane
-      .row
-        form(method='post', action='#')
-          fieldset.col-md-6
-            h4 CHOOSE A TRANSPORT METHOD
-            +radio-custom("store", "Pick up in store")(checked)
-            +radio-custom("courier", "Transport courier")
+            +a("Continue shopping", "").btn-grey.pull-left 
+            +a("Checkout", "").btn-cta.pull-right
+      // end cart
+      // begin address
+      #address.tab-pane
+        .row
+          form.form-horizontal.grey-bg(method='post', action='#')
+            fieldset.billing_address.col-md-6.col-sm-6
+              h4 BILLING ADRESS
+              +input-cart("firstname", "First Name", "text").required
+              +input-cart("lastname", "Last Name", "text").required
+              +input-cart("street", "Street name", "text").required
+              +input-cart("city", "City", "text").required
+              +input-cart("country", "Country", "text").required
+              +input-cart("phone", "Phone", "number").required
+              .element.row
+                label.col-md-3.col-sm-4.col-xs-12(for="comment") Order Comment
+                textarea.col-md-8.col-sm-6.col-xs-12(id="comment", rows='5', name='message')
+          form.form-horizontal(method='post', action='#')
+            fieldset.shipping_address.col-md-6.col-md-6.col-sm-6
+              .row.title
+                .col-md-6.col-sm-8.col-xs-6
+                  h4 SHIPPING ADRESS
+                .col-md-5.col-xs-6.text-right(style='padding-right:0;')
+                  label.custom_checkbox.delivery
+                    input(type='checkbox', name='delivery', checked='checked')
+                    b.cb
+                  span Same as billing
+              .hidden-xs
+                +input-cart("firstname", "First Name", "text").required
+                +input-cart("lastname", "Last Name", "text").required
+                +input-cart("street", "Street name", "text").required
+                +input-cart("city", "City", "text").required
+                .element.row
+                  select.disabled.col-md-8.col-sm-6.col-xs-12
+                    option(disabled='') Chose option
+                    option(disabled='') Chose option
+                  label.col-md-3.col-sm-4.col-xs-12 Country
+                +input-cart("phone", "Phone", "number").required
+          .col-md-12.col-sm-12.col-xs-12.actions
+            .row
+              +a("Back to cart", "").btn-grey.pull-left 
+              +a("Proceed to shipping", "").btn-cta.pull-right
+      // end address
+      // begin shipping
+      #shipping.tab-pane
+        .row
+          form(method='post', action='#')
+            fieldset.col-md-6
+              h4 CHOOSE A TRANSPORT METHOD
+              +radio-custom("store", "Pick up in store")(checked)
+              +radio-custom("courier", "Transport courier")
 
-          fieldset.col-md-6
-            h4 SELECT A PAYMENT METHOD
-            +radio-custom("bank", "Bank transfer")(checked)
-            +radio-custom("paypal", "Paypal")
-            +radio-custom("checkque", "Checkque payment")
-            +radio-custom("card", "Secure payment by credit card")
+            fieldset.col-md-6
+              h4 SELECT A PAYMENT METHOD
+              +radio-custom("bank", "Bank transfer")(checked)
+              +radio-custom("paypal", "Paypal")
+              +radio-custom("checkque", "Checkque payment")
+              +radio-custom("card", "Secure payment by credit card")
 
-          .col-md-12.actions
-            +a("Back to delivery", "").btn-grey.pull-left 
-            +a("Proceed to summary", "").btn-black.pull-right
-    // end shipping
-    // begin summary
-    #summary.tab-pane.clearfix
-      .sumary-blocks.flex.row
-        .col-md-4.col-sm-4.col-sm-12
-          .content-block
-            h4 BILLING INFORMATION
-            ul.list-unstyled
-              li Mr. John Doe
-              li Bakerstreet no.24
-              li 841 11 Bratislava
-              li Slovak Republic
-              li john@doe.com
-        .col-md-4.col-sm-4.col-sm-12
-          .content-block
-            h4 SHIPPING ADRESS
-            ul.list-unstyled
-              li Mr. John Doe
-              li Bakerstreet no.24
-              li 841 11 Bratislava
-              li Slovak Republic
-              li john@doe.com
-        .col-md-4.col-sm-4.col-sm-12
-          .content-block
-            h4 PAYMENT AND DELIVERY
-            ul.list-unstyled
-              li Payment: Cash on delivery
-              li Delivery: Eshop right post
-      .col-md-12.actions
-        +a("Back to shipping", "").btn-grey.pull-left 
-        +a("Send order", "").btn-cta.pull-right
-      // end summay
+            .col-md-12.actions
+              +a("Back to delivery", "").btn-grey.pull-left 
+              +a("Proceed to summary", "").btn-cta.pull-right
+      // end shipping
+      // begin summary
+      #summary.tab-pane.clearfix
+        .sumary-blocks.flex.row
+          .col-md-4.col-sm-4.col-sm-12
+            .content-block
+              h4 BILLING INFORMATION
+              ul.list-unstyled
+                li Mr. John Doe
+                li Bakerstreet no.24
+                li 841 11 Bratislava
+                li Slovak Republic
+                li john@doe.com
+          .col-md-4.col-sm-4.col-sm-12
+            .content-block
+              h4 SHIPPING ADRESS
+              ul.list-unstyled
+                li Mr. John Doe
+                li Bakerstreet no.24
+                li 841 11 Bratislava
+                li Slovak Republic
+                li john@doe.com
+          .col-md-4.col-sm-4.col-sm-12
+            .content-block
+              h4 PAYMENT AND DELIVERY
+              ul.list-unstyled
+                li Payment: Cash on delivery
+                li Delivery: Eshop right post
+        .col-md-12.actions
+          +a("Back to shipping", "").btn-grey.pull-left 
+          +a("Send order", "").btn-cta.pull-right
+        // end summay

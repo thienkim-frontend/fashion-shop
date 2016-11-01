@@ -116,6 +116,7 @@ blockquote{
 .btn{
   &-cta{
     background-color: $highlight-color;
+    &:hover{ color:$white; background-color: darken($highlight-color, 10%);}
   }
   &-grey{
     background-color: rgb(221, 221, 221);
