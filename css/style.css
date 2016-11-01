@@ -668,7 +668,7 @@ blockquote:before {
   -moz-border-radius: 1.5em;
   -webkit-border-radius: 1.5em;
   border-radius: 1.5em;
-  min-width: 70px;
+  min-width: 100px;
   color: #fff;
   padding: .75em 1em;
   display: inline-block;
@@ -907,12 +907,14 @@ input:disabled + label, option:disabled + label, select.disabled + label {
 }
 /* col-md */
 .fancybox-ad {
+  position: relative;
+  width: 700px;
+  height: 300px;
+  background-color: #eee;
   text-transform: uppercase;
-  width: 700px !important;
-  background: #f0f0f0;
 }
 .fancybox-ad [class*="col"] {
-  padding: 0px !important;
+  padding: 0;
 }
 .fancybox-ad .header {
   padding: 20px;
@@ -940,19 +942,27 @@ input:disabled + label, option:disabled + label, select.disabled + label {
 }
 .fancybox-ad input[type="text"] {
   border-radius: 0px;
-  border: 1px solid #e0e0e0;
-  padding: 8px 5px;
-  width: 77%;
+  border: 1px solid #000;
+  padding: 8px 10px;
 }
 .fancybox-ad .btn {
-  font-size: 12px;
+  padding: 8px 20px;
+  height: 40px;
+  color: #fff;
   background-color: #000;
   border-radius: 0px;
-  padding: 8px 20px;
+}
+.fancybox-ad .list-inline > li {
+  padding-right: 0;
+}
+.fancybox-ad .list-inline > li .round-icon {
+  border-color: #eee;
 }
 .fancybox-ad .social-icon {
   margin-top: 80px;
-  float: right;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
 }
 
 .fancybox-skin {
