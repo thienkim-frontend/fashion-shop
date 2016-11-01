@@ -142,3 +142,13 @@ mixin side-item(type, heading, arr)
                   | #{item[2]} 
               else
                 span.price $#{item[2]}
+
+mixin account-list(arr)
+  ul.list-unstyle
+    - for (items in arr)
+      - var item = arr[items]
+        - if(item[1])
+          li.active
+            a(href="javascript:void(0);", title=item[0])!=item[0]
+        - else
+          li: a(href="javascript:void(0);", title=item[0])!=item[0]

@@ -26,96 +26,112 @@ block var
 block breadcrumb
   +breadcrumb([["Home", "index.html"],["Account", "account.html"]], "Kim Nguyen")
 block content
-  #accordion.panel-group.account-block
-    .panel.panel-default
-      #headingOne.panel-heading(role='tab')
-        h2.panel-title
-          a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
-            span.step 01
-            | Acccount Infomation
-      #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
-        .panel-body
-          div
-            form.form-horizontal(role='form', action="#", method="post")
-              .row.pusher-b-20
-                .col-xs-12.col-sm-12.col-md-6
-                  h3 YOUR PERSONAL DETAILS
-                  +input("first-name", "First Name", "text")
-                  +input("last-name", "Last Name", "text")
-                  +input("email", "E-Mail", "email")
-                  +input("phone", "Telephone", "number")
-                  +input("mobile", "Mobile", "number")
-                  +input("fax", "Fax", "number")
-                  
-                .col-xs-12.col-sm-12.col-md-6
-                  h3 YOUR ADRESS
-                  +input("company", "Company", "text")
-                  +input("address", "Address", "text")
-                  +input("city", "City", "text")
-                  +input("post-code", "Post Code", "number")
-                  +select("country", "Country", ["Select Country", "VietNam"])
-                  +select("region", "Region/state", ["Select State/region"])
-              .row
-                .col-xs-12.col-sm-12.col-md-6
-                  h3 YOUR PASSWORD
-                  +input("pass", "Password", "password")
-                  +input("confirm-pass", "Confirm Password", "password")
+  aside.sidebar.col-sm-4.col-md-3.hidden-xs
+    //- category
+    section.account-block
+      header Categories
+      +account-list([["Acccount Infomation", "active"], ["Delivery Details",""], ["MY ORDERS",""],[" MY WISHLIST",""], ["Payment Method",""], ["Returns",""], ["Downloads",""], ["Newsletter",""], ["Logout",""]])
+    section.tag-block
+      header Tag Cloud
+      .content-block
+        .tag-cloud
+          +a("New collections", "") 
+          +a("Jacket", "") 
+          +a("Fashion", "") 
+          +a("Casual", "") 
+          +a("Tommy Mancini", "") 
+          +a("Utamur tincidunt", "")
+  .col-md-9.col-sm-8.col-xs-12
+    #accordion.panel-group.account-block
+      .panel.panel-default
+        #headingOne.panel-heading(role='tab')
+          h3.panel-title
+            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+              span.step 01
+              | Acccount Infomation
+        #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne').in
+          .panel-body
+            div
+              form.form-horizontal(role='form', action="#", method="post")
+                .row.pusher-b-20
+                  .col-xs-12.col-sm-12.col-md-6
+                    h4 Personal Details
+                    +input("first-name", "First Name", "text")
+                    +input("last-name", "Last Name", "text")
+                    +input("email", "E-Mail", "email")
+                    +input("phone", "Telephone", "number")
+                    +input("mobile", "Mobile", "number")
+                    +input("fax", "Fax", "number")
+                    
+                  .col-xs-12.col-sm-12.col-md-6
+                    h4 Your Adress
+                    +input("company", "Company", "text")
+                    +input("address", "Address", "text")
+                    +input("city", "City", "text")
+                    +input("post-code", "Post Code", "number")
+                    +select("country", "Country", ["Select Country", "VietNam"])
+                    +select("region", "Region/state", ["Select State/region"])
+                .row
+                  .col-xs-12.col-sm-12.col-md-6
+                    h4 Your Password
+                    +input("pass", "Password", "password")
+                    +input("confirm-pass", "Confirm Password", "password")
 
-                .col-xs-12.col-sm-12.col-md-6
-                  h3 NEWSLETTER
-                  .form-group
-                    label.col-sm-4.col-lg-4.control-label.required Subscribe
-                    .col-sm-2.col-lg-3
-                      .radio
-                        .clearfix
-                          input#radio-subscribe-yes.hide(type='radio', name='customer', checked='checked')
-                          a(href='javascript:void(0);')
-                          label(for='radio-subscribe-yes') Yes
-                    .col-sm-2.col-lg-3
-                      .radio.has-child
-                        .clearfix.prettyradio
-                          input#radio-subscribe-no.hide(type='radio', name='customer')
-                          a(href='javascript:void(0);')
-                          label(for='radio-subscribe-no') No
-              .pull-right
-                button.btn-grey Edit
-                button.btn-cta Save
-              .space20.clearfix
-    .panel.panel-default
-      #headingTwo.panel-heading(role='tab')
-        h2.panel-title
-          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-            span.step 02
-            | MY ORDERS
-      #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
-        .panel-body
-          .col-xs-12.col-sm-12
-              table.table.table-responsive.table-striped
-                thead
-                  +row(["No.", "Order Date", "Total", "Status", "Details "])
-                tbody
-                  +row(["8172", "Aug 5, 2013", "$109.00", "On hold", "<a href='javascript:void(0);'>View</a> "])
-                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
-                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
-                  +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
-                  
-    .panel.panel-default
-      #headingThree.panel-heading(role='tab')
-        h2.panel-title
-          a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-            span.step 03
-            | MY WISHLIST
-      #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
-        .panel-body
-          .col-xs-12.col-sm-12
-            .row
-              .col-md-4
-                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "$350.00", "210", "$350.00", "-15%", "removable")
-              .col-md-4
-                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
-              .col-md-4
-                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
-              .col-md-4
-                +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+                  .col-xs-12.col-sm-12.col-md-6
+                    h4 Newsletter
+                    .form-group
+                      label.col-sm-4.col-lg-4.control-label.required Subscribe
+                      .col-sm-2.col-lg-3
+                        .radio
+                          .clearfix
+                            input#radio-subscribe-yes.hide(type='radio', name='customer', checked='checked')
+                            a(href='javascript:void(0);')
+                            label(for='radio-subscribe-yes') Yes
+                      .col-sm-2.col-lg-3
+                        .radio.has-child
+                          .clearfix.prettyradio
+                            input#radio-subscribe-no.hide(type='radio', name='customer')
+                            a(href='javascript:void(0);')
+                            label(for='radio-subscribe-no') No
+                .pull-right
+                  button.btn-grey Edit
+                  button.btn-cta Save
+                .space20.clearfix
+      .panel.panel-default
+        #headingTwo.panel-heading(role='tab')
+          h3.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+              span.step 02
+              | MY ORDERS
+        #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+          .panel-body
+            .col-xs-12.col-sm-12
+                table.table.table-responsive.table-striped
+                  thead
+                    +row(["No.", "Order Date", "Total", "Status", "Details "])
+                  tbody
+                    +row(["8172", "Aug 5, 2013", "$109.00", "On hold", "<a href='javascript:void(0);'>View</a> "])
+                    +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                    +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                    +row(["8077", "Jul 25, 2013", "$140.00", "Shipped", "<a href='javascript:void(0);'>View</a> "])
+                    
+      .panel.panel-default
+        #headingThree.panel-heading(role='tab')
+          h3.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+              span.step 03
+              | MY WISHLIST
+        #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+          .panel-body
+            .col-xs-12.col-sm-12
+              .row
+                .col-md-4
+                  +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "$350.00", "210", "$350.00", "-15%", "removable")
+                .col-md-4
+                  +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+                .col-md-4
+                  +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
+                .col-md-4
+                  +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-09", "$350.00", "210", "", "", "removable")
 
     
