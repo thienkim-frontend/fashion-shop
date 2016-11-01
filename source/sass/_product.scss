@@ -35,21 +35,13 @@
 		background-color: $white;
 		color: #1f1f1f;
 	}
-	.entry-title {
-		margin-bottom: 0;
-		padding-right: 70px;
-	}
 	.recent-order{
 		float:right;
-		.order{
-			font-weight:bold;
-		}
 	}
 	.price{
-		margin-top: 10px;
 		display: inline-block;
-		color: $highlight-color;
-		font-weight: bold;
+		font-size: 18px;
+		color: $dark-grey;
 	}
 	.remove-icon{
 		display:none;

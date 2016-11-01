@@ -24,10 +24,10 @@ block content
       +account-list([["Acccount Infomation", "active"], ["Delivery Details",""], ["MY ORDERS",""],[" MY WISHLIST",""], ["Payment Method",""], ["Returns",""], ["Downloads",""], ["Newsletter",""], ["Logout",""]])
 
   .col-md-9.col-sm-8.col-xs-12
-    .content-inner
+    .content-inner(style="min-height:420px;")
       .row
         .col-xs-12.col-sm-6.col-md-6
-          h4 New Customer
+          h3 New Customer
           p Checkout Options:
           form(action="#", method="post")#register-frm
             .radio.has-pretty-child
@@ -43,19 +43,13 @@ block content
             p By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
             button.btn-grey Continue
         .col-xs-12.col-sm-6.col-md-6
-          h4 Returning Customer
+          h3 Returning Customer
           form(action="#", method="post")#login-frm
             .form-group.stylish-input
               label.required(for='inputEmail') Email
-              div(style='position:relative;')
-                input#inputEmail(type='email', style='width:93%;', placeholder='ndt_kim@yahoo.com.vn')
-                .ok-tipbox
-                  i.iconfont-ok-sign
+              input#inputEmail.form-control(type='email', placeholder='ndt_kim@yahoo.com.vn')
             .form-group.stylish-input
               label.required(for='inputPassword') Password
-              div(style='position:relative;')
-                input#inputPassword(type='text', style='width:93%;')
-                .error-tipbox
-                  i.iconfont-remove-sign
+              input#inputPassword.form-control(type='text')
               a.help-block(href='') Forgot your password?
             button.btn-black Login

@@ -64,8 +64,8 @@ overflow:hidden !important;
 		}
 		.titles {
 			position:absolute;
-			bottom: 20px;
-			left: 30px;
+			left: 22px;
+			bottom: 5px;
 			color: $white;
 			font-size: 16px;
 			text-transform: uppercase;
@@ -73,7 +73,6 @@ overflow:hidden !important;
 		}
 		.title02 {
 			font-size: 22px;
-			font-weight:bold;
 			margin-top: 5px;
 			margin-bottom: 20px;
 		}
@@ -108,14 +107,6 @@ overflow:hidden !important;
 	margin-bottom:15px;
 	color: $white;
 	background-color: $black;
-	button{
-		padding: .5em 0.7em;
-		background: $highlight-color;
-		position:absolute;
-		top:0;
-		right:0px;
-		border:0;
-	}
 	span{
 		font-size: 18px;
 		line-height: 1.5em;
@@ -127,9 +118,10 @@ overflow:hidden !important;
 	button{
 		position: absolute;
 		top: 0;
-		bottom: 0;
+		bottom: -1pxs;
 		right: 10px;
 		padding: 0 10px;
+		border:0;
 		color: $white;
 		background-color: $highlight-color;
 	}
@@ -207,6 +199,11 @@ overflow:hidden !important;
 	right: 0;
 	a{
 		display: inline-block;
+    margin-left: 5px;
+    &:hover i{
+    	color: $white;
+    	background-color: $dark-grey;
+    }
 	}
 }
 

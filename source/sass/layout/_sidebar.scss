@@ -35,6 +35,9 @@
 			display:block;
 			margin-bottom: 10px;
 		} 
+		.price, .time{
+			color: $dark-grey;
+		}
 	}
 }
 .category-block{
@@ -61,7 +64,6 @@
 .latest-articles{
 	.fa{
 		display: inline-block;
-    vertical-align: bottom;
     margin-right: 5px;
 	}
 	.date{

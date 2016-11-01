@@ -28,15 +28,6 @@ footer{
 .footer-sub{
 	background-color: $grey; 
 	padding: 10px;	
-	a{
-		display: inline-block;
-		width: 40px;
-		margin-left: 5px;
-	}
-}
-.vmid > *{
-	display:table-cell;
-	vertical-align:middle;
 }
 #back-top {
 	position: fixed;
