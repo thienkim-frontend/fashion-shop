@@ -62,6 +62,7 @@ blockquote{
   padding-left: 10px;
   padding-right: 10px;
 }
+.margin-r-10{margin-right:10px;}
 .margin-20{
   margin-top:20px;
   margin-bottom:20px;
@@ -74,7 +75,7 @@ blockquote{
     margin-bottom:20px;
   }
 }
-
+.white_border{ border-color: $white!important;}
 .flex{
   @include display-flex(); 
   @include align-items(stretch);
@@ -94,9 +95,8 @@ blockquote{
   width: 2em;
   height: 2em;
   padding-top:6px;
-  font-size: 16px;
   text-align: center;
-  border: 2px solid #919191;
+  border: 1px solid $dark-grey;
   background-color: $white;
   @include border-radius(50%);
   @include transition(color .2s ease-out, border-color .2s ease-out);
@@ -117,16 +117,20 @@ blockquote{
   &-cta{
     background-color: $highlight-color;
     &:hover{ color:$white; background-color: darken($highlight-color, 10%);}
+    &:visited{ color: $white; }
   }
   &-grey{
     background-color: rgb(221, 221, 221);
+    &:visited{ color: $white; }
   }
   &-black{
     background-color: $black;
+    &:visited{ color: $white; }
   }
   &-outline{
     color: $grey;
     border: 1px solid $grey;
+    &:visited{ color: $grey; }
   }
 }
 .error {
@@ -161,27 +165,21 @@ input:disabled, option:disabled, select.disabled{
 
 .custom-select {
   position: relative;
-  width: 250px;
-  color: #919191;
+  min-width: 120px;
+  color: $dark-grey;
   overflow: hidden;
-  height: 25px;
   border-radius: 3px;
   select {
     width: 100%;
-    padding: 6px 10px;
-    border: 0;
+    appearance: none;
+    -moz-appearance: none;
     -webkit-appearance: none;
   }
-  &:after {
-    content: '\e6be';
+  &:before {
     position: absolute;
-    right: 1em;
+    right: 8px;
     top: 50%;
     margin-top: -6px;
-    font-family: fontawesome;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     cursor: default;
   }
 }

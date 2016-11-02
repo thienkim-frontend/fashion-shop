@@ -11,9 +11,8 @@
 .product {
 	position: relative;
 	padding:10px;
-	border: 1px solid #dedede;
 	background-color: #fff;
-	@include box-shadow(0 0 5px rgba(0,0,0,.15));
+	@include box-shadow(0 0 3px rgba(0,0,0,.15));
 	.entry-media {
 		position: relative;
 		background-color: #ccc;
@@ -149,10 +148,14 @@
 		}
 	}
 }
+[class^="filter"] ul{
+	@include display-flex();
+	@include justify-content(space-between);
+	margin-bottom: 10px;
+}
 .filter{
 	&-block{
 		li{
-			margin: 0 5px 5px;
 			display:inline-block;
 		}
 		.round-icon{
@@ -184,8 +187,11 @@
 product layout - list
 =======================================*/
 .products-layout{
+	> div{
+		@include transition(all ease-out .5s);
+	}
 	.product{
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		.visible-list{
 			display: none;
 		}
@@ -213,14 +219,6 @@ product layout - list
 		.hidden-list{
 			display: none;
 		}
-		.button-group{
-			a{
-				display: inline-block;
-			}
-			i{
-				margin-right: 5px;
-			}
-		}
 	}
 }
 .pagination{
@@ -228,38 +226,38 @@ product layout - list
 	margin-top: 10px;
 	li{
 		padding-right: 0;
+		&.active a{
+			color: $highlight-color;
+		}
 	}
 	a{
 		display: block;
 		background:#fff;
 		padding: 10px 15px;
-		&.active{
-			color:#DF0A71 !important;
-		}
 	}
 	.page-info{
 		margin-top: 10px;
 	}
 }
 .product-control{
+	background: #fff; 
+	margin-bottom: 15px; 
+	padding:10px;
 	.layout-mode{
 		li{
 			display:inline-block;
 		}
 		a{
 			margin-left:5px;
-			padding:5px;
-			background:#888686;
+			padding:5px 10px;
+			background-color: $grey;
 			display:inline-block;
 			font-size:14px;
 			color:#fff !important;
 			&.active{
-				background:#DF0A71;
+				background-color: $dark-grey;
 			}
 		}
-	}
-	.pro-per-page{
-		margin:3px 5px 0px 0px;	
 	}
 }
 

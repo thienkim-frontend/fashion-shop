@@ -4,24 +4,22 @@ extends layout/layout
 block var
   - scriptpage = "home";
   - subPage = "product-detail";
-  - title = "Fashion Shop | Product Detail";
+  - title = "Product Detail";
 
-
-      
 block content
   .preview-block.clearfix
     .product-preview.col-md-4
       .big-image
         a.elevatezoom(href='#')
           img.zoom.fancybox.img-respnsive(src='images/small/n14d0663px-4.jpg', data-zoom-image='images/large/n14d0663px-4.jpg')
-      +carouselProduct(['n14d0663px-4', 'n14d0663px-2', 'n14d0663px-4', 'n14d0663px-6', 'n14d0663px-7.jpg'])
+      +carouselProduct(['n14d0663px-4', 'n14d0663px-2', 'n14d0663px-4', 'n14d0663px-6', 'n14d0663px-7'])
       
     .product-details.col-md-8
-      header.entry-header.clearfix
+      .entry-header.clearfix
         h3 One Shoulder Asymmetric Dress
         .print-block
-          i.iconfont-print
-          span Print this page
+          i.fa.fa-print.margin-r-10
+          +a("Print this page", "") 
       article.entry-content
         .rate-bar
           .rateit-selected
@@ -46,7 +44,7 @@ block content
             | GF-123456
           li.colors
             span Color
-            +radio('colors', ['white', 'silver', 'black', 'green', 'yellow', 'pink', 'tomato', 'purple', 'pattern'])
+            +radio('color', ['white', 'silver', 'black', 'green', 'yellow', 'pink', 'tomato', 'purple', 'pattern'])
           li.sizes
             span Size
             +radio('size', ['XS', 'S', 'M', 'L', 'XL', 'XLL', 'XLLL'])
@@ -61,21 +59,21 @@ block content
               .buy-protection-info
                 ul.list-unstyled
                   li
-                    i.iconfont-check
+                    i.fa.fa-check
                     strong Full Refund
                     |  if you don't receive your order
                   li
-                    i.iconfont-check
+                    i.fa.fa-check
                     strong Refund or Keep
                     |   items not as described
         .button-group
           a.btn-cta(href='#')
-            i.iconfont-shopping-cart
+            i.fa.fa-shopping-cart
             |  ADD TO CARD
           a.btn-outline(href='#', title='Add to Wishlist')
-            i.iconfont-heart
+            i.fa.fa-heart
           a.btn-outline(href='#', title='Add to Comapre')
-            i.iconfont-retweet
+            i.fa.fa-retweet
   // Nav tabs
   ul.nav.nav-tabs.product-nav
     li.active
@@ -131,7 +129,7 @@ block content
           td 2.0Kg
     #profile.tab-pane
       .comments-list.clearfix
-        header.col-md-12
+        .row
           span.col-md-3 Feedback (14) 
           span.pull-right
             span
@@ -140,7 +138,7 @@ block content
         +article('title-review', 'Richard Doe', 'Aug 7, 2013', 'Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar round sunglasses.')
         +article('title-review', 'Richard Doe', 'Aug 7, 2013', 'Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar round sunglasses.')    
         //- end article
-        +pagination(2, 5)
+        +pagination(2, 5, 4, 29)
 
     #sizechart.tab-pane
       h4 Dresses Size Chart

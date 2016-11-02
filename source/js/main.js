@@ -1,7 +1,17 @@
 jQuery(document).ready(function ($) { 
-  $(function () {
-    $("[rel='tooltip']").tooltip();
+  $(".product-control #fitColumns").on("click", function(e){
+    e.preventDefault();
+    $(".product-control a").removeClass('active');
+    $(this).addClass('active');
+    $('.products-layout').addClass('list');
   });
+  $(".product-control #fitRows").on('click', function (e) {
+    e.preventDefault();
+    $(".product-control a").removeClass('active');
+    $(this).addClass('active');
+    $('.products-layout').removeClass('list');
+  });
+
   function openTab(){
     // Javascript to enable link to tab
     var hash = document.location.hash;
@@ -72,7 +82,7 @@ jQuery(document).ready(function ($) {
     $(".brands .prev").click(function(){
       owl2.trigger('prev.owl.carousel', [300]);
     })
-
+  
   var owl = $(".product-carousel");
   owl.owlCarousel({
     nav : false, // Show next and prev buttons
@@ -128,8 +138,23 @@ jQuery(document).ready(function ($) {
       start();
       
   }
-
-  /*==================Map==================*/
+  /*================== noUiSlider ==================*/
+  $(".noUiSlider").noUiSlider({
+     range: [0, 100]
+    ,start: [20, 80]
+    ,handles: 2
+    ,step: 10
+    ,margin: 10
+    ,connect: true
+    ,behaviour: 'tap-drag'
+    ,serialization: {
+       mark: ','
+      ,resolution: 0.1
+      ,to: [ [$('#value-min'), 'html'],
+          [$('#value-max'), 'html'] ]
+    }
+  });
+  /*================== Map ==================*/
   function initialize() {
     var mapOptions = {
     zoom: 16,
@@ -149,5 +174,45 @@ jQuery(document).ready(function ($) {
   google.maps.event.addDomListener(window, 'load', initialize);
   
   $(".fancybox-ad").fancybox().trigger('click');
+  /*================== Slider Product Detail page ==================*/
+  $(".zoom").elevateZoom({
+    gallery:'gallery_01', 
+    cursor: 'pointer', 
+    galleryActiveClass: 'active', 
+    imageCrossfade: true, 
+    loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+  }); 
+  
+  //pass the images to Fancybox
+  $(".zoom").bind("click", function(e) {  
+    var ez =   $('.zoom').data('elevateZoom');  
+    $.fancybox(ez.getGalleryList(),{
+      closeBtn  : false,
+      helpers : {
+        title : {
+          type : 'inside'
+        },
+        buttons : {}
+      },
+
+      afterLoad : function() {
+        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+      }
+    });
+    return false;
+  }); 
+
+  $("#gallery_01").owlCarousel({
+    nav: true,
+    pagination: false,
+    items: 4,
+    itemsDesktop : [1199,4],
+    itemsDesktopSmall : [979,3],
+    itemsTablet: [768,3],
+    itemsMobile : [479,3],
+    scrollPerPage: true,
+    navText: ['<i class="fa fa-chevron-left round-icon" title="Previous"></i>', '<i class="fa fa-chevron-right round-icon" title="Next"></i>']
+  });
+
   $( '#dl-menu' ).dlmenu();
 });

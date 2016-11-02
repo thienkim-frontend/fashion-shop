@@ -67,6 +67,15 @@
 		@include box-shadow(none);
 	}
 }
+.button-group{
+	a{
+		display: inline-block;
+    margin-right: 10px;
+	}
+	i{
+		margin-right: 5px;
+	}
+}
 .preview-block{
 	background-color: $white;
 	padding: 10px 0;
@@ -107,58 +116,34 @@
 .sizes{
 	display: inline-block;
 	margin: 10px 0 5px!important;
-	> span {
-		margin-right: 7px;
-	}
 	label {
 		position: relative;
-		margin-right: 20px;
 		input[type="radio"] {
 			display: none;
+			+ b{
+				padding: 10px;
+				@include border-radius(50px);
+			}
 		}
 		input[type="radio"]:checked {
 			+ b{
-				&:before{
-					content: "";
-					position: absolute;
-					z-index: -1;
-					top:-50%;
-					left: 0;
-					width: 30px;
-					height: 30px;
-				    margin-left: -7px;
-					border-radius: 50%;
-					background-color: $grey;
-				}
+				background-color: $grey;
 			}
 		}
 		&:hover{
 			b{
-				&:before{
-					content: "";
-					position: absolute;
-					z-index: -1;
-					top:-50%;
-					left: 0;
-					width: 30px;
-					height: 30px;
-				    margin-left: -7px;
-					border-radius: 50%;
-					background-color: $grey;
-				}
+				background-color: $grey;
 			}	
 		}
 	}
-	
 }
 .colors{
 	label{
 		margin-right: 10px;
-		@include border-radius(50%);
 		overflow: hidden;
 		&:hover{
 			b:before{
-				opacity:0.1;
+				@include opacity(0);
 			}
 		}
 		b{
@@ -183,7 +168,7 @@
 		input[type="radio"]{
 			display:none;
 			&:checked + b:before{
-				opacity:0.1;
+				@include opacity(0);
 			}
 		}
 	}
@@ -205,6 +190,7 @@
 		li{
 			margin-bottom: 10px;
 		}
+		i{color: #03396b; margin-right: 10px;}
 		img{
 			width:70px; 
 			height:60px;
@@ -308,6 +294,7 @@
 	}
 }
 .review{
+	position: relative;
 	padding-bottom:10px;
 	border-bottom: 1px solid $grey;
 	margin-bottom: 20px;
@@ -315,8 +302,9 @@
 		color: $dark-grey;
 	}
 	.social-icon{
-		position: relative;
-		z-index: 0;
+		position: absolute;
+    bottom: 20px;
+    right: 10px;
 		i{
 			display: inline-block;
 			position: relative;
@@ -344,6 +332,7 @@
 			&:hover{
 				color: $white;
 				border-bottom: 5px solid $highlight-color;
+				z-index: 10;
 				&:after{
 					height: 100%;
 					@include opacity(1);

@@ -17,10 +17,13 @@ mixin carouselProduct(arr)
         img(src='images/small/#{url}.jpg')
 
 mixin radio(type, arr)
-  each color in arr
+  each item in arr
     label
-      input(type='radio', name=type)
-      b(class=color title=color)
+      input(type='radio', name=type)&attributes(attributes)
+      - if(type == "color")
+        b(class=item title=item)
+      - else
+        b(class=item title=item)= item
 
 mixin social-icon(arr)
   .social-icon
@@ -31,14 +34,14 @@ mixin social-icon(arr)
 mixin article(title, author, date, content)
   article.review.row
     .col-md-1
-      img(src='images/images.jpg', alt='')
-    .col-md-8
+      img(src='images/avatar-default.jpg', alt='Default avatar')
+    .col-md-9
       h4.title-review= title
       p.info
         span.author= author
         span.date= date
       p!= content
-      +social-icon(['twitter', 'linkedin', 'facebook', 'xing', 'rss'])
+    +social-icon(['twitter', 'linkedin', 'facebook', 'xing', 'rss'])
 
 mixin pagination(start, numPages, curr, total)
   - start    = start    || 1
@@ -89,7 +92,7 @@ mixin product(name, url, price, order, discount, savepercent, removeicon)
     if (savepercent)
       .sale-icon= savepercent
     .photo-wrapper
-      img(src='images/#{url}.jpg', alt='')
+      img(src='images/#{url}.jpg', alt='').img-responsive
       .icon-style.hidden-list
         a.img-link(href='product_detail.html')
         a(href='cart.html', title='Add to Cart')
@@ -117,13 +120,13 @@ mixin infoProduct(text)
     p= text
   .button-group.unstyled.clearfix.visible-list
     a.btn-cta(href='#')
-      i.iconfont-shopping-cart
+      i.fa.fa-shopping-cart
       |  ADD TO CARD
     a.btn-outline(href='#', title='Add to Wishlist')
-      i.iconfont-heart
+      i.fa.fa-heart
       | Wishlist
     a.btn-outline(href='#', title='Comapre')
-      i.iconfont-retweet
+      i.fa.fa-retweet
       | Comapre        
 
 mixin side-item(type, heading, arr)
