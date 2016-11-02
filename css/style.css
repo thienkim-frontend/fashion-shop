@@ -1299,36 +1299,46 @@ product layout - list
   margin-top: 20px !important;
 }
 .panel .panel-heading {
-  background: #fff;
+  background-color: #fff;
   padding: 10px 20px;
 }
-.panel .panel-heading h2 {
+.panel .panel-heading h3 {
   margin-bottom: 0;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 .panel .panel-heading a {
   position: relative;
   display: block;
 }
 .panel .panel-heading a:after {
-  font-family: fontawesome;
-  content: "\e671";
+  font-family: FontAwesome;
+  content: "\f063";
   position: absolute;
   right: 0px;
   top: 0px;
-  font-size: 14px;
+  color: #888686;
 }
 .panel .panel-heading a.collapsed:after {
-  content: "\e670";
+  content: "\f062";
 }
-.panel .panel-heading:hover a {
-  color: #DF0A71;
-}
-.panel .panel-heading:hover .step {
+.panel .panel-heading a .step {
   color: #000;
+  margin-right: 15px;
+}
+.panel .panel-heading:hover {
+  color: #888686;
+  background-color: #eee;
+}
+.panel .panel-heading:hover .step, .panel .panel-heading:hover a {
+  color: #888686;
 }
 .panel .panel-body {
   padding: 20px;
   background: #fff;
+}
+.panel .panel-body h4 {
+  color: #888686;
 }
 
 .table > thead > tr > th,
