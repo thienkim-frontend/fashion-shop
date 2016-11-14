@@ -106,12 +106,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #D3D1D1;
 }
 
-.header-section {
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .logo-wrapper a {
   display: inline-block;
   width: 260px;
@@ -609,6 +603,10 @@ blockquote:before {
   margin-right: -10px;
 }
 
+.clearfix {
+  clear: both;
+}
+
 [class*="col-"] {
   padding-left: 10px;
   padding-right: 10px;
@@ -920,8 +918,10 @@ input:disabled + label, option:disabled + label, select.disabled + label {
   font-size: 18px;
   line-height: 1.5em;
 }
-.newsletter input {
-  padding: 5px 10px;
+.newsletter input[type="email"] {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   width: 100%;
 }
 .newsletter button {
@@ -1101,6 +1101,9 @@ input:disabled + label, option:disabled + label, select.disabled + label {
   position: relative;
   overflow: hidden;
 }
+.photo-wrapper a {
+  padding: 10px;
+}
 .photo-wrapper .icon-style {
   position: absolute;
   left: 0;
@@ -1118,7 +1121,6 @@ input:disabled + label, option:disabled + label, select.disabled + label {
   display: inline-block;
   height: 35px;
   width: 35px;
-  margin: 0 5px;
   color: #fff;
   font-size: 20px;
   line-height: 35px;
@@ -1269,7 +1271,7 @@ product layout - list
   display: block;
 }
 .products-layout.list .hidden-list {
-  display: none;
+  display: none !important;
 }
 
 .pagination {
@@ -2295,8 +2297,7 @@ body {
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 320px) {
   .logo-wrapper a {
     width: 200px;
     height: 70px;
@@ -2304,6 +2305,7 @@ body {
 
   .header-section {
     margin: 0 10px;
+    position: relative;
   }
 
   .dl-menuwrapper {
@@ -2326,13 +2328,25 @@ body {
   }
 
   .row {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   footer {
     margin-top: 15px;
   }
 
+  .product .button-group a {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .pagination .page-info {
+    float: right !important;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .cart .cart_nav {
     clear: both;
   }
@@ -2377,7 +2391,53 @@ body {
   }
 }
 /* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .logo-wrapper a {
+    width: 200px;
+    height: 50px;
+  }
+
+  .index .product {
+    min-height: 315px;
+    overflow: auto;
+  }
+
+  .newsletter span {
+    font-size: 12px;
+  }
+  .newsletter button {
+    right: 5px;
+  }
+}
 /* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .header-section {
+    margin: 20px 0;
+  }
+}
 /* Large Devices, Wide Screens */
 /* 
 @include font-face();
