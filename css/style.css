@@ -632,11 +632,8 @@ blockquote:before {
   border-color: #fff !important;
 }
 
-.flex {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: stretch;
-  align-items: stretch;
+.img-responsive {
+  width: 100%;
 }
 
 .has-carousel {
@@ -2339,6 +2336,14 @@ body {
   .product .button-group a {
     margin-bottom: 10px;
   }
+
+  .flex {
+    display: block;
+  }
+
+  .about .who-we-are .content-block {
+    background-color: transparent;
+  }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .pagination .page-info {
@@ -2406,6 +2411,10 @@ body {
     padding-right: 5px;
   }
 
+  .header-section {
+    margin: 10px;
+  }
+
   h3 {
     font-size: 20px;
   }
@@ -2436,6 +2445,17 @@ body {
 
   .header-section {
     margin: 20px 0;
+  }
+
+  .flex {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+  }
+
+  .about .who-we-are .content-block {
+    background-color: #fff;
   }
 }
 /* Large Devices, Wide Screens */
