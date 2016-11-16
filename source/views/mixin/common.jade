@@ -69,12 +69,13 @@ mixin pagination(start, numPages, curr, total)
 mixin carousel(url)
   for item in url
     div&attributes(attributes)
-      img.img-responsive(src='images/#{item[0]}.jpg').hidden-sm.hidden-xs
+      img.img-responsive(src='images/#{item[0]}.jpg')
       if item[1]  
+        img.img-responsive(src='images/#{item[0]}.jpg').hidden-sm.hidden-xs
         img.img-responsive(src='images/#{item[1]}.jpg').hidden-md.hidden-lg
 
 mixin banner(url, title1, title2, title3)
-  .col-md-4.banner-item
+  .col-md-4.banner-item.hidden-sm.hidden-xs
     .img-wrapper
       img.img-responsive(src='images/#{url}.jpg')
       span.triangle
@@ -93,7 +94,7 @@ mixin product(name, url, price, order, discount, savepercent, removeicon)
       .sale-icon= savepercent
     .photo-wrapper
       img(src='images/#{url}.jpg', alt='').img-responsive
-      .icon-style.hidden-list
+      .icon-style.hidden-list.hidden-sm.hidden-xs
         a.img-link(href='product_detail.html')
         a(href='cart.html', title='Add to Cart')
           i.fa.fa-shopping-cart.icon-01

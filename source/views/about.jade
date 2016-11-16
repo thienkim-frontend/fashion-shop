@@ -26,22 +26,22 @@ block var
   - subPage = "about";
   - title = "About us";
 block content
-  section.flex.who-we-are
-    .col-md-5.col-sm-5
+  section.row.flex.who-we-are
+    .col-md-5.col-sm-12.col-xs-12
       img.img-responsive(src='images/about-us-02.jpg', alt='img')
-    .col-md-7.col-sm-7.content-block
+    .col-md-7.col-sm-12.col-xs-12.content-block
       h2.pusher-t-20 WHO WE ARE
       blockquote We will increase the value of our company and our global portfolio of diversified brands by exceeding customers' expectations and achieving market leadership and operating excellence in every segment of our company.
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel velit ullamcorper arcu pretium porttitor. Nunc enim nisi, posuere ac ipsum nec, condimentum mollis velit. Suspendisse dapibus dui imperdiet, consequat est sagittis, tincidunt metus.
       p Nunc a fermentum urna. Fusce et lectus vel nisl volutpat egestas. Nulla at diam arcu. Proin faucibus quam nulla. Fusce sed lacinia lorem, sed posuere nunc. Vestibulum congue rhoncus orci sit amet adipiscing. 
-  section.features.flex
+  section.features.row.flex
     +feature-item("gift", "NEW STYLES EVERY DAY", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
     +feature-item("truck", "FREE SHIPPING", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
     +feature-item("refresh ", "30 DAYS RETURN", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
     +feature-item("lock", "SECURE PAYMENTS", "Ut rutrum consects nibh, pelletesque sed sagittis vta et dolor. Cum s natoque penats et magnis dis parturient.")
     
   section.row.our-team.clearfix
-    h2(style='padding:0 15px;') Meet our Team
+    h2 Meet our Team
     +team-item("team-img-03", "Mr. Vicente Gaby ", "CASHIER", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
     +team-item("team-img-02", "Mr. Vicente Gaby ", "SALE ASSISTANT", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")
     +team-item("team-img-01", "Mr. Vicente Gaby ", "MANAGER", "Lorem ipsum dolor sit a consctetur adipiscing elit. Curabitur fringillrmentumam, sed blandit leo convallis ac.")

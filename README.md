@@ -12,6 +12,7 @@ About us page        https://thienkim-frontend.github.io/fashion-shop/about
 Contact page         https://thienkim-frontend.github.io/fashion-shop/contact
 Blog page            https://thienkim-frontend.github.io/fashion-shop/blog
 Blog detail page     https://thienkim-frontend.github.io/fashion-shop/blog-detail
+Email template       https://thienkim-frontend.github.io/fashion-shop/edm
 ```
 
 ### Overview
@@ -52,6 +53,6 @@ https://github.com/thienkim-frontend/fashion-shop.git
 
 ### Features
 
-  * Item 1
-  * Item 2
-  * Item 3
+  * Valid CSS3 and HTML5 – valid code and optimized structure is one of the key points for a successful website that will be successfully crawled and indexed by search engines.
+  * Responsive Layout – Yoga & Fitness Sport WordPress Theme theme has a responsive layout that will respond to your screen width and make content appearance be perfect on all devices, from large desktop screens to mobile phones and tablets.
+  * Font-Awesome Icons – You'll be able to relax, knowing your site will look amazing no matter what display your user is on.

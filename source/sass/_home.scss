@@ -119,8 +119,8 @@ overflow:hidden !important;
 		font-size: 18px;
 		line-height: 1.5em;
 	}
-	input{
-		padding: 5px 10px;
+	input[type="email"]{
+		@include border-radius(0);
 		width: 100%;
 	}
 	button{

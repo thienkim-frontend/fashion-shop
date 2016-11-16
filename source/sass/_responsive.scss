@@ -1,12 +1,8 @@
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
-    
-}
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) and (max-width : 767px) {
   .logo-wrapper a{ width: 200px; height:70px;}
-  .header-section { margin: 0 10px;}
+  .header-section { margin: 0 10px; position: relative;}
   .dl-menuwrapper { position: absolute; right: 0; top: 15px; margin-right:0;}
   .breadcrumb{
     margin-bottom: 10px; 
@@ -14,8 +10,22 @@
     li{padding: 5px 5px 5px 20px;}
   }
   .container{ padding: 0;}
-  .row{ margin: 0;}
+  .row{ margin-left: 0; margin-right: 0;}
   footer{ margin-top: 15px;}
+  .product{
+    .button-group a{
+      margin-bottom: 10px;
+    }
+  }
+  .flex{display: block;}
+  .about .who-we-are .content-block{ background-color: transparent;}
+}
+@media only screen and (min-width : 320px) and (max-width : 480px){
+  .pagination .page-info{ float:right!important;}
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+  
   .cart{
     .cart_nav{
       clear: both;
@@ -42,16 +52,46 @@
     .title > div{ padding-left: 0; margin-top: 10px;}
     .sumary-blocks{ margin-bottom: 15px;}
   }
+  
+  // .product{
+  //   .button-group a{
+  //     margin-bottom: 10px;
+  //   }
+  // }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
+@media only screen and (min-width : 768px) and (max-width : 991px){
+  body{ font-size: 12px; }
+  .container{ padding-right: 10px; padding-left: 10px;}
+  [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .header-section{ margin: 10px;}
+  h3{ font-size: 20px;}
+  .logo-wrapper a{ width: 200px; height: 50px;}
+  .index .product{min-height: 315px; overflow: auto;}
+  .newsletter{
+    span{ font-size: 12px;}
+    button{ right: 5px; }
+  } 
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .header-section {
+    margin: 20px 0;
+  }
+  .flex{
+    @include display-flex(); 
+    @include align-items(stretch);
+  }
+  .about .who-we-are .content-block{ background-color: $white;}
 }
 
 /* Large Devices, Wide Screens */

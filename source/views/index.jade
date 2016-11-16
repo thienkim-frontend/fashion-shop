@@ -36,12 +36,12 @@ block content
           +a("Casual", "") 
           +a("Tommy Mancini", "") 
           +a("Utamur tincidunt", "")
-    +side-item("article", "Latest Articles",[["Quisque a justo magna. Curabitur nec dui non massa.", "blog-10", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "blog-07", "Sep 5, 2013"]]).latest-articles
+    +side-item("article", "Latest Articles",[["Quisque a justo magna. Curabitur nec dui non massa.", "blog-10", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "blog-07", "Sep 5, 2013"]]).latest-articles.hidden-sm
 
   #col-right.col-md-9.col-sm-8.col-xs-12
     //- home-slider
     .main-slider.owl-carousel
-      +carousel([["slice01","#"],["slice04","#"], ["slice05", "#"]]).carousel-item        
+      +carousel([["slice01",""],["slice04",""], ["slice05", ""]]).carousel-item        
     .row.banner-block.clearfix.hidden-sm.margin-20
       +banner("banner01", "free shipping", "on orders", "over $120")
       +banner("banner02", "free shipping", "on orders", "over $120")
@@ -60,11 +60,11 @@ block content
         +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-20", "250.00", "210")
         +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
     //- newsletter
-    .newsletter.clearfix
-      .col-md-7
+    .newsletter.clearfix.hidden-xs
+      .col-md-7.col-sm-6
         span SUBSCRIBE TO NEWSLETTER&nbsp;
         span.highlight.text-bold GET A 10% DISCOUNT ON 1ST PURCHASE
-      .col-md-5
+      .col-md-5.col-sm-6
         form(action='', method='post')
           input(type='email', value='', placeholder='Enter Your Email')
           button(type='submit') Subscribe
@@ -80,13 +80,13 @@ block content
         +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-27", "250.00", "210")
         +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210", "$380.00", "SALE")
         +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
-    .brands.has-carousel.clearfix
+    .brands.has-carousel.clearfix.hidden-xs
       h3 Our Brand
       .customNavigation
         a.prev: i.fa.fa-angle-left.round-icon
         a.next: i.fa.fa-angle-right.round-icon
       .owl-carousel.brand-carousel
-        +carousel([["brand01","#"], ["brand02","#"], ["brand03","#"], ["brand04","#"], ["brand05", "#"], ["brand06", "#"], ["brand02","#"], ["brand03","#"]]).brand-item
+        +carousel([["brand01",""], ["brand02",""], ["brand03",""], ["brand04",""], ["brand05", ""], ["brand06", ""], ["brand02",""], ["brand03",""]]).brand-item
 
   
 

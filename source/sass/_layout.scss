@@ -58,6 +58,7 @@ blockquote{
   margin-left: -10px;
   margin-right: -10px;
 }
+.clearfix{ clear: both;}
 [class*="col-"]{
   padding-left: 10px;
   padding-right: 10px;
@@ -76,10 +77,7 @@ blockquote{
   }
 }
 .white_border{ border-color: $white!important;}
-.flex{
-  @include display-flex(); 
-  @include align-items(stretch);
-}
+.img-responsive {width: 100%;}
 .has-carousel{
   position: relative;
   margin-top: 20px;

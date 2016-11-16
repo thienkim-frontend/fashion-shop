@@ -53,6 +53,7 @@
 .photo-wrapper{
 	position: relative;
 	overflow: hidden;
+	a{padding: 10px;}
 	.icon-style{
 		position: absolute;
 		left: 0;
@@ -67,7 +68,6 @@
 			display: inline-block;
 			height: 35px;
 			width: 35px;
-			margin: 0 5px;
 			color: $white;
 			font-size: 20px;
 			line-height: 35px;
@@ -217,7 +217,7 @@ product layout - list
 			display: block;
 		}
 		.hidden-list{
-			display: none;
+			display: none!important;
 		}
 	}
 }

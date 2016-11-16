@@ -87,7 +87,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: [{
-                    '<%= meta.public %>js/plugin.min.js': '<%= meta.js %>/**/*.js',
+                    '<%= meta.public %>js/plugin.min.js': '<%= meta.js %>/libs/*.js',
                     '<%= meta.public %>js/main.js': 'source/js/main.js'
                 }]
             }
@@ -119,6 +119,9 @@ module.exports = function (grunt) {
           }, {
             files: 'source/sass/**',
             tasks: ['compass']
+          }, {
+            files: 'source/css/**/*.css',
+            tasks: ['cssmin']
           }, {
             files: 'source/js/main.js',
             tasks: ['uglify']        

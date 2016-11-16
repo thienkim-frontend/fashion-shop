@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) { 
+
   $(".product-control #fitColumns").on("click", function(e){
     e.preventDefault();
     $(".product-control a").removeClass('active');
@@ -18,6 +19,10 @@ jQuery(document).ready(function ($) {
     if (hash) {
         $('.nav-tabs a[href="'+ hash +'"]').tab('show');
         // $('html,body').animate({scrollTop:$('.nav-tabs a[href="'+ hash +'"]').offset().top}, 600);
+        $('.panel-title a[href="'+ hash +'"]').trigger('click');
+        var posTop = $('.panel-title a[href="'+ hash +'"]').offset().top;
+        $('html,body').animate({scrollTop: 0}, 1000);
+        console.log('px'+posTop);
     } 
     // Change hash for page-reload
     $('.nav-tabs a').on('shown.bs.tab', function (e) {
@@ -69,11 +74,7 @@ jQuery(document).ready(function ($) {
   var owl2 = $(".brand-carousel");
     owl2.owlCarousel({
       nav: false, // Show next and prev buttons
-      items : 6,
-      margin: 20,
-      itemsDesktop: [1199,6],
-      itemsTablet:  [768,3],
-      itemsMobile:  [479,3]
+      responsive: { 992: {items:6, margin: 20}, 479: {items:6, margin: 10}}
     });
    // Custom Navigation Events
     $(".brands .next").click(function(){
@@ -86,13 +87,20 @@ jQuery(document).ready(function ($) {
   var owl = $(".product-carousel");
   owl.owlCarousel({
     nav : false, // Show next and prev buttons
-    margin: 20,
-    items : 3,
-    itemsDesktop: [1199,3],
-    itemsTablet:  [768,2],
-    itemsMobile:  [479,1]
+    responsive: {  0: {items:1}, 650: {items:2, margin: 10}, 992: {items:3, margin: 20}}
   });
-
+  var width;
+  $(window).resize(function() {
+    width = $(window).width();
+    // console.log(width);
+    if(width < 767){
+      $(".index .owl-item").addClass('products-layout list');
+      $(".index .sale-icon").hide();
+    }else{
+      $(".index .owl-item").removeClass('products-layout list');
+      $(".index .sale-icon").show();
+    }
+  });
   /*___________________main-slider___________________*/
   var $progressBar, $bar, $elem, isPause, tick, percentTime, time = 7; // time in seconds
   // http://www.owlcarousel.owlgraphic.com/docs/api-options.html
@@ -173,7 +181,7 @@ jQuery(document).ready(function ($) {
   }
   google.maps.event.addDomListener(window, 'load', initialize);
   
-  $(".fancybox-ad").fancybox().trigger('click');
+  // $(".fancybox-ad").fancybox().trigger('click');
   /*================== Slider Product Detail page ==================*/
   $(".zoom").elevateZoom({
     gallery:'gallery_01', 

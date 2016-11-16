@@ -9,7 +9,8 @@ mixin checkActive(obj)
       if (block)
         block
   - else
-    li: a(href=obj.url  title=obj.title) #{obj.title}
+    li
+      a(href=obj.url  title=obj.title) #{obj.title}
       if (block)
         block
 mixin dl-list(arr, addClass)
@@ -77,7 +78,7 @@ header.header-section
         +li(["Men", ""])
         +li(["Template pages<b class='caret'></b>", ""]).has-child
           .dropdown-content.mega-menu.col-md-12 
-            +mega-menu("Common pages", [["Home page", "index.html"], ["Products grid listing", "product.html"], ["Product detail page", "product-detail.html"], ["Compare products", "compare.html"], ["Wishlist page", "account.html"]])
+            +mega-menu("Common pages", [["Home page", "index.html"], ["Products grid listing", "product.html"], ["Product detail page", "product-detail.html"], ["Compare products", "compare.html"], ["Wishlist page", "account.html#collapseThree"]])
             +mega-menu("Cart pages", [["Emty cart", ""], ["Checkout step 1", "cart.html#cart"], ["Checkout step 2", "cart.html#address"], ["Checkout step 3", "cart.html#shipping"], ["Checkout step 4", "cart.html#summary"]])
             +mega-menu("My pages", [["Registration", "register.html"], ["My account", "account.html"], ["Blog listing", "blog.html"], ["Blog detail", "blog-detail.html"], ["About us", "about.html"], ["Contact us", "contact.html"]])
             .col-md-3
