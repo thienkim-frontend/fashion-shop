@@ -63,32 +63,38 @@ jQuery(document).ready(function ($) {
     return false;
   });
 
-  // Custom Navigation Events
-  $(".featured-product .next").click(function(){
-  owl.trigger('next.owl.carousel');
-  })
-  $(".featured-product .prev").click(function(){
-  owl.trigger('prev.owl.carousel');
-  })
+
     
   var owl2 = $(".brand-carousel");
     owl2.owlCarousel({
       nav: false, // Show next and prev buttons
       responsive: { 992: {items:6, margin: 20}, 479: {items:6, margin: 10}}
     });
-   // Custom Navigation Events
-    $(".brands .next").click(function(){
-      owl2.trigger('next.owl.carousel', [300]);
-    })
-    $(".brands .prev").click(function(){
-      owl2.trigger('prev.owl.carousel', [300]);
-    })
-  
-  var owl = $(".product-carousel");
-  owl.owlCarousel({
-    nav : false, // Show next and prev buttons
-    responsive: {  0: {items:1}, 650: {items:2, margin: 10}, 992: {items:3, margin: 20}}
-  });
+  // http://jsfiddle.net/bimaljr/ZTBuj/7/  
+  var owlWrap = $('.has-carousel');
+  if (owlWrap.length > 0) {
+    // check if plugin is loaded
+    if (jQuery().owlCarousel) {
+
+      owlWrap.each(function(){
+        var carousel= $(this).find('.owl-carousel'),
+            navigation = $(this).find('.customNavigation'),
+            nextBtn = navigation.find('.next'),
+            prevBtn = navigation.find('.prev');
+        carousel.owlCarousel({
+          nav : false, // Show next and prev buttons
+          responsive: {  0: {items:1}, 650: {items:2, margin: 10}, 992: {items:3, margin: 20}}
+        });
+       
+        nextBtn.click(function(){
+          carousel.trigger('next.owl.carousel', [300]);
+        });
+        prevBtn.click(function(){
+          carousel.trigger('prev.owl.carousel', [300]);
+        });
+      });
+    };
+  };
   var width;
   $(window).resize(function() {
     width = $(window).width();
@@ -144,7 +150,6 @@ jQuery(document).ready(function ($) {
   function moved () {
       clearTimeout(tick);
       start();
-      
   }
   /*================== noUiSlider ==================*/
   $(".noUiSlider").noUiSlider({
