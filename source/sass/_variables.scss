@@ -12,10 +12,7 @@ $base-fontsize: 14px;
 $lg-fontsize: 16px;
 $default-border-radius: 1.5em; 
 
-// mixin color(white: '#fff', )
-// silver
-// black rgb(82, 81, 81)
-// tan rgb(210, 180, 140)
+
 @each $color, $value in ('white': #fff, 'silver': silver, 'black': rgb(82, 81, 81), 'tan': rgb(210, 180, 140), 'green': rgb(107, 142, 35), 'yellow': rgb(224, 204, 18), 'pink': rgb(252, 134, 193), 'tomato': rgb(253, 119, 95), 'purple': purple, 'pattern': url(../images/pattern.png)) {
   .#{$color} {
     background: $value!important;
@@ -40,6 +37,29 @@ $default-border-radius: 1.5em;
 	border-left: $width solid transparent;
 	border-right: $width solid transparent;
 	border-top: $width solid $color;		
+}
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
 }
 // @mixin mixinBefore($top, $bottom, $left, $right, $margin-top, $content:""){
 // 	content: $content;
