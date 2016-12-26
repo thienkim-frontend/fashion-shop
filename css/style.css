@@ -94,6 +94,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: url(../images/pattern.png) !important;
 }
 
+/*********************
+BREAKPOINTS
+*********************/
 .main-color {
   color: #DF0A71;
 }
@@ -520,6 +523,9 @@ footer {
   background: url(../images/pattern.png) !important;
 }
 
+/*********************
+BREAKPOINTS
+*********************/
 .main-color {
   color: #DF0A71;
 }
