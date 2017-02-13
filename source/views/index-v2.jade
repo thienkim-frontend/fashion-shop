@@ -1,0 +1,120 @@
+//- extends layout to your side
+extends layout/layout
+
+block var
+  - scriptpage = "home";
+  - subPage = "index";
+  - title = "Home page";
+block content
+  aside.sidebar.col-sm-4.col-md-3.hidden-xs
+    //- category
+    section.category-block
+      header Categories
+      .content-block 
+        ul.list-unstyled
+          +li(["New Arrivals <span>(547)</span>", ""])  
+          +li(["Tops <span>(547)</span>", ""])  
+          +li(["Shirts & Blouses <span>(860)</span>", ""])  
+          +li(["Trousers <span>(118)</span>", ""])  
+          +li(["Jeans <span>(131)</span>", ""])  
+          +li(["Dresses <span>(624)</span>", ""]) 
+          +li(["Skirts  <span>(329)</span>", ""]) 
+          +li(["Jackets &amp; Coats <span>(135)</span>", ""]) 
+          +li(["Nightwear <span>(39)</span>", ""]) 
+          +li(["Shoulder Bag <span>(251)</span>", ""]) 
+          +li(["Shoes <span>(30)</span>", ""]) 
+          +li(["Nightwear <span>(25)</span>", ""]) 
+    //- visited product 
+    +side-item("product", "You have visited",[["One Shoulder Asymmetric Dress", "pro-15", "125,90"], ["One Shoulder Asymmetric Dress", "pro-09", "125,90"], ["One Shoulder Asymmetric Dress", "pro-21", "125,90"]]).visited-block
+    section.tag-block
+      header Tag Cloud
+      .content-block
+        .tag-cloud
+          +a("New collections", "") 
+          +a("Jacket", "") 
+          +a("Fashion", "") 
+          +a("Casual", "") 
+          +a("Tommy Mancini", "") 
+          +a("Utamur tincidunt", "")
+    +side-item("article", "Latest Articles",[["Quisque a justo magna. Curabitur nec dui non massa.", "blog-10", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "blog-07", "Sep 5, 2013"]]).latest-articles.hidden-sm
+
+  #col-right.col-md-9.col-sm-8.col-xs-12
+    //- home-slider
+    .main-slider.owl-carousel
+      +carousel([["slice01",""],["slice04",""], ["slice05", ""]]).carousel-item        
+    .row.banner-block.clearfix.hidden-sm.margin-20
+      +banner("banner01", "free shipping", "on orders", "over $120")
+      +banner("banner02", "free shipping", "on orders", "over $120")
+      +banner("banner03", "free shipping", "on orders", "over $120")
+    //- featured-product  
+    .featured-product.has-carousel.clearfix
+      h3 New Products
+      .customNavigation
+        a.prev: i.fa.fa-angle-left.round-icon
+        a.next: i.fa.fa-angle-right.round-icon
+      .owl-carousel.product-carousel
+        +product("Beautiful Strapless Sweetheart Slit Chiffon Pageant Dress", "pro-24", "$250.00", "325", "$380.00", "SALE")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-25", "250.00", "210")
+        +product("Halter Rhinestone Sleeveless Cocktail Dresses", "pro-26", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-20", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+    //- newsletter
+    .newsletter.clearfix.hidden-xs
+      .col-md-7.col-sm-6
+        span SUBSCRIBE TO NEWSLETTER&nbsp;
+        span.highlight.text-bold GET A 10% DISCOUNT ON 1ST PURCHASE
+      .col-md-5.col-sm-6
+        form(action='', method='post')
+          input(type='email', value='', placeholder='Enter Your Email')
+          button(type='submit') Subscribe
+    .featured-product.has-carousel.clearfix
+      h3 Best Salers
+      .customNavigation
+        a.prev: i.fa.fa-angle-left.round-icon
+        a.next: i.fa.fa-angle-right.round-icon
+      .owl-carousel.product-carousel
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-19", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-23", "250.00", "210", "$380.00", "SALE")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-16", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-27", "250.00", "210")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210", "$380.00", "SALE")
+        +product("Princess Floor-Length Shoulder Chiffon Dress", "pro-15", "250.00", "210")
+    .brands.has-carousel.clearfix.hidden-xs
+      h3 Our Brand
+      .customNavigation
+        a.prev: i.fa.fa-angle-left.round-icon
+        a.next: i.fa.fa-angle-right.round-icon
+      .owl-carousel.brand-carousel
+        +carousel([["brand01",""], ["brand02",""], ["brand03",""], ["brand04",""], ["brand05", ""], ["brand06", ""], ["brand02",""], ["brand03",""]]).brand-item
+
+  .content-bottom
+    .col-md-4.testimonial
+      h4 Featured Artists
+      .testimonial-txt
+        p
+          i.fa.fa-quote-left
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. 
+          i.fa.fa-quote-right
+      .testimonial-intro
+        .row
+          .content
+              h5.title  Meet DJ 
+                span.highlight DAVID GADDHA
+              ul
+                li.user-icon 
+                li
+                  h6 10 846
+                  small Followers
+                li
+                  h6 308
+                  small Following
+          .col-md-6.pull-right
+            img(src="images/blog-07.jpg", alt="").img-responsive
+    .col-md-4.office
+      h4 Featured Artists
+      +galary(["fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4"])
+    .col-md-4
+      h4 Featured Artists
+      +new-item([["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"]]).latest-news.hidden-sm
+
