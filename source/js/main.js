@@ -1,5 +1,13 @@
 jQuery(document).ready(function ($) { 
-
+  $.ajax({
+    url: "/data/data.json",
+    beforeSend: function( xhr ) {
+      alert("loading..");
+    }
+  })
+    .done(function( data ) {
+      console.log(data);
+    });
   $(".product-control #fitColumns").on("click", function(e){
     e.preventDefault();
     $(".product-control a").removeClass('active');
@@ -117,9 +125,9 @@ jQuery(document).ready(function ($) {
       slideSpeed : 500,
       items: 1,
       autoplay: true,
-      onInitialized : progressBar,
-      onChanged : moved,
-      onDragged : pauseOnDragging
+      // onInitialized : progressBar,
+      // onChanged : moved,
+      // onDragged : pauseOnDragging
   });
 
   function progressBar (elem) {

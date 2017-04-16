@@ -66,6 +66,11 @@ module.exports = function (grunt) {
                     src: 'source/fonts/*',
                     dest: '<%= meta.public %>fonts',
                     flatten: true
+                },  {
+                    expand: true,
+                    src: 'source/views/data/*',
+                    dest: '<%= meta.public %>data',
+                    flatten: true
                 }]
             }
         },

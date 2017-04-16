@@ -7,7 +7,7 @@
 	{
 		"title": "Well Crafted",
 		"icon": "fa-keyboard-o",
-		"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra"
+		"content": "Lorem ipsum dolor sit amet, <strong>consectetur</strong>consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra"
 	},
 	{
 		"title": "Easy to Customize",
