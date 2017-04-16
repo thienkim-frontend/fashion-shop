@@ -1,5 +1,13 @@
 jQuery(document).ready(function ($) { 
-
+  // $.ajax({
+  //   url: "/data/data.json",
+  //   beforeSend: function( xhr ) {
+  //     alert("loading..");
+  //   }
+  // })
+  //   .done(function( data ) {
+  //     console.log(data);
+  //   });
   mainSlider();
   owlCarousel();
   sliderProduct();
