@@ -88,4 +88,33 @@ block content
       .owl-carousel.brand-carousel
         +carousel([["brand01",""], ["brand02",""], ["brand03",""], ["brand04",""], ["brand05", ""], ["brand06", ""], ["brand02",""], ["brand03",""]]).brand-item
 
+  .content-bottom
+    .col-md-4.testimonial
+      h4 Featured Artists
+      .testimonial-txt
+        p
+          i.fa.fa-quote-left
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. 
+          i.fa.fa-quote-right
+      .testimonial-intro
+        .row
+          .content
+              h5.title  Meet DJ 
+                span.highlight DAVID GADDHA
+              ul
+                li.user-icon 
+                li
+                  h6 10 846
+                  small Followers
+                li
+                  h6 308
+                  small Following
+          .col-md-6.pull-right
+            img(src="images/blog-07.jpg", alt="").img-responsive
+    .col-md-4.office
+      h4 Featured Artists
+      +galary(["fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4", "fa-4"])
+    .col-md-4
+      h4 Featured Artists
+      +new-item([["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"], ["Quisque a justo magna. Curabitur nec dui non massa.", "ln1.png", "Sep 5, 2013"]]).latest-news.hidden-sm
 

@@ -1,3 +1,9 @@
+mixin galary(arr)
+  .office-gallery
+    ul
+      each items in arr
+        li
+          a(href="javascript:void(0)", title=items): img(src="images/#{items}.jpg", alt=items)
 mixin a(text, href)
   - var href= (typeof(href) === 'undefined' || href =="")? "javascript:void(0);" : href;
   a(href=href, title=text)&attributes(attributes) #{text}
@@ -129,6 +135,24 @@ mixin infoProduct(text)
     a.btn-outline(href='#', title='Comapre')
       i.fa.fa-retweet
       | Comapre        
+mixin new-item(arr)
+    .content-block&attributes(attributes)
+      ul.list-unstyled
+        for item in arr
+          li.list-item.clearfix
+            a(href=''): img(src='./images/#{item[1]}', alt='')
+            .detail
+              h5.title= item[0]
+              span.time
+                i.fa.fa-clock-o
+                | #{item[2]} 
+            .clearfix
+            .top_half
+            .bottom_half
+            .info
+              .fa.fa-phone
+              .fa.fa-comments
+              .fa.fa-envelope
 
 mixin side-item(type, heading, arr)
   section&attributes(attributes)

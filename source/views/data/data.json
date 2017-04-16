@@ -1,17 +1,52 @@
-[
-	{
-		"title": "Thoughtful Design",
-		"icon": " fa-lightbulb-o",
-		"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra."
+{
+	"products":[
+		{
+		  "id": 329678821,
+		  "title": "Red Rain Coat",
+		  "description": "<p>Lorem Ipsum.</p>",
+		  "category": "Coat",
+		  "color":["red", "yellow", "white"],
+		  "size":["XXL", "XL", "L"],
+		  "tags": [ "Spring"],
+		  "price": 12900,
+		  "available": true,
+		  "images": [
+		    "/products/red-rain-coat.jpeg",
+		    "/products/red-rain-coat-01.jpeg",
+		    "/products/red-rain-coat-02.jpeg",
+		  ]
+		},
+		{
+		  "id": 329678821,
+		  "title": "Red Rain Coat",
+		  "description": "<p>Lorem Ipsum.</p>",
+		  "category": "Coat",
+		  "color":[
+		  	"red", 
+		  	"yellow", 
+		  	"white"
+		  ],
+		  "size":[
+		  	"XXL", 
+		  	"XL", 
+		  	"L"
+		  ],
+		  "tags": [
+		    "Spring"
+		  ],
+		  "price": 12900,
+		  "available": true,
+		  "images": [
+		    "/products/red-rain-coat.jpeg",
+		    "/products/red-rain-coat-01.jpeg",
+		    "/products/red-rain-coat-02.jpeg",
+		  ]
+		}],
+	"product_count": 8,
+	"total_price": 92,
+	"session_id": "blnj77nik4equdg7ou0emr3kd4",
+	"coupons":{
+		"$5 off all orders over $5!":-5
 	},
-	{
-		"title": "Well Crafted",
-		"icon": "fa-keyboard-o",
-		"content": "Lorem ipsum dolor sit amet, <strong>consectetur</strong>consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra"
-	},
-	{
-		"title": "Easy to Customize",
-		"icon": "fa-flash",
-		"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra"
-	}
-]
+	"requires_shipping": true
+};
