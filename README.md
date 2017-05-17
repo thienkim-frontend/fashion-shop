@@ -20,7 +20,7 @@ Email template       https://thienkim-frontend.github.io/fashion-shop/edm
 ```
 Fashion shop is a responsive website built on
 
-Jade                 https://github.com/pugjs/pug
+Jade/Pug             https://github.com/pugjs/pug
 Sass                 http://sass-lang.com/
 Compass              http://compass-style.org/
 Grunt                http://gruntjs.com/
